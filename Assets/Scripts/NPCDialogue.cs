@@ -4,16 +4,14 @@ using UnityEngine;
 
 public class NPCDialogue : MonoBehaviour
 {
-    [SerializeField]
-    string[] dialogue;
-    [SerializeField]
-    GameObject textboxPrefab;
+    [SerializeField] [TextArea(1, 4)] private string[] dialogue;
+    [SerializeField] private GameObject textboxPrefab;
 
-    DialogueBox db;
-
-    bool dialogueTriggered = false;
-    int dialoguePosition = 0;
-    bool talkable = true;
+    private DialogueBox db;
+    
+    private bool dialogueTriggered = false;
+    private int dialoguePosition = 0;
+    private bool talkable = true;
     
 
     //we first check if the player is in the area to talk with the npc
