@@ -842,6 +842,12 @@ MonoBehaviour:
   - My Name is "box"
   - Nice to meet you!
   textboxPrefab: {fileID: 3392875753123741850, guid: a75fba7265650014c8aee6ac619c25e9, type: 3}
+  characterFaces:
+  - {fileID: 21300000, guid: ff00345da0563d641903c5bd5bb748a4, type: 3}
+  - {fileID: 21300000, guid: ad7b296d426713b4593ee1a19fcbf9d1, type: 3}
+  characterSpritePair:
+  - {x: 1, y: 1}
+  - {x: 2, y: 0}
 --- !u!1 &1788651902
 GameObject:
   m_ObjectHideFlags: 0
@@ -947,6 +953,8 @@ MonoBehaviour:
   - I love you
   - Wait where are you going?
   textboxPrefab: {fileID: 3392875753123741850, guid: a75fba7265650014c8aee6ac619c25e9, type: 3}
+  characterFaces: []
+  characterSpritePair: []
 --- !u!58 &1821206830
 CircleCollider2D:
   m_ObjectHideFlags: 0
