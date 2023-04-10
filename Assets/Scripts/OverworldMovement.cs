@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class OverworldMovement : MonoBehaviour
 {
-    [SerializeField]
-    float speed = 5;
+    [SerializeField] private float speed = 5;
+
+    private Vector3 move;
 
     private Rigidbody2D rb;
 
@@ -14,35 +15,25 @@ public class OverworldMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        //we cannot use Moveposition in each movement check, otherwise it will only take in the one directional input
-        //simply use an empty vector3, add the movement direction we want, and add use it with MovePosition later. Allows the play to go diagonally
-        Vector3 MoveVector = Vector3.zero;
-        if (Input.GetKey(KeyCode.W))
-        {
-            MoveVector += Vector3.up * speed * Time.deltaTime;
-        }
-        else if (Input.GetKey(KeyCode.S))
-        {
-            MoveVector += Vector3.down * speed * Time.deltaTime;
-            
-        }
+        // the direction the player should move is updated each frame
+        move = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
-        if (Input.GetKey(KeyCode.D))
-        {
-            MoveVector += Vector3.right * speed * Time.deltaTime;
-        }
-        else if (Input.GetKey(KeyCode.A))
-        {
-            MoveVector +=  Vector3.left * speed * Time.deltaTime;
-        }
-        
-        rb.MovePosition(transform.position + MoveVector);
+        if (move.x > 0)
+            move.x = 1;
+        if (move.x < 0)
+            move.x = -1;
+
+        if (move.y > 0)
+            move.y = 1;
+        if (move.y < 0)
+            move.y = -1;
     }
 
-
-
+    private void FixedUpdate()
+    {
+        // the player moves on FixedUpdate() for consistent movement each frame
+        rb.MovePosition(transform.position + move * speed * Time.fixedDeltaTime);
+    }
 }
