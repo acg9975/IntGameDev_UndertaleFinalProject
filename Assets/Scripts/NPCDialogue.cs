@@ -39,6 +39,9 @@ public class NPCDialogue : MonoBehaviour
     {
         if (dialogueTriggered)
         {
+            //disable player movement 
+            OverworldMovement.canMove = false;
+            Debug.Log(OverworldMovement.canMove);
             if (db == null)
             {
                 //if this does not exist, create it
@@ -65,6 +68,11 @@ public class NPCDialogue : MonoBehaviour
                 }
             }
         }
+        else
+        {
+            //reenable movements
+            OverworldMovement.canMove = true;
+        }
     }
 
     private void OnTriggerStay2D(Collider2D other)
@@ -75,6 +83,7 @@ public class NPCDialogue : MonoBehaviour
             {
                 //spawn dialogue boxes
                 dialogueTriggered = true;
+                OverworldMovement.canMove = false;
                 talkable = false;
             }
         }
