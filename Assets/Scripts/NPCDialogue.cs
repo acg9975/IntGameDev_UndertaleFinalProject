@@ -51,13 +51,13 @@ public class NPCDialogue : MonoBehaviour
             }
             else if (db != null)
             {
-                if (Input.GetKeyUp(KeyCode.Space) && dialogueIndex < dialogue.Length)
+                if (Input.GetKeyDown(KeyCode.Space) && dialogueIndex < dialogue.Length)
                 {
                     //if we have a textbox already, simply show the dialogue at the position we set and increment position counter
                     db.ChangeText(dialogue[dialogueIndex].text, dialogue[dialogueIndex].sprite);
                     dialogueIndex++;
                 }
-                else if (Input.GetKeyUp(KeyCode.Space) && dialogueIndex >= dialogue.Length)
+                else if (Input.GetKeyDown(KeyCode.Space) && dialogueIndex >= dialogue.Length)
                 {
                     //delete textbox. set dialogue triggered to false. reset dialogue position
                     Destroy(db.gameObject);
@@ -79,7 +79,7 @@ public class NPCDialogue : MonoBehaviour
     {
         if (other.CompareTag("Player") && talkable)
         {
-            if (Input.GetKey(KeyCode.Space) && !dialogueTriggered)
+            if (Input.GetKeyDown(KeyCode.Space) && !dialogueTriggered)
             {
                 //spawn dialogue boxes
                 dialogueTriggered = true;
