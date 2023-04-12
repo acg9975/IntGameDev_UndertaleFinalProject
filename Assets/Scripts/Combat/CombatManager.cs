@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class CombatManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private EnemyBehavior[] enemies;
+
+    private void Start()
     {
-        
+        foreach (EnemyBehavior enemy in enemies)
+            enemy.NextWave(true);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            foreach (EnemyBehavior enemy in enemies)
+                enemy.NextWave();
+        }
     }
 }

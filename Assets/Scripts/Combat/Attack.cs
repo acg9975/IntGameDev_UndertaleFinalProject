@@ -4,6 +4,8 @@ using UnityEngine;
 
 public abstract class Attack : ScriptableObject
 {
+    protected List<AttackProjectile> projectiles = new List<AttackProjectile>();
+
     public virtual void Run()
     {
 
@@ -11,6 +13,9 @@ public abstract class Attack : ScriptableObject
 
     public virtual void Stop()
     {
+        foreach (AttackProjectile projectile in projectiles)
+            Destroy(projectile);
 
+        projectiles.Clear();
     }
 }

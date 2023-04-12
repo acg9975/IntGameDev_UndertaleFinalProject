@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class EnemyBehavior : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private Attack[] attacks;
 
-    // Update is called once per frame
-    void Update()
+    private int waveIndex = 0;
+
+    public void NextWave(bool firstWave = false)
     {
-        
+        if (firstWave)
+        {
+            waveIndex = 0;
+        }
+        else
+        {
+            attacks[waveIndex].Stop();
+            waveIndex++;
+        }
+
+        attacks[waveIndex].Run();
     }
 }
