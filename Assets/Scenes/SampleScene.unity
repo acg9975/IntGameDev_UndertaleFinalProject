@@ -838,16 +838,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-  - Hi There
-  - My Name is "box"
-  - Nice to meet you!
+  - sprite: {fileID: -1619752381, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
+    text: Hello! I can talk!
+  - sprite: {fileID: -893850241, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
+    text: Isn't it amazing?
+  - sprite: {fileID: -1526311129, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
+    text: I wonder what people usually talk about...
   textboxPrefab: {fileID: 3392875753123741850, guid: a75fba7265650014c8aee6ac619c25e9, type: 3}
-  characterFaces:
-  - {fileID: 21300000, guid: ff00345da0563d641903c5bd5bb748a4, type: 3}
-  - {fileID: 21300000, guid: ad7b296d426713b4593ee1a19fcbf9d1, type: 3}
-  characterSpritePair:
-  - {x: 1, y: 1}
-  - {x: 2, y: 0}
 --- !u!1 &1788651902
 GameObject:
   m_ObjectHideFlags: 0
@@ -948,13 +945,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-  - You suck
-  - I hate that guy over there
-  - I love you
-  - Wait where are you going?
+  - sprite: {fileID: -1619752381, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
+    text: Woah! You can talk too?
+  - sprite: {fileID: -1499177175, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
+    text: I thought I was the only one!
+  - sprite: {fileID: -893850241, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
+    text: I mean... I heard voices, I just figured I was going *insane*
+  - sprite: {fileID: -1956576422, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
+    text: But I'm not insane, right?
   textboxPrefab: {fileID: 3392875753123741850, guid: a75fba7265650014c8aee6ac619c25e9, type: 3}
-  characterFaces: []
-  characterSpritePair: []
 --- !u!58 &1821206830
 CircleCollider2D:
   m_ObjectHideFlags: 0
