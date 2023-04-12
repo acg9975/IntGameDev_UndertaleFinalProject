@@ -14,7 +14,7 @@ public abstract class Attack : ScriptableObject
     public virtual void Stop()
     {
         foreach (AttackProjectile projectile in projectiles)
-            Destroy(projectile);
+            Destroy(projectile.gameObject);
 
         projectiles.Clear();
     }

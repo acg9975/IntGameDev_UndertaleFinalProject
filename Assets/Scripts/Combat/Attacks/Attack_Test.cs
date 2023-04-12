@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Test", menuName = "Combat/Attacks/Test")]
 public class Attack_Test : Attack
 {
-    [SerializeField] private AttackProjectile projectilePrefab;
+    [SerializeField] protected AttackProjectile projectilePrefab;
 
     public override void Run()
     {
