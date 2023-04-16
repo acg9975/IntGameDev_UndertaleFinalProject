@@ -4,12 +4,25 @@ using UnityEngine;
 
 public class CombatManager : MonoBehaviour
 {
-    [SerializeField] private EnemyBehavior[] enemies;
+    public static CombatManager instance;
+
+    [SerializeField] private GameObject playerPrefab;
+    private GameObject player;
+
+    [SerializeField] private Transform playerSpawn;
+    public static Vector2 AttackCenter { get { return instance.playerSpawn.position; } }
 
     public enum CombatMode { Menu, Attack }
-    private CombatMode combatMode = CombatMode.Menu;
+    [HideInInspector] public CombatMode combatMode = CombatMode.Menu;
+
+    [SerializeField] private EnemyBehavior[] enemies;
 
     private IEnumerator waveRoutine;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     private void Start()
     {
@@ -23,14 +36,24 @@ public class CombatManager : MonoBehaviour
                 TriggerWave();
     }
 
+    private void SpawnPlayer()
+    {
+        player = Instantiate(playerPrefab, playerSpawn.position, Quaternion.identity);
+    }
+
     private void ShowCombatMenu()
     {
         combatMode = CombatMode.Menu;
+        Destroy(player);
+        CombatMenuNavigator.instance.UpdateCombatUI();
     }
 
     private void TriggerWave()
     {
         combatMode = CombatMode.Attack;
+        SpawnPlayer();
+        CombatMenuNavigator.instance.UpdateCombatUI();
+
         waveRoutine = WaveRoutine();
         StartCoroutine(waveRoutine);
     }

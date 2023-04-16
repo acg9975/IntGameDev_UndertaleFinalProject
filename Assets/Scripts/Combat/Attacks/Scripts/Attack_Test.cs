@@ -6,19 +6,38 @@ using UnityEngine;
 public class Attack_Test : Attack
 {
     [SerializeField] protected AttackProjectile projectilePrefab;
+    [SerializeField] protected float projectileSpeed = 1f;
+    [SerializeField] protected float spawnDelay = 1f;
+    [SerializeField] protected float spawnRadius = 3f;
+
+    protected float spawnTimer = 0f;
+
+    protected IEnumerator runRoutine;
 
     public override void Run()
     {
-        for (int i = 0; i < 10; i++)
+        runRoutine = RunRoutine();
+        CombatManager.instance.StartCoroutine(runRoutine);
+    }
+
+    protected IEnumerator RunRoutine()
+    {
+        while (true)
         {
-            Vector2 pos = new Vector2(Random.Range(-2f, 2f), Random.Range(-2f, 2f));
-            AttackProjectile projectile = Instantiate(projectilePrefab, pos, Quaternion.identity);
+            Vector2 spawnPos = CombatManager.AttackCenter + Random.insideUnitCircle.normalized * spawnRadius;
+            AttackProjectile projectile = Instantiate(projectilePrefab, spawnPos, Quaternion.identity);
             projectiles.Add(projectile);
+
+            projectile.MoveTowards(CombatMovement.PlayerPosition, projectileSpeed);
+
+            yield return new WaitForSeconds(spawnDelay);
         }
     }
 
     public override void Stop()
     {
         base.Stop();
+
+        CombatManager.instance.StopCoroutine(runRoutine);
     }
 }
