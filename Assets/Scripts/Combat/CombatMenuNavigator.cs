@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class CombatMenuNavigator : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static CombatMenuNavigator instance;
+
+    [SerializeField] private GameObject dialogueBox;
+    [SerializeField] private GameObject attackBox;
+
+    private void Awake()
     {
-        
+        instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void UpdateCombatUI()
     {
-        
+        CombatManager.CombatMode combatMode = CombatManager.instance.combatMode;
+
+        dialogueBox.SetActive(combatMode == CombatManager.CombatMode.Menu);
+        attackBox.SetActive(combatMode == CombatManager.CombatMode.Attack);
     }
 }

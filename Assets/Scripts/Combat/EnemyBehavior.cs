@@ -2,17 +2,50 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBehavior : MonoBehaviour
+[CreateAssetMenu(fileName = "Enemy Behavior", menuName = "Combat/Enemy Behavior")]
+public class EnemyBehavior : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
+    [System.Serializable]
+    public class Phase
     {
-        
+        public enum IterationType { InOrder, Random }
+
+        public IterationType iterationType;
+        public Attack[] attacks;
+
+        private int attackIndex = -1;
+
+        public Attack GetNextAttack()
+        {
+            if (iterationType == IterationType.InOrder)
+            {
+                attackIndex++;
+                if (attackIndex >= attacks.Length) attackIndex = 0;
+
+                return attacks[attackIndex];
+            }
+            else
+            {
+                return attacks[Random.Range(0, attacks.Length)];
+            }
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField] private Phase[] phases;
+
+    private int phaseIndex = 0;
+
+    public float NextWave()
     {
-        
+        Attack attack = phases[phaseIndex].GetNextAttack();
+
+        attack.Run();
+        return attack.duration;
+    }
+
+    public void StopWave()
+    {
+        Attack attack = phases[phaseIndex].GetNextAttack();
+        attack.Stop();
     }
 }

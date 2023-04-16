@@ -4,15 +4,77 @@ using UnityEngine;
 
 public class CombatManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static CombatManager instance;
+
+    [SerializeField] private GameObject playerPrefab;
+    private GameObject player;
+
+    [SerializeField] private Transform playerSpawn;
+    public static Vector2 AttackCenter { get { return instance.playerSpawn.position; } }
+
+    public enum CombatMode { Menu, Attack }
+    [HideInInspector] public CombatMode combatMode = CombatMode.Menu;
+
+    [SerializeField] private EnemyBehavior[] enemies;
+
+    private IEnumerator waveRoutine;
+
+    private void Awake()
     {
-        
+        instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        ShowCombatMenu();
+    }
+
+    private void Update()
+    {
+        if (combatMode == CombatMode.Menu)
+            if (Input.GetKeyUp(KeyCode.Space))
+                TriggerWave();
+    }
+
+    private void SpawnPlayer()
+    {
+        player = Instantiate(playerPrefab, playerSpawn.position, Quaternion.identity);
+    }
+
+    private void ShowCombatMenu()
+    {
+        combatMode = CombatMode.Menu;
+        Destroy(player);
+        CombatMenuNavigator.instance.UpdateCombatUI();
+    }
+
+    private void TriggerWave()
+    {
+        combatMode = CombatMode.Attack;
+        SpawnPlayer();
+        CombatMenuNavigator.instance.UpdateCombatUI();
+
+        waveRoutine = WaveRoutine();
+        StartCoroutine(waveRoutine);
+    }
+
+    private IEnumerator WaveRoutine()
+    {
+        float minDuration = float.PositiveInfinity;
+
+        foreach (EnemyBehavior enemy in enemies)
+        {
+            float duration = enemy.NextWave();
+
+            if (duration < minDuration)
+                minDuration = duration;
+        }
+
+        yield return new WaitForSeconds(minDuration);
+
+        foreach (EnemyBehavior enemy in enemies)
+            enemy.StopWave();
+
+        ShowCombatMenu();
     }
 }
