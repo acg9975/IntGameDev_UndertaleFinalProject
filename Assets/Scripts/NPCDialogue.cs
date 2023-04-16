@@ -20,6 +20,13 @@ public class NPCDialogue : MonoBehaviour
     private int dialogueIndex = 0;
     private bool talkable = true;
 
+    [SerializeField]
+    private bool isFightable = false;
+
+    [SerializeField]
+    private bool givesItem = false;
+    private bool ableToGiveItem = false;
+
     //we first check if the player is in the area to talk with the npc
     //if they are and they press space, we make dialogueTriggered = true
     //once that happens the function in update checks to see if there is any current dialogue.
@@ -65,12 +72,35 @@ public class NPCDialogue : MonoBehaviour
                     StartCoroutine(canTriggerDialogue());
 
                     dialogueIndex = 0;
+
+                    //if this NPC is fightable, we then go into a fight scene
+                    //with the current system, it doesnt make sense to not just have the fight cause dialogue to end here in the overworld, and just continue in the combat scene
+                    if (isFightable)
+                    {
+                        //Transition to combat manager - combat manager may need to be static?
+                    }
+                    
+
+                    //if this player is able to give an item, check at the end of the dialogue and 
+                    if (givesItem && ableToGiveItem)
+                    {
+                        //communicate with player inventory to add object to player's inventory
+                        //possibly will need a reference to the object in this 
+                        ableToGiveItem = false;
+
+                        //maybe change the dialogue somehow to allow for the NPC to react to not having the dialogue
+                        // either through making them give the item earlier or some other way
+                    }
+
+                    
                 }
+
+                
+
             }
         }
         else
         {
-            //reenable movements
             OverworldMovement.canMove = true;
         }
     }
