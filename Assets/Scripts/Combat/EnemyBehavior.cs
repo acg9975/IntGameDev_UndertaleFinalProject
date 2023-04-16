@@ -2,24 +2,50 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBehavior : MonoBehaviour
+[CreateAssetMenu(fileName = "Enemy Behavior", menuName = "Combat/Enemy Behavior")]
+public class EnemyBehavior : ScriptableObject
 {
-    [SerializeField] private Attack[] attacks;
-
-    private int waveIndex = 0;
-
-    public void NextWave(bool firstWave = false)
+    [System.Serializable]
+    public class Phase
     {
-        if (firstWave)
-        {
-            waveIndex = 0;
-        }
-        else
-        {
-            attacks[waveIndex].Stop();
-            waveIndex++;
-        }
+        public enum IterationType { InOrder, Random }
 
-        attacks[waveIndex].Run();
+        public IterationType iterationType;
+        public Attack[] attacks;
+
+        private int attackIndex = -1;
+
+        public Attack GetNextAttack()
+        {
+            if (iterationType == IterationType.InOrder)
+            {
+                attackIndex++;
+                if (attackIndex >= attacks.Length) attackIndex = 0;
+
+                return attacks[attackIndex];
+            }
+            else
+            {
+                return attacks[Random.Range(0, attacks.Length)];
+            }
+        }
+    }
+
+    [SerializeField] private Phase[] phases;
+
+    private int phaseIndex = 0;
+
+    public float NextWave()
+    {
+        Attack attack = phases[phaseIndex].GetNextAttack();
+
+        attack.Run();
+        return attack.duration;
+    }
+
+    public void StopWave()
+    {
+        Attack attack = phases[phaseIndex].GetNextAttack();
+        attack.Stop();
     }
 }
