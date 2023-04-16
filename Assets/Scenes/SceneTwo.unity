@@ -3029,6 +3029,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4316737708007422909, guid: 207ba7bd496292e4a8ce46600cf2a091, type: 3}
+      propertyPath: m_SortingOrder
+      value: 255
+      objectReference: {fileID: 0}
     - target: {fileID: 4316737708007422910, guid: 207ba7bd496292e4a8ce46600cf2a091, type: 3}
       propertyPath: m_Name
       value: FadeoutSquare
