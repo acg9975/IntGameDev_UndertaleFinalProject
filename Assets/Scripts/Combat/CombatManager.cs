@@ -15,13 +15,23 @@ public class CombatManager : MonoBehaviour
     public enum CombatMode { Menu, Attack }
     [HideInInspector] public CombatMode combatMode = CombatMode.Menu;
 
-    [SerializeField] private EnemyBehavior[] enemies;
+    private static EnemyBehavior[] enemies;
 
     private IEnumerator waveRoutine;
 
     private void Awake()
     {
         instance = this;
+    }
+
+    public static void SetEnemies(EnemyBehavior _enemy)
+    {
+        enemies = new EnemyBehavior[]{ _enemy };
+    }
+
+    public static void SetEnemies(EnemyBehavior[] _enemies)
+    {
+        enemies = _enemies;
     }
 
     private void Start()

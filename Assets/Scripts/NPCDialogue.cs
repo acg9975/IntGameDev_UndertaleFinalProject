@@ -20,11 +20,10 @@ public class NPCDialogue : MonoBehaviour
     private int dialogueIndex = 0;
     private bool talkable = true;
 
-    [SerializeField]
-    private bool isFightable = false;
+    [SerializeField] private bool isFightable = false;
+    [SerializeField] private EnemyBehavior enemyBehavior;
 
-    [SerializeField]
-    private bool givesItem = false;
+    [SerializeField] private bool givesItem = false;
     private bool ableToGiveItem = false;
 
     //we first check if the player is in the area to talk with the npc
@@ -77,7 +76,8 @@ public class NPCDialogue : MonoBehaviour
                     //with the current system, it doesnt make sense to not just have the fight cause dialogue to end here in the overworld, and just continue in the combat scene
                     if (isFightable)
                     {
-                        //Transition to combat manager - combat manager may need to be static?
+                        CombatManager.SetEnemies(enemyBehavior);
+                        SceneTransition.ChangeScene("Combat");
                     }
                     
 

@@ -1047,6 +1047,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 3392875753244181810}
   attackBox: {fileID: 446302462}
+  healthText: {fileID: 1640942624}
 --- !u!1 &2082467481
 GameObject:
   m_ObjectHideFlags: 0

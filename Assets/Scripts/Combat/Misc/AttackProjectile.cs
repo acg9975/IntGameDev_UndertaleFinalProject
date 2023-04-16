@@ -7,6 +7,8 @@ public class AttackProjectile : MonoBehaviour
 {
     protected Rigidbody2D rb;
 
+    [SerializeField] protected int damage = 1;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -21,8 +23,8 @@ public class AttackProjectile : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("Damage player");
-            // CombatManager.DamagePlayer();
+            PlayerData.Health -= damage;
+            CombatMenuNavigator.instance.UpdateCombatUI();
             Destroy(gameObject);
         }
     }

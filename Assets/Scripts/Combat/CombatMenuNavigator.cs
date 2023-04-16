@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CombatMenuNavigator : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class CombatMenuNavigator : MonoBehaviour
 
     [SerializeField] private GameObject dialogueBox;
     [SerializeField] private GameObject attackBox;
+
+    [SerializeField] private TextMeshProUGUI healthText;
 
     private void Awake()
     {
@@ -20,5 +23,7 @@ public class CombatMenuNavigator : MonoBehaviour
 
         dialogueBox.SetActive(combatMode == CombatManager.CombatMode.Menu);
         attackBox.SetActive(combatMode == CombatManager.CombatMode.Attack);
+
+        healthText.text = PlayerData.Health + "/" + PlayerData.MaxHealth;
     }
 }

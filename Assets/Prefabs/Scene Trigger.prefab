@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5277079628083683244}
   - component: {fileID: 5277079628083683245}
-  - component: {fileID: 5277079628083683243}
   - component: {fileID: 5277079628083683242}
+  - component: {fileID: 8534020644133358710}
   m_Layer: 0
-  m_Name: Scene Change
+  m_Name: Scene Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -86,20 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5277079628083683243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5277079628083683246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1276e651b198351429f397dfbc4e3368, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scene: SceneTwo
-  FOS: {fileID: 4316737708007422910, guid: 207ba7bd496292e4a8ce46600cf2a091, type: 3}
 --- !u!61 &5277079628083683242
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -126,3 +112,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8534020644133358710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5277079628083683246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e68a4e56a2386ae4ca33a1eb916921dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
