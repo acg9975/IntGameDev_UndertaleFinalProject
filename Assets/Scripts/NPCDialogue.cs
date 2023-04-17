@@ -54,7 +54,7 @@ public class NPCDialogue : MonoBehaviour
                 if (dialogueIndex < dialogue.Length - 1)
                 {
                     dialogueIndex++;
-                    dialogueBox.ChangeText(dialogue[dialogueIndex].text, dialogue[dialogueIndex].sprite);
+                    dialogueBox.UpdateText(dialogue[dialogueIndex]);
                 }
                 else
                 {
@@ -83,7 +83,7 @@ public class NPCDialogue : MonoBehaviour
 
         dialogueBox = Instantiate(textboxPrefab, transform.position - Vector3.down * -2.5f, Quaternion.identity).GetComponent<DialogueBox>();
         dialogueIndex = 0;
-        dialogueBox.ChangeText(dialogue[dialogueIndex].text, dialogue[dialogueIndex].sprite);
+        dialogueBox.UpdateText(dialogue[dialogueIndex]);
     }
 
     private void EndDialogue()

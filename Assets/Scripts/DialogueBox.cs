@@ -4,33 +4,39 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-
 public class DialogueBox : MonoBehaviour
 {
-    [SerializeField]
-    TextMeshProUGUI Text;
-    string currentText;
-    char[] separatedText;
+    [Header("Generic Dialogue")]
+    [SerializeField] private GameObject genericDialogueBox;
+    [SerializeField] private TextMeshProUGUI genericText;
 
-    [SerializeField]
-    Image img;
-    Sprite spr;
+    [Header("Character Dialogue")]
+    [SerializeField] private GameObject characterDialogueBox;
+    [SerializeField] private TextMeshProUGUI characterText;
+    [SerializeField] private Image characterImage;
 
+    private string currentText;
+    private char[] separatedText;
 
-    public void ChangeText(string msg, Sprite spr)
+    private Sprite currentSprite;
+
+    public void UpdateText(NPCDialogue.DialogueItem dialogueItem)
     {
-        img.sprite = spr;
-        /*
-        for (int i = 0; i < msg.Length; i++)
-        {
-            Debug.Log(msg[i]);
-            separatedText[i] = msg[i];
-        }
-        */
-        this.currentText = msg;
-        Text.text = currentText;
+        UpdateText(dialogueItem.text, dialogueItem.sprite);
+    }
 
 
+    public void UpdateText(string text, Sprite sprite)
+    {
+        currentText = text;
+        currentSprite = sprite;
+
+        genericDialogueBox.SetActive(sprite == null);
+        characterDialogueBox.SetActive(sprite != null);
+
+        genericText.text = text;
+        characterText.text = text;
+        characterImage.sprite = sprite;
     }
 
     //dialogue has to be created line by line
