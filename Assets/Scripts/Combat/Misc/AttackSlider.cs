@@ -18,7 +18,7 @@ public class AttackSlider : MonoBehaviour
     CombatManager cm;
 
     
-    public enum AttackValue {low, medium, mediumHigh, high}//messed up when naming these, will make these into fail, low, medium, high
+    public enum AttackValue {fail, low, medium, high}//messed up when naming these, will make these into fail, low, medium, high
     public AttackValue attackValue = AttackValue.low;
     
     public void setCM(CombatManager CM)

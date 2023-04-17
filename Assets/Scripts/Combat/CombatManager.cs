@@ -134,20 +134,20 @@ public class CombatManager : MonoBehaviour
         //attack enemy for the amount of damage specified
         switch (av)
         {
-            case AttackSlider.AttackValue.low:
+            case AttackSlider.AttackValue.fail:
                 //no damage
-                enemyHealth -= 1;
+                enemyHealth -= 0;
                 break;
-            case AttackSlider.AttackValue.medium:
-                enemyHealth -= 4;
+            case AttackSlider.AttackValue.low:
+                enemyHealth -= 2;
 
                 break;
             case AttackSlider.AttackValue.high:
-                enemyHealth -= 8;
+                enemyHealth -= 6;
 
                 break;
-            case AttackSlider.AttackValue.mediumHigh:
-                enemyHealth -= 6;
+            case AttackSlider.AttackValue.medium:
+                enemyHealth -= 4;
                 break;
             default:
                 break;
