@@ -9,8 +9,12 @@ public class CombatMenuNavigator : MonoBehaviour
 
     [SerializeField] private GameObject dialogueBox;
     [SerializeField] private GameObject attackBox;
+    [SerializeField] private GameObject playerAttackBox;
+
 
     [SerializeField] private TextMeshProUGUI healthText;
+    [SerializeField] private TextMeshProUGUI enemyHealthText;
+
 
     private void Awake()
     {
@@ -23,7 +27,9 @@ public class CombatMenuNavigator : MonoBehaviour
 
         dialogueBox.SetActive(combatMode == CombatManager.CombatMode.Menu);
         attackBox.SetActive(combatMode == CombatManager.CombatMode.Attack);
+        playerAttackBox.SetActive(combatMode == CombatManager.CombatMode.PlayerAttack);
 
         healthText.text = PlayerData.Health + "/" + PlayerData.MaxHealth;
+        enemyHealthText.text = CombatManager.enemyHealth + "/" + 10;
     }
 }

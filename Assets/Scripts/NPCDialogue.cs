@@ -47,7 +47,7 @@ public class NPCDialogue : MonoBehaviour
         {
             //disable player movement 
             OverworldMovement.canMove = false;
-            Debug.Log(OverworldMovement.canMove);
+            //Debug.Log(OverworldMovement.canMove);
             if (db == null)
             {
                 //if this does not exist, create it
@@ -105,8 +105,13 @@ public class NPCDialogue : MonoBehaviour
         }
     }
 
+    
     private void OnTriggerStay2D(Collider2D other)
     {
+
+        //this only gets triggered if the player is staying still,
+        //simply have a system to detect when the player has exited or
+        //entered collider instead and control it via update
         if (other.CompareTag("Player") && talkable)
         {
             if (Input.GetKeyDown(KeyCode.Space) && !dialogueTriggered)

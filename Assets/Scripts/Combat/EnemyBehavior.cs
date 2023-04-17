@@ -15,6 +15,8 @@ public class EnemyBehavior : ScriptableObject
 
         private int attackIndex = -1;
 
+        //public int health = 10; 
+
         public Attack GetNextAttack()
         {
             if (iterationType == IterationType.InOrder)

@@ -14,23 +14,23 @@ public class FadeOutSquare : MonoBehaviour
         
         anim = GetComponent<Animator>();
         GetComponent<SpriteRenderer>().rendererPriority = 200;
-        Destroy(gameObject, 2f);
+        Destroy(gameObject, 1.2f);
         if (createdOnSceneStart)
         {
-            StartFadeIn();
+            StartFadeOut();
         }
 
     }
     
     public void StartFadeOut()
     {
-        Debug.Log("fadeout");
+        //Debug.Log("fadeout");
         anim.SetTrigger("FadeOut");
     }
 
     public void StartFadeIn()
     {
-        Debug.Log("fadein");
+        //Debug.Log("fadein");
 
         anim.SetTrigger("FadeIn");
     }

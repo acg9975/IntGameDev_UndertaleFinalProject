@@ -6,7 +6,7 @@ public class OverworldMovement : MonoBehaviour
 {
     public static OverworldMovement instance;
 
-    public static Vector2 PlayerPosition { get { return instance.transform.position; } }
+    //public static Vector2 PlayerPosition { get { return instance.transform.position; } }
 
     [SerializeField] private float speed = 5;
 
