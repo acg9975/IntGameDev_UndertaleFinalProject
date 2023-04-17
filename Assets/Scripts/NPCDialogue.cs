@@ -14,11 +14,11 @@ public class NPCDialogue : MonoBehaviour
     }
     [SerializeField] public DialogueItem[] dialogue;
 
-    private DialogueBox db;
+    private DialogueBox dialogueBox;
     
     private bool dialogueTriggered = false;
     private int dialogueIndex = 0;
-    private bool talkable = true;
+    private bool inRange = false;
 
     [SerializeField] private bool isFightable = false;
     [SerializeField] private EnemyBehavior enemyBehavior;
@@ -43,90 +43,75 @@ public class NPCDialogue : MonoBehaviour
 
     void Update()
     {
-        if (dialogueTriggered)
+        if (inRange && Input.GetKeyUp(KeyCode.Space))
         {
-            //disable player movement 
-            OverworldMovement.canMove = false;
-            //Debug.Log(OverworldMovement.canMove);
-            if (db == null)
+            if (!dialogueTriggered)
             {
-                //if this does not exist, create it
-                db = Instantiate(textboxPrefab, transform.position - Vector3.down * -2.5f, Quaternion.identity).GetComponent<DialogueBox>();
-                db.ChangeText(dialogue[0].text, dialogue[0].sprite);
-                dialogueIndex++;
+                StartDialogue();
             }
-            else if (db != null)
+            else
             {
-                if (Input.GetKeyDown(KeyCode.Space) && dialogueIndex < dialogue.Length)
+                if (dialogueIndex < dialogue.Length - 1)
                 {
-                    //if we have a textbox already, simply show the dialogue at the position we set and increment position counter
-                    db.ChangeText(dialogue[dialogueIndex].text, dialogue[dialogueIndex].sprite);
                     dialogueIndex++;
+                    dialogueBox.ChangeText(dialogue[dialogueIndex].text, dialogue[dialogueIndex].sprite);
                 }
-                else if (Input.GetKeyDown(KeyCode.Space) && dialogueIndex >= dialogue.Length)
+                else
                 {
-                    //delete textbox. set dialogue triggered to false. reset dialogue position
-                    Destroy(db.gameObject);
-                    dialogueTriggered = false;
-                    StartCoroutine(canTriggerDialogue());
-
-                    dialogueIndex = 0;
-
-                    //if this NPC is fightable, we then go into a fight scene
-                    //with the current system, it doesnt make sense to not just have the fight cause dialogue to end here in the overworld, and just continue in the combat scene
-                    if (isFightable)
-                    {
-                        CombatManager.SetEnemies(enemyBehavior);
-                        SceneTransition.ChangeScene("Combat");
-                    }
-                    
-
-                    //if this player is able to give an item, check at the end of the dialogue and 
-                    if (givesItem && ableToGiveItem)
-                    {
-                        //communicate with player inventory to add object to player's inventory
-                        //possibly will need a reference to the object in this 
-                        ableToGiveItem = false;
-
-                        //maybe change the dialogue somehow to allow for the NPC to react to not having the dialogue
-                        // either through making them give the item earlier or some other way
-                    }
-
-                    
+                    EndDialogue();
                 }
-
-                
-
-            }
-        }
-        else
-        {
-            OverworldMovement.canMove = true;
-        }
-    }
-
-    
-    private void OnTriggerStay2D(Collider2D other)
-    {
-
-        //this only gets triggered if the player is staying still,
-        //simply have a system to detect when the player has exited or
-        //entered collider instead and control it via update
-        if (other.CompareTag("Player") && talkable)
-        {
-            if (Input.GetKeyDown(KeyCode.Space) && !dialogueTriggered)
-            {
-                //spawn dialogue boxes
-                dialogueTriggered = true;
-                OverworldMovement.canMove = false;
-                talkable = false;
             }
         }
     }
 
-    IEnumerator canTriggerDialogue()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        yield return new WaitForSeconds(1f);
-        talkable = true;
+        if (collision.CompareTag("Player"))
+            inRange = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+            inRange = false;
+    }
+
+    private void StartDialogue()
+    {
+        dialogueTriggered = true;
+        OverworldMovement.canMove = false;
+
+        dialogueBox = Instantiate(textboxPrefab, transform.position - Vector3.down * -2.5f, Quaternion.identity).GetComponent<DialogueBox>();
+        dialogueIndex = 0;
+        dialogueBox.ChangeText(dialogue[dialogueIndex].text, dialogue[dialogueIndex].sprite);
+    }
+
+    private void EndDialogue()
+    {
+        dialogueTriggered = false;
+        OverworldMovement.canMove = true;
+
+        Destroy(dialogueBox.gameObject);
+        dialogueIndex = 0;
+
+        //if this NPC is fightable, we then go into a fight scene
+        //with the current system, it doesnt make sense to not just have the fight cause dialogue to end here in the overworld, and just continue in the combat scene
+        if (isFightable)
+        {
+            CombatManager.SetEnemies(enemyBehavior);
+            SceneTransition.ChangeScene("Combat");
+        }
+
+
+        //if this player is able to give an item, check at the end of the dialogue and 
+        if (givesItem && ableToGiveItem)
+        {
+            //communicate with player inventory to add object to player's inventory
+            //possibly will need a reference to the object in this 
+            ableToGiveItem = false;
+
+            //maybe change the dialogue somehow to allow for the NPC to react to not having the dialogue
+            // either through making them give the item earlier or some other way
+        }
     }
 }
