@@ -702,13 +702,37 @@ MonoBehaviour:
   dialogue:
   - sprite: {fileID: -1619752381, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
     text: Hello! I can talk!
+    trigger: 0
+    skipToIndex: 0
+    onEnd:
+      m_PersistentCalls:
+        m_Calls: []
   - sprite: {fileID: -893850241, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
     text: Isn't it amazing?
+    trigger: 0
+    skipToIndex: 0
+    onEnd:
+      m_PersistentCalls:
+        m_Calls: []
   - sprite: {fileID: -1526311129, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
     text: I wonder what people usually talk about...
-  isFightable: 1
-  enemyBehavior: {fileID: 11400000, guid: 348db38d5c99fac47a12282218a07ce5, type: 2}
-  givesItem: 0
+    trigger: 2
+    skipToIndex: 0
+    onEnd:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1392281806}
+          m_TargetAssemblyTypeName: NPCDialogue, Assembly-CSharp
+          m_MethodName: FightEnemy
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 348db38d5c99fac47a12282218a07ce5, type: 2}
+            m_ObjectArgumentAssemblyTypeName: EnemyBehavior, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 1
 --- !u!61 &1392281807
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2961,15 +2985,32 @@ MonoBehaviour:
   dialogue:
   - sprite: {fileID: -1619752381, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
     text: Woah! You can talk too?
+    trigger: 0
+    skipToIndex: 0
+    onEnd:
+      m_PersistentCalls:
+        m_Calls: []
   - sprite: {fileID: -1499177175, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
     text: I thought I was the only one!
+    trigger: 0
+    skipToIndex: 0
+    onEnd:
+      m_PersistentCalls:
+        m_Calls: []
   - sprite: {fileID: -893850241, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
     text: I mean... I heard voices, I just figured I was going *insane*
+    trigger: 0
+    skipToIndex: 0
+    onEnd:
+      m_PersistentCalls:
+        m_Calls: []
   - sprite: {fileID: -1956576422, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
     text: But I'm not insane, right?
-  isFightable: 1
-  enemyBehavior: {fileID: 11400000, guid: 348db38d5c99fac47a12282218a07ce5, type: 2}
-  givesItem: 0
+    trigger: 0
+    skipToIndex: 0
+    onEnd:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!212 &1821206831
 SpriteRenderer:
   m_ObjectHideFlags: 0

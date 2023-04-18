@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class NPCDialogue : MonoBehaviour
 {
@@ -9,8 +10,13 @@ public class NPCDialogue : MonoBehaviour
     [System.Serializable]
     public class DialogueItem
     {
+        public enum TriggerType { None, SkipTo, Custom }
+
         public Sprite sprite;
         public string text;
+        public TriggerType trigger;
+        public int skipToIndex;
+        public UnityEvent onEnd;
     }
     [SerializeField] public DialogueItem[] dialogue;
 
@@ -20,11 +26,11 @@ public class NPCDialogue : MonoBehaviour
     private int dialogueIndex = 0;
     private bool inRange = false;
 
-    [SerializeField] private bool isFightable = false;
-    [SerializeField] private EnemyBehavior enemyBehavior;
+    //[SerializeField] private bool isFightable = false;
+    //[SerializeField] private EnemyBehavior enemyBehavior;
 
-    [SerializeField] private bool givesItem = false;
-    private bool ableToGiveItem = false;
+    //[SerializeField] private bool givesItem = false;
+    //private bool ableToGiveItem = false;
 
     //we first check if the player is in the area to talk with the npc
     //if they are and they press space, we make dialogueTriggered = true
@@ -46,20 +52,13 @@ public class NPCDialogue : MonoBehaviour
         if (inRange && Input.GetKeyUp(KeyCode.Space))
         {
             if (!dialogueTriggered)
-            {
                 StartDialogue();
-            }
             else
             {
-                if (dialogueIndex < dialogue.Length - 1)
-                {
-                    dialogueIndex++;
-                    dialogueBox.UpdateText(dialogue[dialogueIndex]);
-                }
+                if (dialogueIndex <= dialogue.Length - 1)
+                    CheckDialogue();
                 else
-                {
                     EndDialogue();
-                }
             }
         }
     }
@@ -94,24 +93,48 @@ public class NPCDialogue : MonoBehaviour
         Destroy(dialogueBox.gameObject);
         dialogueIndex = 0;
 
-        //if this NPC is fightable, we then go into a fight scene
-        //with the current system, it doesnt make sense to not just have the fight cause dialogue to end here in the overworld, and just continue in the combat scene
-        if (isFightable)
+        ////if this NPC is fightable, we then go into a fight scene
+        ////with the current system, it doesnt make sense to not just have the fight cause dialogue to end here in the overworld, and just continue in the combat scene
+        //if (isFightable)
+        //{
+        //    CombatManager.SetEnemies(enemyBehavior);
+        //    SceneTransition.ChangeScene("Combat");
+        //}
+
+
+        ////if this player is able to give an item, check at the end of the dialogue and 
+        //if (givesItem && ableToGiveItem)
+        //{
+        //    //communicate with player inventory to add object to player's inventory
+        //    //possibly will need a reference to the object in this 
+        //    ableToGiveItem = false;
+
+        //    //maybe change the dialogue somehow to allow for the NPC to react to not having the dialogue
+        //    // either through making them give the item earlier or some other way
+        //}
+    }
+
+    private void CheckDialogue()
+    {
+        switch (dialogue[dialogueIndex].trigger)
         {
-            CombatManager.SetEnemies(enemyBehavior);
-            SceneTransition.ChangeScene("Combat");
+            case DialogueItem.TriggerType.None:
+                dialogueIndex++;
+                break;
+            case DialogueItem.TriggerType.SkipTo:
+                dialogueIndex = dialogue[dialogueIndex].skipToIndex;
+                break;
+            case DialogueItem.TriggerType.Custom:
+                dialogue[dialogueIndex].onEnd.Invoke();
+                break;
         }
 
+        dialogueBox.UpdateText(dialogue[dialogueIndex]);
+    }
 
-        //if this player is able to give an item, check at the end of the dialogue and 
-        if (givesItem && ableToGiveItem)
-        {
-            //communicate with player inventory to add object to player's inventory
-            //possibly will need a reference to the object in this 
-            ableToGiveItem = false;
-
-            //maybe change the dialogue somehow to allow for the NPC to react to not having the dialogue
-            // either through making them give the item earlier or some other way
-        }
+    public void FightEnemy(EnemyBehavior enemyBehavior)
+    {
+        CombatManager.SetEnemies(enemyBehavior);
+        SceneTransition.ChangeScene("Combat");
     }
 }
