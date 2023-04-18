@@ -716,7 +716,7 @@ MonoBehaviour:
         m_Calls: []
   - sprite: {fileID: -1526311129, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
     text: I wonder what people usually talk about...
-    trigger: 2
+    trigger: 0
     skipToIndex: 0
     onEnd:
       m_PersistentCalls:

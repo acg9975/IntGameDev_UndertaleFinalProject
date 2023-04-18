@@ -54,7 +54,7 @@ public class AttackSlider : MonoBehaviour
             }
             else if ((transform.position.x >= -2.4f && transform.position.x < -0.70f) || (transform.position.x > 0.7f && transform.position.x < 2.4f))
             {
-                //attackValue = AttackValue.mediumHigh;
+                attackValue = AttackValue.medium;
             }
             else 
             {
