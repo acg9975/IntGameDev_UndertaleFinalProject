@@ -6,16 +6,17 @@ public class CombatManager : MonoBehaviour
 {
     public static CombatManager instance;
 
+    [SerializeField] private EnemyBehavior enemy;
+    public static EnemyBehavior Enemy { get { return instance.enemy; } }
+
     [SerializeField] private GameObject playerPrefab;
     private GameObject player;
 
     [SerializeField] private Transform playerSpawn;
     public static Vector2 AttackCenter { get { return instance.playerSpawn.position; } }
 
-    public enum CombatMode { Menu, Attack , PlayerAttack}//consider changing Attack to Defense
+    public enum CombatMode { Menu, PlayerAttack, PlayerDefend }
     [HideInInspector] public CombatMode combatMode = CombatMode.Menu;
-
-    private static EnemyBehavior[] enemies;
 
     private IEnumerator waveRoutine;
 
@@ -29,30 +30,25 @@ public class CombatManager : MonoBehaviour
     private Transform attackSpriteTransform;
     //be able to set this from the enemy that transitions into the combat manager in the future
     //I know this is bad form but its late rn, will decide on how to make properly later
-    public static int enemyHealth = 10;
-
-
+    //public static int enemyHealth = 10;
 
     [SerializeField]
     private Transform sliderSpawn;
+
     private void Awake()
     {
         instance = this;
     }
 
 
-    public static void SetEnemies(EnemyBehavior _enemy)
+    public static void SetEnemy(EnemyBehavior enemy)
     {
-        enemies = new EnemyBehavior[]{ _enemy };
-    }
-
-    public static void SetEnemies(EnemyBehavior[] _enemies)
-    {
-        enemies = _enemies;
+        instance.enemy = enemy;
     }
 
     private void Start()
     {
+        Enemy.Init();
         ShowCombatMenu();
     }
 
@@ -67,9 +63,6 @@ public class CombatManager : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
                 PlayerAttacks();
-            //if (Input.GetKeyDown(KeyCode.Space))
-            //    TriggerWave();
-
         }
     }
 
@@ -84,37 +77,6 @@ public class CombatManager : MonoBehaviour
         combatMode = CombatMode.Menu;
         Destroy(player);
         CombatMenuNavigator.instance.UpdateCombatUI();
-    }
-
-    private void TriggerWave()
-    {
-        combatMode = CombatMode.Attack;
-        Debug.Log(combatMode);
-        SpawnPlayer();
-        CombatMenuNavigator.instance.UpdateCombatUI();
-
-        waveRoutine = WaveRoutine();
-        StartCoroutine(waveRoutine);
-    }
-
-    private IEnumerator WaveRoutine()
-    {
-        float minDuration = float.PositiveInfinity;
-
-        foreach (EnemyBehavior enemy in enemies)
-        {
-            float duration = enemy.NextWave();
-
-            if (duration < minDuration)
-                minDuration = duration;
-        }
-
-        yield return new WaitForSeconds(minDuration);
-
-        foreach (EnemyBehavior enemy in enemies)
-            enemy.StopWave();
-
-        ShowCombatMenu();
     }
 
     private void PlayerAttacks()
@@ -136,24 +98,18 @@ public class CombatManager : MonoBehaviour
         {
             case AttackSlider.AttackValue.fail:
                 //no damage
-                enemyHealth -= 0;
+                enemy.Health -= 0;
                 break;
             case AttackSlider.AttackValue.low:
-                enemyHealth -= 2;
-
+                enemy.Health -= 2;
                 break;
             case AttackSlider.AttackValue.high:
-                enemyHealth -= 6;
-
+                enemy.Health -= 6;
                 break;
             case AttackSlider.AttackValue.medium:
-                enemyHealth -= 4;
-                break;
-            default:
+                enemy.Health -= 4;
                 break;
         }
-        if (enemyHealth < 0)
-            enemyHealth = 0;
 
         CombatMenuNavigator.instance.UpdateCombatUI();
         StartCoroutine(playerAttackFinish());
@@ -172,7 +128,7 @@ public class CombatManager : MonoBehaviour
         //add a waitforseconds 
 
 
-        if (enemyHealth <= 0)
+        if (enemy.Health <= 0)
             enemyDeath();
         else
             TriggerWave();
@@ -182,6 +138,33 @@ public class CombatManager : MonoBehaviour
 
     }
     
+    private void TriggerWave()
+    {
+        combatMode = CombatMode.PlayerDefend;
+        Debug.Log(combatMode);
+        SpawnPlayer();
+        CombatMenuNavigator.instance.UpdateCombatUI();
+
+        waveRoutine = WaveRoutine();
+        StartCoroutine(waveRoutine);
+    }
+
+    private IEnumerator WaveRoutine()
+    {
+        float minDuration = float.PositiveInfinity;
+
+        float duration = enemy.NextWave();
+
+        if (duration < minDuration)
+            minDuration = duration;
+
+        yield return new WaitForSeconds(minDuration);
+
+        enemy.StopWave();
+
+        ShowCombatMenu();
+    }
+
     void enemyDeath()
     {
         //give player item if necessary and say what the player was given
@@ -202,5 +185,4 @@ public class CombatManager : MonoBehaviour
         attackSlider = Instantiate(attackSliderPrefab, sliderSpawn.position, Quaternion.identity);
         attackSlider.GetComponent<AttackSlider>().setCM(this);
     }
-
 }

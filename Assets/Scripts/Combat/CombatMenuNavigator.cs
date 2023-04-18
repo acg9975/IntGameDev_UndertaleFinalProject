@@ -8,8 +8,8 @@ public class CombatMenuNavigator : MonoBehaviour
     public static CombatMenuNavigator instance;
 
     [SerializeField] private GameObject dialogueBox;
-    [SerializeField] private GameObject attackBox;
     [SerializeField] private GameObject playerAttackBox;
+    [SerializeField] private GameObject playerDefendBox;
 
 
     [SerializeField] private TextMeshProUGUI healthText;
@@ -26,10 +26,10 @@ public class CombatMenuNavigator : MonoBehaviour
         CombatManager.CombatMode combatMode = CombatManager.instance.combatMode;
 
         dialogueBox.SetActive(combatMode == CombatManager.CombatMode.Menu);
-        attackBox.SetActive(combatMode == CombatManager.CombatMode.Attack);
         playerAttackBox.SetActive(combatMode == CombatManager.CombatMode.PlayerAttack);
+        playerDefendBox.SetActive(combatMode == CombatManager.CombatMode.PlayerDefend);
 
         healthText.text = PlayerData.Health + "/" + PlayerData.MaxHealth;
-        enemyHealthText.text = CombatManager.enemyHealth + "/" + 10;
+        enemyHealthText.text = CombatManager.Enemy.Health + "/" + CombatManager.Enemy.MaxHealth;
     }
 }

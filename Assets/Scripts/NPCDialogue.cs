@@ -90,7 +90,7 @@ public class NPCDialogue : MonoBehaviour
 
     public void FightEnemy(EnemyBehavior enemyBehavior)
     {
-        CombatManager.SetEnemies(enemyBehavior);
+        CombatManager.SetEnemy(enemyBehavior);
         SceneTransition.ChangeScene("Combat");
     }
 }

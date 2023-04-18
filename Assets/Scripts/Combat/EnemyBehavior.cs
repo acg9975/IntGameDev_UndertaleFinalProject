@@ -5,6 +5,23 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Enemy Behavior", menuName = "Combat/Enemy Behavior")]
 public class EnemyBehavior : ScriptableObject
 {
+    [SerializeField] [Min(0)] private int maxHealth;
+    [SerializeField] [Min(0)] private int health;
+
+    public int MaxHealth { get { return maxHealth; } }
+
+    public int Health
+    {
+        get
+        {
+            return health;
+        }
+        set
+        {
+            health = Mathf.Clamp(value, 0, MaxHealth);
+        }
+    }
+
     [System.Serializable]
     public class Phase
     {
@@ -14,8 +31,6 @@ public class EnemyBehavior : ScriptableObject
         public Attack[] attacks;
 
         private int attackIndex = -1;
-
-        //public int health = 10; 
 
         public Attack GetNextAttack()
         {
@@ -36,6 +51,11 @@ public class EnemyBehavior : ScriptableObject
     [SerializeField] private Phase[] phases;
 
     private int phaseIndex = 0;
+
+    public void Init()
+    {
+        Health = MaxHealth;
+    }
 
     public float NextWave()
     {

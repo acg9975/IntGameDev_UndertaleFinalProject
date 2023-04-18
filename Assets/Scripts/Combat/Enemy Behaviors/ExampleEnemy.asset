@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bc6f9462afc347418b98db90dbe5b0e, type: 3}
   m_Name: ExampleEnemy
   m_EditorClassIdentifier: 
+  maxHealth: 10
+  health: 0
   phases:
   - iterationType: 1
     attacks:
