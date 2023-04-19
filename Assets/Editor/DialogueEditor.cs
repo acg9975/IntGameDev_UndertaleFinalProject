@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEditor;
-using static NPCDialogue;
-using static NPCDialogue.DialogueItem;
+using static Dialogue;
+using static Dialogue.DialogueItem;
 
 public class NPCDialogueEditor
 {
@@ -15,18 +15,20 @@ public class NPCDialogueEditor
         private const float IMAGE_HEIGHT = 70;
         private const float TRIGGER_SPACING = 6;
 
+        private float VIEW_WIDTH_OFFSET = 24;
+
         public override float GetPropertyHeight(SerializedProperty prop, GUIContent label)
         {
             var trigger = prop.FindPropertyRelative("trigger");
-            var skipToIndex = prop.FindPropertyRelative("skipToIndex");
+            var choices = prop.FindPropertyRelative("choices");
             var onEnd = prop.FindPropertyRelative("onEnd");
 
             float triggerHeight = EditorGUI.GetPropertyHeight(trigger);
 
             switch ((TriggerType)trigger.intValue)
             {
-                case TriggerType.SkipTo:
-                    triggerHeight += VERTICAL_SPACING + EditorGUI.GetPropertyHeight(skipToIndex);
+                case TriggerType.Choice:
+                    triggerHeight += VERTICAL_SPACING + EditorGUI.GetPropertyHeight(choices);
                     break;
                 case TriggerType.Custom:
                     triggerHeight += TRIGGER_SPACING + EditorGUI.GetPropertyHeight(onEnd);
@@ -41,13 +43,13 @@ public class NPCDialogueEditor
 
         public override void OnGUI(Rect position, SerializedProperty prop, GUIContent label)
         {
-            position.width = EditorGUIUtility.currentViewWidth - position.x;
+            position.width = EditorGUIUtility.currentViewWidth - position.x - VIEW_WIDTH_OFFSET;
             Rect originalPosition = position;
 
             var sprite = prop.FindPropertyRelative("sprite");
             var text = prop.FindPropertyRelative("text");
             var trigger = prop.FindPropertyRelative("trigger");
-            var skipToIndex = prop.FindPropertyRelative("skipToIndex");
+            var choices = prop.FindPropertyRelative("choices");
             var onEnd = prop.FindPropertyRelative("onEnd");
 
             EditorGUI.BeginProperty(position, label, prop);
@@ -73,7 +75,7 @@ public class NPCDialogueEditor
             sprite.objectReferenceValue = EditorGUI.ObjectField(position, sprite.objectReferenceValue, typeof(Sprite), false);
 
             position.x += IMAGE_HEIGHT + 10;
-            position.width = EditorGUIUtility.currentViewWidth - 155;
+            position.width = EditorGUIUtility.currentViewWidth - position.x - VIEW_WIDTH_OFFSET;
 
             text.stringValue = EditorGUI.TextArea(position, text.stringValue, new GUIStyle(EditorStyles.textArea));
 
@@ -83,7 +85,7 @@ public class NPCDialogueEditor
 
             position.x = originalPosition.x;
             position.y += VERTICAL_SPACING;
-            position.width = EditorGUIUtility.currentViewWidth - 75;
+            position.width = EditorGUIUtility.currentViewWidth - position.x - VIEW_WIDTH_OFFSET;
             position.height = SINGLE_LINE_HEIGHT;
 
             trigger.intValue = (int)(TriggerType)EditorGUI.EnumPopup(position, trigger.displayName, (TriggerType)trigger.intValue);
@@ -94,11 +96,14 @@ public class NPCDialogueEditor
 
             switch ((TriggerType)trigger.intValue)
             {
-                case TriggerType.SkipTo:
+                case TriggerType.Choice:
+
                     position.y += VERTICAL_SPACING;
-                    skipToIndex.intValue = EditorGUI.IntField(position, skipToIndex.displayName, skipToIndex.intValue);
+                    EditorGUI.PropertyField(position, choices);
                     break;
+
                 case TriggerType.Custom:
+
                     position.y += TRIGGER_SPACING;
                     EditorGUI.PropertyField(position, onEnd);
                     break;

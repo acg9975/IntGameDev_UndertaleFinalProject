@@ -600,6 +600,83 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1370009276
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1370009278}
+  - component: {fileID: 1370009277}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1370009277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370009276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b01dfbc7cb8e454dafc8341ba433e8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+  - sprite: {fileID: 0}
+    text: 
+    choicePaths:
+    - dialogue:
+      - sprite: {fileID: 0}
+        text: 
+        choicePaths:
+        - dialogue:
+          - sprite: {fileID: 0}
+            text: 
+            choicePaths: []
+  - sprite: {fileID: 0}
+    text: 
+    choicePaths: []
+  - sprite: {fileID: 0}
+    text: 
+    choicePaths:
+    - dialogue:
+      - sprite: {fileID: 0}
+        text: 
+        choicePaths: []
+      - sprite: {fileID: 0}
+        text: 
+        choicePaths: []
+      - sprite: {fileID: 0}
+        text: 
+        choicePaths: []
+      - sprite: {fileID: 0}
+        text: 
+        choicePaths: []
+    - dialogue: []
+    - dialogue: []
+--- !u!4 &1370009278
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370009276}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 36.604866, y: 4.3182893, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1392281801
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,39 +777,56 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textboxPrefab: {fileID: 3392875753123741850, guid: a75fba7265650014c8aee6ac619c25e9, type: 3}
   dialogue:
-  - sprite: {fileID: -1619752381, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
-    text: Hello! I can talk!
-    trigger: 0
-    skipToIndex: 0
-    onEnd:
-      m_PersistentCalls:
-        m_Calls: []
-  - sprite: {fileID: -893850241, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
-    text: Isn't it amazing?
-    trigger: 0
-    skipToIndex: 0
-    onEnd:
-      m_PersistentCalls:
-        m_Calls: []
-  - sprite: {fileID: -1526311129, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
-    text: I wonder what people usually talk about...
-    trigger: 0
-    skipToIndex: 0
-    onEnd:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1392281806}
-          m_TargetAssemblyTypeName: NPCDialogue, Assembly-CSharp
-          m_MethodName: FightEnemy
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 11400000, guid: 348db38d5c99fac47a12282218a07ce5, type: 2}
-            m_ObjectArgumentAssemblyTypeName: EnemyBehavior, Assembly-CSharp
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 1
+    content:
+    - sprite: {fileID: -1619752381, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
+      text: you have a choice
+      trigger: 1
+      choices:
+      - text: Red Pill
+        dialogue:
+          content:
+          - sprite: {fileID: -1956576422, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
+            text: Good choice
+            trigger: 1
+            choices:
+            - text: 
+              dialogue:
+                content:
+                - sprite: {fileID: 0}
+                  text: 
+                  trigger: 0
+                  choices: []
+                  onEnd:
+                    m_PersistentCalls:
+                      m_Calls: []
+            onEnd:
+              m_PersistentCalls:
+                m_Calls:
+                - m_Target: {fileID: 1392281806}
+                  m_TargetAssemblyTypeName: NPCDialogue, Assembly-CSharp
+                  m_MethodName: FightEnemy
+                  m_Mode: 0
+                  m_Arguments:
+                    m_ObjectArgument: {fileID: 0}
+                    m_ObjectArgumentAssemblyTypeName: EnemyBehavior, Assembly-CSharp
+                    m_IntArgument: 0
+                    m_FloatArgument: 0
+                    m_StringArgument: 
+                    m_BoolArgument: 0
+                  m_CallState: 0
+      - text: Blue pill
+        dialogue:
+          content:
+          - sprite: {fileID: -893850241, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
+            text: oh... that's disappointing
+            trigger: 0
+            choices: []
+            onEnd:
+              m_PersistentCalls:
+                m_Calls: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
 --- !u!61 &1392281807
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2983,34 +3077,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textboxPrefab: {fileID: 3392875753123741850, guid: a75fba7265650014c8aee6ac619c25e9, type: 3}
   dialogue:
-  - sprite: {fileID: -1619752381, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
-    text: Woah! You can talk too?
-    trigger: 0
-    skipToIndex: 0
-    onEnd:
-      m_PersistentCalls:
-        m_Calls: []
-  - sprite: {fileID: -1499177175, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
-    text: I thought I was the only one!
-    trigger: 0
-    skipToIndex: 0
-    onEnd:
-      m_PersistentCalls:
-        m_Calls: []
-  - sprite: {fileID: -893850241, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
-    text: I mean... I heard voices, I just figured I was going *insane*
-    trigger: 0
-    skipToIndex: 0
-    onEnd:
-      m_PersistentCalls:
-        m_Calls: []
-  - sprite: {fileID: -1956576422, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
-    text: But I'm not insane, right?
-    trigger: 0
-    skipToIndex: 0
-    onEnd:
-      m_PersistentCalls:
-        m_Calls: []
+    content: []
 --- !u!212 &1821206831
 SpriteRenderer:
   m_ObjectHideFlags: 0

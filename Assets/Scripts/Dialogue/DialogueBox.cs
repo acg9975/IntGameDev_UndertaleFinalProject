@@ -20,7 +20,7 @@ public class DialogueBox : MonoBehaviour
 
     private Sprite currentSprite;
 
-    public void UpdateText(NPCDialogue.DialogueItem dialogueItem)
+    public void UpdateText(Dialogue.DialogueItem dialogueItem)
     {
         UpdateText(dialogueItem.text, dialogueItem.sprite);
     }
