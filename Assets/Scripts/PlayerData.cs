@@ -43,7 +43,12 @@ public static class PlayerData
 
         List<item> currentItems = new List<item>();
 
-        item getItem(item item)
+        public List<item> getCurrentItems()
+        {
+            return currentItems;
+        }
+
+        public item getItem(item item)
         {
             if (currentItems.Contains(item))
             {
@@ -56,7 +61,7 @@ public static class PlayerData
             }
 
         }
-
+        
         public void useItem(item chosenItem)
         {
             //applies item's effects and destroys item
@@ -73,6 +78,7 @@ public static class PlayerData
             if (currentItems.Capacity < 7)
             {
                 currentItems.Add(item);
+                Debug.Log("Item added");
             }
         }
 
@@ -84,13 +90,12 @@ public static class PlayerData
                 currentItems.Remove(item);
             }
         }
-        public void listItems()
+        public item findItem(int position)
         {
-            foreach (item i in currentItems)
-            {
-                Debug.Log(i.itemName);
-            }
+            return currentItems.ToArray()[position];
         }
+            
 
+
+        }
     }
-}

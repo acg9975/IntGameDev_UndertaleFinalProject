@@ -15,7 +15,7 @@ public class CombatManager : MonoBehaviour
     [SerializeField] private Transform playerSpawn;
     public static Vector2 AttackCenter { get { return instance.playerSpawn.position; } }
 
-    public enum CombatMode { Menu, PlayerAttack, PlayerDefend }
+    public enum CombatMode { Menu, PlayerAttack, PlayerDefend, Inventory}
     [HideInInspector] public CombatMode combatMode = CombatMode.Menu;
 
     private IEnumerator waveRoutine;
@@ -34,6 +34,9 @@ public class CombatManager : MonoBehaviour
 
     [SerializeField]
     private Transform sliderSpawn;
+
+    [SerializeField]
+    item exampleItem;
 
     private void Awake()
     {
@@ -54,6 +57,13 @@ public class CombatManager : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            
+            PlayerData.inventory.addItem(exampleItem);
+            
+        }
+
         if (!PlayerData.IsAlive)
         {
             playerDeath();
@@ -63,6 +73,13 @@ public class CombatManager : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
                 PlayerAttacks();
+            if (Input.GetKeyDown(KeyCode.C))
+            {
+                Debug.Log("CM: " + combatMode);
+                combatMode = CombatMode.Inventory;
+                inventoryUIManager.instance.updateText();
+                inventoryUIManager.instance.setActive(true);
+            }
         }
     }
 
