@@ -86,47 +86,51 @@ public class inventoryUIManager : MonoBehaviour
         int cap = PlayerData.inventory.getCurrentItemArray().Length;
         int lastpopulatedposition = itemText.Length - cap;
         //handle going back
-        if (Input.GetKeyUp(KeyCode.Escape))
+        if (SceneManager.GetActiveScene().name == "Combat")
         {
-            //Debug.Log("IUIM:setting unactive");
-            setActive(false);
-            CombatManager.instance.combatMode = CombatManager.CombatMode.Menu;
-        }
-        //handle selection
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            position--;
-        }
-        else if (Input.GetKeyDown(KeyCode.S))
-        {
-            position++;
-        }
-        //Debug.Log("Pos: "+position + " cap:" + cap);
-        if (position < 0 )
-        {
-            position = cap - 1;
-        }
-
-        if (position > cap - 1)
-        {
-            position = 0;
-        }
-
-        //handle changing color
-        itemText[position].color = new Color32(65,65,65,255); ;
-        for (int i = 0; i < itemText.Length; i++)
-        {
-            if (i != position)
+            if (Input.GetKeyUp(KeyCode.Escape))
             {
-                itemText[i].color = Color.white;
+                //Debug.Log("IUIM:setting unactive");
+                setActive(false);
+                CombatManager.instance.combatMode = CombatManager.CombatMode.Menu;
+            }
+            //handle selection
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                position--;
+            }
+            else if (Input.GetKeyDown(KeyCode.S))
+            {
+                position++;
+            }
+            //Debug.Log("Pos: "+position + " cap:" + cap);
+            if (position < 0)
+            {
+                position = cap - 1;
+            }
+
+            if (position > cap - 1)
+            {
+                position = 0;
+            }
+
+            //handle changing color
+            itemText[position].color = new Color32(65, 65, 65, 255); ;
+            for (int i = 0; i < itemText.Length; i++)
+            {
+                if (i != position)
+                {
+                    itemText[i].color = Color.white;
+                }
             }
         }
+        
         //handle selecting an item and using it
 
-        if (Input.GetKeyDown(KeyCode.Space) && canActivateInventory)
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.C)) && canActivateInventory)
         {
             //if there is at least one item in inventory, allow space to 
-            if (cap != 0)
+            if (cap != 0 && SceneManager.GetActiveScene().name == "Combat")
             {
                 //find the item we are gonna use and then use it
                 item it = PlayerData.inventory.findItem(position);
@@ -154,6 +158,9 @@ public class inventoryUIManager : MonoBehaviour
                     Debug.Log("canActivateinv false");
 
                 }
+                else {
+                    OverworldMovement.canMove = true;
+                }
             }
 
         }
@@ -174,11 +181,32 @@ public class inventoryUIManager : MonoBehaviour
 
     private void Update()
     {
-        CombatManager.CombatMode combatMode = CombatManager.instance.combatMode;
-        //debated on whether to control inventory activeness checking in here or in 
-        if (combatMode == CombatManager.CombatMode.Inventory)
+        if (SceneManager.GetActiveScene().name == "Combat")
+        {
+            CombatManager.CombatMode combatMode = CombatManager.instance.combatMode;
+            //debated on whether to control inventory activeness checking in here or in 
+            if (combatMode == CombatManager.CombatMode.Inventory)
+            {
+                itemSelection();
+            }
+
+        }
+        else if (Input.GetKeyDown(KeyCode.C) && canActivateInventory && !isUIActive)
+        {
+
+            if (canActivateInventory)
+            {
+                updateText();
+                //make sure player cannot move
+                OverworldMovement.canMove = false;
+                setActive(true);
+            }
+            
+        }
+        else if (isUIActive)
         {
             itemSelection();
+
         }
 
 
