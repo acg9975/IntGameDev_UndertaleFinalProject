@@ -15,7 +15,7 @@ public class CombatManager : MonoBehaviour
     [SerializeField] private Transform playerSpawn;
     public static Vector2 AttackCenter { get { return instance.playerSpawn.position; } }
 
-    public enum CombatMode { Menu, PlayerAttack, PlayerDefend, Inventory}
+    public enum CombatMode { Menu, PlayerAttack, PlayerDefend, Inventory, Inactive}
     [HideInInspector] public CombatMode combatMode = CombatMode.Menu;
 
     private IEnumerator waveRoutine;
@@ -59,9 +59,8 @@ public class CombatManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            
             PlayerData.inventory.addItem(exampleItem);
-            
+            inventoryUIManager.instance.updateText();
         }
 
         if (!PlayerData.IsAlive)
@@ -75,7 +74,7 @@ public class CombatManager : MonoBehaviour
                 PlayerAttacks();
             if (Input.GetKeyDown(KeyCode.C))
             {
-                Debug.Log("CM: " + combatMode);
+                //Debug.Log("CM: " + combatMode);
                 combatMode = CombatMode.Inventory;
                 inventoryUIManager.instance.updateText();
                 inventoryUIManager.instance.setActive(true);
@@ -158,7 +157,7 @@ public class CombatManager : MonoBehaviour
     private void TriggerWave()
     {
         combatMode = CombatMode.PlayerDefend;
-        Debug.Log(combatMode);
+        Debug.Log("PLAYER DEFEND");
         SpawnPlayer();
         CombatMenuNavigator.instance.UpdateCombatUI();
 
@@ -201,5 +200,21 @@ public class CombatManager : MonoBehaviour
     {
         attackSlider = Instantiate(attackSliderPrefab, sliderSpawn.position, Quaternion.identity);
         attackSlider.GetComponent<AttackSlider>().setCM(this);
+    }
+
+    public void finishPlayerTurn()
+    {
+        //this is called in scripts like inventoryUIManager and likely others
+        //main point is to just allow the turn to end, maybe show dialogue if necessary
+        //or use a coroutine to give the player some seconds to recover (juice/polish)
+        //then move to the enemy's turn
+
+        StartCoroutine(waitforturn());
+    }
+
+    private IEnumerator waitforturn()
+    {
+        yield return new WaitForSeconds(1f);
+        TriggerWave();
     }
 }

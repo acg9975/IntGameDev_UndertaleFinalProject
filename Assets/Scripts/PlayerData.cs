@@ -48,6 +48,10 @@ public static class PlayerData
             return currentItems;
         }
 
+        public item[] getCurrentItemArray()
+        {
+            return currentItems.ToArray();
+        }
         public item getItem(item item)
         {
             if (currentItems.Contains(item))

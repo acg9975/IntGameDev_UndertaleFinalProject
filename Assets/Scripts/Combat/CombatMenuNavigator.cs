@@ -25,9 +25,10 @@ public class CombatMenuNavigator : MonoBehaviour
     {
         CombatManager.CombatMode combatMode = CombatManager.instance.combatMode;
 
-        dialogueBox.SetActive(combatMode == CombatManager.CombatMode.Menu);
+        dialogueBox.SetActive(combatMode == CombatManager.CombatMode.Menu || combatMode == CombatManager.CombatMode.Inactive);
         playerAttackBox.SetActive(combatMode == CombatManager.CombatMode.PlayerAttack);
         playerDefendBox.SetActive(combatMode == CombatManager.CombatMode.PlayerDefend);
+
         //inventory is set active in inventoryUIManager
 
         healthText.text = PlayerData.Health + "/" + PlayerData.MaxHealth;
