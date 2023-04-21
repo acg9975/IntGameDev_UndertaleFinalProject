@@ -70,6 +70,7 @@ public class CombatManager : MonoBehaviour
 
         if (combatMode == CombatMode.Menu)
         {
+            /*
             if (Input.GetKeyDown(KeyCode.Space))
                 PlayerAttacks();
             if (Input.GetKeyDown(KeyCode.C))
@@ -79,8 +80,10 @@ public class CombatManager : MonoBehaviour
                 inventoryUIManager.instance.updateText();
                 inventoryUIManager.instance.setActive(true);
             }
+            */
         }
     }
+    
 
     private void SpawnPlayer()
     {
@@ -95,7 +98,7 @@ public class CombatManager : MonoBehaviour
         CombatMenuNavigator.instance.UpdateCombatUI();
     }
 
-    private void PlayerAttacks()
+    public void PlayerAttacks()
     {
         //a bar goes left and right, player has to press space at the right time, 
         combatMode = CombatMode.PlayerAttack;
@@ -216,5 +219,13 @@ public class CombatManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         TriggerWave();
+    }
+
+    public void showInventory()
+    {
+        //Debug.Log("CM: " + combatMode);
+        combatMode = CombatMode.Inventory;
+        inventoryUIManager.instance.updateText();
+        inventoryUIManager.instance.setActive(true);
     }
 }

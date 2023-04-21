@@ -12,12 +12,13 @@ public class inventoryUIManager : MonoBehaviour
     {
         instance = this;
     }
-    
+
     //not too sure where to put this object
 
     //opens the inventory and allows them to support 
     //check if player is in combat
-    
+
+    private bool canActivateInventory = true;
 
     public bool isUIActive = false;
 
@@ -28,8 +29,17 @@ public class inventoryUIManager : MonoBehaviour
     int position = 0;
     public void setActive(bool v)
     {
-        UI.SetActive(v);
-        isUIActive = v;
+        if (v && !canActivateInventory)
+        {
+            //sometimes it gets stuck here from the combatMenuNav - so we just need to reset the combat mode
+            CombatManager.instance.combatMode = CombatManager.CombatMode.Menu;
+            return;
+        }
+        else 
+        {
+            UI.SetActive(v);
+            isUIActive = v;
+        }
     }
 
 
@@ -113,23 +123,52 @@ public class inventoryUIManager : MonoBehaviour
         }
         //handle selecting an item and using it
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && canActivateInventory)
         {
-            //find the item we are gonna use and then use it
-            item it = PlayerData.inventory.findItem(position);
-            PlayerData.inventory.useItem(it);
-            //update our inventory text
-            updateText();
-            //close the inventory
-            setActive(false);
-            //make it the enemys turn - this connects into a coroutine, so we still see the player's health as it updates
-            CombatManager.instance.finishPlayerTurn();
-            //update UI
-            CombatManager.instance.combatMode = CombatManager.CombatMode.Inactive;//this just makes it flash the dialogue screen for a quick second - will change if we update dialogue system in fights
-            CombatMenuNavigator.instance.UpdateCombatUI();
+            //if there is at least one item in inventory, allow space to 
+            if (cap != 0)
+            {
+                //find the item we are gonna use and then use it
+                item it = PlayerData.inventory.findItem(position);
+                PlayerData.inventory.useItem(it);
+                //update our inventory text
+                updateText();
+                //close the inventory
+                setActive(false);
+                //make it the enemys turn - this connects into a coroutine, so we still see the player's health as it updates
+                CombatManager.instance.finishPlayerTurn();
+                //update UI
+                CombatManager.instance.combatMode = CombatManager.CombatMode.Inactive;//this just makes it flash the dialogue screen for a quick second - will change if we update dialogue system in fights
+                CombatMenuNavigator.instance.UpdateCombatUI();
+
+            }
+            else if(cap == 0)//set it to false after space is pressed - therefore escape and space can both be used
+            {
+                Debug.Log("setting to false");
+                setActive(false);
+                //if in combat, go to combat mode menu
+                if (SceneManager.GetActiveScene().name == "Combat")
+                {
+                    CombatManager.instance.combatMode = CombatManager.CombatMode.Menu;
+                    StartCoroutine(canActivateInventoryTimer());
+                    Debug.Log("canActivateinv false");
+
+                }
+            }
 
         }
 
+
+    }
+
+    IEnumerator canActivateInventoryTimer()
+    {
+        CombatManager.instance.combatMode = CombatManager.CombatMode.Menu;
+        CombatMenuNavigator.instance.UpdateCombatUI();
+        canActivateInventory = false;
+        yield return new WaitForSeconds(1);//wait for half a second to turn this back on
+        canActivateInventory = true ;
+        Debug.Log("canActivateinv true  ");
 
     }
 

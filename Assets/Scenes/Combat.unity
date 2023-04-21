@@ -3398,6 +3398,9 @@ MonoBehaviour:
   playerDefendBox: {fileID: 446302462}
   healthText: {fileID: 1640942624}
   enemyHealthText: {fileID: 1512388600}
+  combatButtons:
+  - {fileID: 283954606}
+  - {fileID: 529294403}
 --- !u!1 &2034265166
 GameObject:
   m_ObjectHideFlags: 0
