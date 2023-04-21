@@ -15,6 +15,7 @@ public class OverworldMovement : MonoBehaviour
     private Rigidbody2D rb;
 
     public static bool canMove = true;
+    public item item;
 
     private void Awake()
     {
@@ -41,7 +42,7 @@ public class OverworldMovement : MonoBehaviour
             if (move.y < 0)
                 move.y = -1;
         }
-        
+
     }
 
     private void FixedUpdate()

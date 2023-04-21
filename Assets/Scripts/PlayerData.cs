@@ -33,7 +33,7 @@ public static class PlayerData
 
     public static bool IsAlive { get { return health > 0; } }
 
-    public static InventoryManager inventory;
+    public static InventoryManager inventory = new InventoryManager();
 
 
     public class InventoryManager
@@ -63,14 +63,14 @@ public static class PlayerData
             if (currentItems.Contains(chosenItem))
             {
                 int i = currentItems.IndexOf(chosenItem);
-                PlayerData.Health += currentItems[i].amountHealed;
+                Health += currentItems[i].HealingAmount;
                 currentItems.Remove(chosenItem);
             }
         }
 
         public void addItem(item item)
         {
-            if (currentItems.Capacity <= 6)
+            if (currentItems.Capacity < 7)
             {
                 currentItems.Add(item);
             }
@@ -84,5 +84,13 @@ public static class PlayerData
                 currentItems.Remove(item);
             }
         }
+        public void listItems()
+        {
+            foreach (item i in currentItems)
+            {
+                Debug.Log(i.itemName);
+            }
+        }
+
     }
 }

@@ -7,17 +7,19 @@ public class item : ScriptableObject
 {
     public string itemName;
     public string itemDescription;
+    [SerializeField]
+    private int healingAmount;
 
-    public int amountHealed
+    public int HealingAmount
     {
         get
         {
-            return amountHealed;
+            return healingAmount;
         }
+        set
+        {
+            healingAmount = Mathf.Clamp(value, 0, 155);
+        }
+
     }
-
-    public bool isWeapon;
-
-
-
 }
