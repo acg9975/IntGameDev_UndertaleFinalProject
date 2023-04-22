@@ -15,7 +15,7 @@ public class CombatManager : MonoBehaviour
     [SerializeField] private Transform playerSpawn;
     public static Vector2 AttackCenter { get { return instance.playerSpawn.position; } }
 
-    public enum CombatMode { Menu, PlayerAttack, PlayerDefend, Inventory, Inactive}
+    public enum CombatMode { Menu, PlayerAttack, PlayerDefend, Inventory, Inactive, Mercy}
     [HideInInspector] public CombatMode combatMode = CombatMode.Menu;
 
     private IEnumerator waveRoutine;
@@ -67,21 +67,6 @@ public class CombatManager : MonoBehaviour
         {
             playerDeath();
         }
-
-        if (combatMode == CombatMode.Menu)
-        {
-            /*
-            if (Input.GetKeyDown(KeyCode.Space))
-                PlayerAttacks();
-            if (Input.GetKeyDown(KeyCode.C))
-            {
-                //Debug.Log("CM: " + combatMode);
-                combatMode = CombatMode.Inventory;
-                inventoryUIManager.instance.updateText();
-                inventoryUIManager.instance.setActive(true);
-            }
-            */
-        }
     }
     
 
@@ -92,7 +77,6 @@ public class CombatManager : MonoBehaviour
 
     private void ShowCombatMenu()
     {
-
         combatMode = CombatMode.Menu;
         Destroy(player);
         CombatMenuNavigator.instance.UpdateCombatUI();
@@ -228,4 +212,116 @@ public class CombatManager : MonoBehaviour
         inventoryUIManager.instance.updateText();
         inventoryUIManager.instance.setActive(true);
     }
+
+    public void fleeSequence()
+    {
+        //player has a 10% chance to flee. if they do, then they automatically leave the battle
+        //if they succeed, flash the dialogue that they have fled onto the dialogue box, set the state to inactive, and then after 5 seconds move back to overworld
+        int x = Random.Range(1,10);
+
+        combatMode = CombatMode.Inactive;
+        Debug.Log("Flee chance: " + x);
+        if (x == 1)
+        {
+            StartCoroutine(fleeSequenceTimer(true)) ;
+        }
+        else
+        {
+            StartCoroutine(fleeSequenceTimer(false));
+
+        }
+
+    }
+
+    IEnumerator fleeSequenceTimer(bool isSuccessful)
+    {
+
+        //throw up dialogue box with text
+        //set to inactive
+        if (isSuccessful)
+        {
+            //throw up positive text - "You were able to escape"
+            Debug.Log("Player is successful! They escape");
+        }
+        else
+        {
+            //throw up negative text - "You were unable to escape"
+            Debug.Log("Player fails!");
+            TriggerWave();
+        }
+        yield return new WaitForSeconds(5f);
+        if (isSuccessful)
+        {
+            //player flees
+            playerFlee();
+        }
+        else
+        {
+            TriggerWave();
+        }
+
+    }
+
+    public void spareSequence()
+    {
+        //if enemy health is low enough (25%), and if the enemy can flee (make bool for this), allow them to flee
+
+        //if it is not low enough, flash dialogue box with enemy taunting the player. set this for 5 seconds, and then move to enemy's turn
+        if (enemy.Health <= enemy.MaxHealth * 0.25f)
+        {
+            Debug.Log("Enemy health is low");
+            StartCoroutine(spareTimer(true));
+        }
+        else
+        {
+            Debug.Log("enemy health is not low enough");
+            StartCoroutine(spareTimer(false));
+        }
+
+    }
+
+    IEnumerator spareTimer(bool isSuccessful)
+    {
+        if (isSuccessful)
+        {
+            //display success text
+            Debug.Log("Player spare success");
+        }
+        else
+        {
+            //display failure text
+            Debug.Log("Player spare fail");
+
+        }
+
+        yield return new WaitForSeconds(5f);
+        if (isSuccessful)
+        {
+            playerSpare();
+        }
+        else
+        {
+            TriggerWave();
+        }
+
+
+    }
+
+
+    public void playerSpare()
+    {
+        
+        //currently the same as enemy death, but later on will have different functionality
+        //player might gain items on enemy death - player will not gain items from this
+        SceneTransition.ChangeScene(SceneTransition.previousScene);
+    }
+    public void playerFlee()
+    {
+        //currently the same as enemy death, but later on will have different functionality
+        //player might gain items on enemy death - player will not gain items from this
+        SceneTransition.ChangeScene(SceneTransition.previousScene);
+
+
+    }
+
 }
