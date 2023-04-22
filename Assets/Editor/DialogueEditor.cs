@@ -15,8 +15,6 @@ public class NPCDialogueEditor
         private const float IMAGE_HEIGHT = 70;
         private const float TRIGGER_SPACING = 6;
 
-        private float VIEW_WIDTH_OFFSET = 24;
-
         public override float GetPropertyHeight(SerializedProperty prop, GUIContent label)
         {
             var trigger = prop.FindPropertyRelative("trigger");
@@ -43,7 +41,6 @@ public class NPCDialogueEditor
 
         public override void OnGUI(Rect position, SerializedProperty prop, GUIContent label)
         {
-            position.width = EditorGUIUtility.currentViewWidth - position.x - VIEW_WIDTH_OFFSET;
             Rect originalPosition = position;
 
             var sprite = prop.FindPropertyRelative("sprite");
@@ -75,7 +72,7 @@ public class NPCDialogueEditor
             sprite.objectReferenceValue = EditorGUI.ObjectField(position, sprite.objectReferenceValue, typeof(Sprite), false);
 
             position.x += IMAGE_HEIGHT + 10;
-            position.width = EditorGUIUtility.currentViewWidth - position.x - VIEW_WIDTH_OFFSET;
+            position.width = originalPosition.width - IMAGE_HEIGHT - 10;
 
             text.stringValue = EditorGUI.TextArea(position, text.stringValue, new GUIStyle(EditorStyles.textArea));
 
@@ -85,7 +82,7 @@ public class NPCDialogueEditor
 
             position.x = originalPosition.x;
             position.y += VERTICAL_SPACING;
-            position.width = EditorGUIUtility.currentViewWidth - position.x - VIEW_WIDTH_OFFSET;
+            position.width = originalPosition.width;
             position.height = SINGLE_LINE_HEIGHT;
 
             trigger.intValue = (int)(TriggerType)EditorGUI.EnumPopup(position, trigger.displayName, (TriggerType)trigger.intValue);
