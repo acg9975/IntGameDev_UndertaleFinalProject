@@ -1,29 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
+using static Dialogue;
 
 public class NPCDialogue : MonoBehaviour
 {
     [SerializeField] private GameObject textboxPrefab;
-
-    [System.Serializable]
-    public class DialogueItem
-    {
-        public enum TriggerType { None, SkipTo, Custom }
-
-        public Sprite sprite;
-        public string text;
-        public TriggerType trigger;
-        public int skipToIndex;
-        public UnityEvent onEnd;
-    }
-    [SerializeField] public DialogueItem[] dialogue;
-
     private DialogueBox dialogueBox;
     
+    [SerializeField] private Dialogue dialogue;
+    private Dialogue currentDialogue;
+
     private bool dialogueTriggered = false;
-    private int dialogueIndex = 0;
     private bool inRange = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -52,32 +40,24 @@ public class NPCDialogue : MonoBehaviour
     private void StartDialogue()
     {
         dialogueTriggered = true;
-        dialogueIndex = 0;
         OverworldMovement.canMove = false;
 
+        currentDialogue = dialogue;
+        currentDialogue.Reset();
+
         dialogueBox = Instantiate(textboxPrefab, transform.position - Vector3.down * -2.5f, Quaternion.identity).GetComponent<DialogueBox>();
-        dialogueBox.UpdateText(dialogue[dialogueIndex]);
+        dialogueBox.UpdateText(currentDialogue.Item);
     }
+
 
     private void CheckDialogue()
     {
-        switch (dialogue[dialogueIndex].trigger)
-        {
-            case DialogueItem.TriggerType.None:
-                dialogueIndex++;
-                break;
-            case DialogueItem.TriggerType.SkipTo:
-                dialogueIndex = dialogue[dialogueIndex].skipToIndex;
-                break;
-            case DialogueItem.TriggerType.Custom:
-                dialogue[dialogueIndex].onEnd.Invoke();
-                break;
-        }
+        currentDialogue = currentDialogue.Trigger();
 
-        if (dialogueIndex >= dialogue.Length)
+        if (currentDialogue == null)
             EndDialogue();
         else
-            dialogueBox.UpdateText(dialogue[dialogueIndex]);
+            dialogueBox.UpdateText(currentDialogue.Item);
     }
 
     private void EndDialogue()
