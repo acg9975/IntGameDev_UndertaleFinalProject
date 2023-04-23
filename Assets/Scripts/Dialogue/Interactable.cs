@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static Dialogue;
 
-public class NPCDialogue : MonoBehaviour
+[RequireComponent(typeof(Collider2D))]
+public class Interactable : MonoBehaviour
 {
     [SerializeField] private GameObject textboxPrefab;
     private DialogueBox dialogueBox;
@@ -12,29 +12,18 @@ public class NPCDialogue : MonoBehaviour
     private Dialogue currentDialogue;
 
     private bool dialogueTriggered = false;
-    private bool inRange = false;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void Awake()
     {
-        if (collision.CompareTag("Player"))
-            inRange = true;
+        gameObject.layer = LayerMask.NameToLayer("Interactable");
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    public void TriggerInteraction()
     {
-        if (collision.CompareTag("Player"))
-            inRange = false;
-    }
-
-    void Update()
-    {
-        if (inRange && Input.GetKeyUp(KeyCode.Space))
-        {
-            if (!dialogueTriggered)
-                StartDialogue();
-            else
-                CheckDialogue();
-        }
+        if (!dialogueTriggered)
+            StartDialogue();
+        else
+            CheckDialogue();
     }
 
     private void StartDialogue()

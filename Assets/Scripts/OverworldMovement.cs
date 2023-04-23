@@ -11,11 +11,14 @@ public class OverworldMovement : MonoBehaviour
     [SerializeField] private float speed = 5;
 
     private Vector3 move;
+    private Vector3 dir;
 
     private Rigidbody2D rb;
 
     public static bool canMove = true;
     public item item;
+
+    public static Vector3 Direction { get { return (instance == null) ? Vector3.up : instance.dir; } }
 
     private void Awake()
     {
@@ -31,7 +34,6 @@ public class OverworldMovement : MonoBehaviour
         {
             move = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
-    
             if (move.x > 0)
                 move.x = 1;
             if (move.x < 0)
@@ -41,8 +43,10 @@ public class OverworldMovement : MonoBehaviour
                 move.y = 1;
             if (move.y < 0)
                 move.y = -1;
-        }
 
+            if (move != Vector3.zero)
+                dir = move;
+        }
     }
 
     private void FixedUpdate()

@@ -219,6 +219,7 @@ GameObject:
   - component: {fileID: 28708282}
   - component: {fileID: 28708283}
   - component: {fileID: 28708284}
+  - component: {fileID: 28708285}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -354,6 +355,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   item: {fileID: 11400000, guid: ca9861d3fbdf2354abdde4caf4b2617f, type: 2}
+--- !u!114 &28708285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28708279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d97d576cc11312442adc6631c7aa094b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  castDistance: 1.5
+  interactionLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &102583917
 GameObject:
   m_ObjectHideFlags: 0
@@ -1794,7 +1811,7 @@ GameObject:
   - component: {fileID: 1392281803}
   - component: {fileID: 1392281806}
   - component: {fileID: 1392281807}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1882,39 +1899,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textboxPrefab: {fileID: 3392875753123741850, guid: a75fba7265650014c8aee6ac619c25e9, type: 3}
   dialogue:
-  - sprite: {fileID: -1619752381, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
-    text: Hello! I can talk!
-    trigger: 0
-    skipToIndex: 0
-    onEnd:
-      m_PersistentCalls:
-        m_Calls: []
-  - sprite: {fileID: -893850241, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
-    text: Isn't it amazing?
-    trigger: 0
-    skipToIndex: 0
-    onEnd:
-      m_PersistentCalls:
-        m_Calls: []
-  - sprite: {fileID: -1526311129, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
-    text: I wonder what people usually talk about...
-    trigger: 2
-    skipToIndex: 0
-    onEnd:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1392281806}
-          m_TargetAssemblyTypeName: NPCDialogue, Assembly-CSharp
-          m_MethodName: FightEnemy
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 11400000, guid: 348db38d5c99fac47a12282218a07ce5, type: 2}
-            m_ObjectArgumentAssemblyTypeName: EnemyBehavior, Assembly-CSharp
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 1
+    content:
+    - sprite: {fileID: 0}
+      text: 
+      trigger: 0
+      choices: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
 --- !u!61 &1392281807
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1928,7 +1920,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.4731815, y: -0.6935411}
+  m_Offset: {x: 0, y: 0.21133333}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.28866667}
@@ -1939,7 +1931,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.1807504, y: 1.4190065}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &1421584789
 GameObject:
@@ -4696,7 +4688,7 @@ GameObject:
   - component: {fileID: 1821206831}
   - component: {fileID: 1821206829}
   - component: {fileID: 1821206833}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4717,46 +4709,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textboxPrefab: {fileID: 3392875753123741850, guid: a75fba7265650014c8aee6ac619c25e9, type: 3}
   dialogue:
-  - sprite: {fileID: -1619752381, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
-    text: Woah! You can talk too?
-    trigger: 0
-    skipToIndex: 0
-    onEnd:
-      m_PersistentCalls:
-        m_Calls: []
-  - sprite: {fileID: -1499177175, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
-    text: I thought I was the only one!
-    trigger: 0
-    skipToIndex: 0
-    onEnd:
-      m_PersistentCalls:
-        m_Calls: []
-  - sprite: {fileID: -893850241, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
-    text: I mean... I heard voices, I just figured I was going *insane*
-    trigger: 2
-    skipToIndex: 0
-    onEnd:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: 
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: 
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 1
-  - sprite: {fileID: -1956576422, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
-    text: But I'm not insane, right?
-    trigger: 0
-    skipToIndex: 0
-    onEnd:
-      m_PersistentCalls:
-        m_Calls: []
+    content: []
 --- !u!212 &1821206831
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4834,10 +4787,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.087148726, y: -0.42122304}
+  m_Offset: {x: 0, y: 0.21133333}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.28866667}
@@ -4848,7 +4801,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.7429786, y: 1.396528}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &2097571343
 GameObject:
