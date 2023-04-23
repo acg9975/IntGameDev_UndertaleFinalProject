@@ -43,7 +43,7 @@ public class Interactable : MonoBehaviour
     {
         currentDialogue = currentDialogue.Trigger();
 
-        if (currentDialogue == null)
+        if (currentDialogue == null || currentDialogue.Item == null)
             EndDialogue();
         else
             dialogueBox.UpdateText(currentDialogue.Item);

@@ -50,6 +50,8 @@ public class Dialogue
 
     public Dialogue Trigger()
     {
+        if (Item == null) return null;
+
         switch (Item.trigger)
         {
             case DialogueItem.TriggerType.NextItem:
@@ -59,12 +61,10 @@ public class Dialogue
                 ;
                 break;
             case DialogueItem.TriggerType.Custom:
-                Item.onEnd.Invoke();
+                Item.onEnd?.Invoke();
                 id++;
                 break;
         }
-
-        if (Item == null) return null;
 
         return this;
     }

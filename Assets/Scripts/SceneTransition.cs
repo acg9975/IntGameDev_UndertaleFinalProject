@@ -13,13 +13,13 @@ public class SceneTransition : MonoBehaviour
 
     private void Awake()
     {
-        if (instance != null && instance != this)
-            Destroy(this.gameObject);
-        //if (instance != null)
-        //    Destroy(instance);
-        
-        instance = this;
-        DontDestroyOnLoad(this);
+        if (instance != null)
+            Destroy(gameObject);
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(this);
+        }
     }
 
     public static void ChangeScene(string scene)

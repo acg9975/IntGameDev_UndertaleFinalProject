@@ -6,8 +6,7 @@ public class CombatManager : MonoBehaviour
 {
     public static CombatManager instance;
 
-    [SerializeField] private EnemyBehavior enemy;
-    public static EnemyBehavior Enemy { get { return instance.enemy; } }
+    public static EnemyBehavior Enemy;
 
     [SerializeField] private GameObject playerPrefab;
     private GameObject player;
@@ -46,7 +45,7 @@ public class CombatManager : MonoBehaviour
 
     public static void SetEnemy(EnemyBehavior enemy)
     {
-        instance.enemy = enemy;
+        Enemy = enemy;
     }
 
     private void Start()
@@ -117,16 +116,16 @@ public class CombatManager : MonoBehaviour
         {
             case AttackSlider.AttackValue.fail:
                 //no damage
-                enemy.Health -= 0;
+                Enemy.Health -= 0;
                 break;
             case AttackSlider.AttackValue.low:
-                enemy.Health -= 2;
+                Enemy.Health -= 2;
                 break;
             case AttackSlider.AttackValue.high:
-                enemy.Health -= 6;
+                Enemy.Health -= 6;
                 break;
             case AttackSlider.AttackValue.medium:
-                enemy.Health -= 4;
+                Enemy.Health -= 4;
                 break;
         }
 
@@ -147,7 +146,7 @@ public class CombatManager : MonoBehaviour
         //add a waitforseconds 
 
 
-        if (enemy.Health <= 0)
+        if (Enemy.Health <= 0)
             enemyDeath();
         else
             TriggerWave();
@@ -172,14 +171,14 @@ public class CombatManager : MonoBehaviour
     {
         float minDuration = float.PositiveInfinity;
 
-        float duration = enemy.NextWave();
+        float duration = Enemy.NextWave();
 
         if (duration < minDuration)
             minDuration = duration;
 
         yield return new WaitForSeconds(minDuration);
 
-        enemy.StopWave();
+        Enemy.StopWave();
 
         ShowCombatMenu();
     }
