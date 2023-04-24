@@ -268,7 +268,7 @@ public class CombatManager : MonoBehaviour
         //if enemy health is low enough (25%), and if the enemy can flee (make bool for this), allow them to flee
 
         //if it is not low enough, flash dialogue box with enemy taunting the player. set this for 5 seconds, and then move to enemy's turn
-        if (enemy.Health <= enemy.MaxHealth * 0.25f)
+        if (Enemy.Health <= Enemy.MaxHealth * 0.25f)
         {
             Debug.Log("Enemy health is low");
             StartCoroutine(spareTimer(true));
