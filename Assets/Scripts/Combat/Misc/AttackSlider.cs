@@ -17,6 +17,7 @@ public class AttackSlider : MonoBehaviour
     bool isMoving = true;
     CombatManager cm;
 
+    bool canAttack = true;
     
     public enum AttackValue {fail, low, medium, high}//messed up when naming these, will make these into fail, low, medium, high
     public AttackValue attackValue = AttackValue.low;
@@ -34,7 +35,7 @@ public class AttackSlider : MonoBehaviour
             float x = Mathf.Lerp(startPoint.x, endPoint.x, Mathf.PingPong(time, 1.0f)) ;
             transform.position = new Vector3(x, transform.position.y,transform.position.z) ;
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && canAttack)
         {
             //possibly have this blink for 2 seconds to show that the attack landed
             //spawn in an attack sprite on the enemy sprite
@@ -66,7 +67,7 @@ public class AttackSlider : MonoBehaviour
             cm.setSliderInfo(attackValue);
 
             Destroy(gameObject, 1f);
-
+            canAttack = false;
 
         }
     
