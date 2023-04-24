@@ -5,36 +5,44 @@ using UnityEngine.Events;
 
 public class TestDialogue : MonoBehaviour
 {
+    public enum DialogueItemType { Standard, Decision }
+
     private int id;
-    [SerializeField] private DialogueItemBranch[] content;
+    [SerializeField] private DialogueItem[] content;
 
     [System.Serializable]
     public class DialogueItem
     {
+        public Condition[] conditions;
+        public DialogueItemType type;
+
         public Sprite sprite;
         public string text;
+
         public UnityEvent onEnd;
-        public PrefSetter[] setPrefs;
+        public Choices choices;
     }
 
     [System.Serializable]
-    public class DialogueItemBranch : DialogueItem
+    public class Condition
     {
-        public DialoguePath[] choices;
-    }
-
-    [System.Serializable]
-    public class PrefSetter
-    {
-        public string key;
+        public string parameter;
         public string value;
     }
 
     [System.Serializable]
-    public class DialoguePath
+    public class Choices
     {
-        private int id;
-        [SerializeField] private string text;
-        [SerializeField] private DialogueItem[] content;
+        public string parameter;
+        public Option option1;
+        public Option option2;
+    }
+
+    [System.Serializable]
+    public class Option
+    {
+        public string value;
+        public string text;
+        public UnityEvent onEnd;
     }
 }

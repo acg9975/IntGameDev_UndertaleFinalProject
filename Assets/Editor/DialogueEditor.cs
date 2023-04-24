@@ -3,7 +3,7 @@ using UnityEditor;
 using static Dialogue;
 using static Dialogue.DialogueItem;
 
-public class NPCDialogueEditor
+public class DialogueEditor
 {
     [CustomPropertyDrawer(typeof(DialogueItem))]
     public class DialogueItemEditor : PropertyDrawer
@@ -13,43 +13,69 @@ public class NPCDialogueEditor
         private float LABEL_WIDTH = EditorGUIUtility.labelWidth;
 
         private const float IMAGE_HEIGHT = 70;
-        private const float TRIGGER_SPACING = 6;
+        private const float VERTICAL_SPACING_MED = 6;
 
         public override float GetPropertyHeight(SerializedProperty prop, GUIContent label)
         {
-            var trigger = prop.FindPropertyRelative("trigger");
-            var choices = prop.FindPropertyRelative("choices");
+            var conditions = prop.FindPropertyRelative("conditions");
+            var type = prop.FindPropertyRelative("type");
             var onEnd = prop.FindPropertyRelative("onEnd");
+            var choices = prop.FindPropertyRelative("choices");
 
-            float triggerHeight = EditorGUI.GetPropertyHeight(trigger);
+            float extraHeight = 0;
 
-            switch ((TriggerType)trigger.intValue)
+            switch ((DialogueItemType)type.intValue)
             {
-                case TriggerType.Choice:
-                    triggerHeight += VERTICAL_SPACING + EditorGUI.GetPropertyHeight(choices);
+                case DialogueItemType.Standard:
+                    extraHeight += EditorGUI.GetPropertyHeight(onEnd);
                     break;
-                case TriggerType.Custom:
-                    triggerHeight += TRIGGER_SPACING + EditorGUI.GetPropertyHeight(onEnd);
+                case DialogueItemType.Decision:
+                    extraHeight += EditorGUI.GetPropertyHeight(choices);
                     break;
             }
 
             return
-                VERTICAL_SPACING + IMAGE_HEIGHT
-                + VERTICAL_SPACING + triggerHeight
+                VERTICAL_SPACING + EditorGUI.GetPropertyHeight(conditions)
+                + VERTICAL_SPACING + EditorGUI.GetPropertyHeight(type)
+                + VERTICAL_SPACING + IMAGE_HEIGHT
+                + VERTICAL_SPACING_MED + extraHeight
                 + VERTICAL_SPACING;
         }
 
         public override void OnGUI(Rect position, SerializedProperty prop, GUIContent label)
         {
             Rect originalPosition = position;
+            string index = label.text.Substring(label.text.LastIndexOf(' ') + 1);
 
+            var conditions = prop.FindPropertyRelative("conditions");
+            var type = prop.FindPropertyRelative("type");
             var sprite = prop.FindPropertyRelative("sprite");
             var text = prop.FindPropertyRelative("text");
-            var trigger = prop.FindPropertyRelative("trigger");
-            var choices = prop.FindPropertyRelative("choices");
             var onEnd = prop.FindPropertyRelative("onEnd");
+            var choices = prop.FindPropertyRelative("choices");
 
             EditorGUI.BeginProperty(position, label, prop);
+
+            // Conditions
+
+            position.x += 14;
+            position.y += VERTICAL_SPACING;
+            position.width -= 10;
+
+            EditorGUI.PropertyField(position, conditions);
+
+            position.y += EditorGUI.GetPropertyHeight(conditions, true);
+
+            // Type
+
+            position.x = originalPosition.x;
+            position.y += VERTICAL_SPACING;
+            position.width = originalPosition.width;
+            position.height = SINGLE_LINE_HEIGHT;
+
+            type.intValue = (int)(DialogueItemType)EditorGUI.EnumPopup(position, type.displayName, (DialogueItemType)type.intValue);
+
+            position.y += SINGLE_LINE_HEIGHT;
 
             // Element Label
 
@@ -58,14 +84,12 @@ public class NPCDialogueEditor
             position.width = LABEL_WIDTH;
             position.height = SINGLE_LINE_HEIGHT;
 
-            string labelString = label.ToString();
-            string elementIndex = labelString.Substring(labelString.LastIndexOf(' ') + 1);
-            EditorGUI.LabelField(position, elementIndex, new GUIStyle(EditorStyles.boldLabel));
+            EditorGUI.LabelField(position, index, new GUIStyle(EditorStyles.boldLabel));
 
             // Sprite and Text
 
-            position = originalPosition;
-            position.y += VERTICAL_SPACING;
+            position.x = originalPosition.x;
+            position.y -= (IMAGE_HEIGHT - SINGLE_LINE_HEIGHT) / 2f;
             position.width = IMAGE_HEIGHT;
             position.height = IMAGE_HEIGHT;
 
@@ -78,31 +102,20 @@ public class NPCDialogueEditor
 
             position.y += IMAGE_HEIGHT;
 
-            // Trigger Dropdown
+            // Type options
 
             position.x = originalPosition.x;
-            position.y += VERTICAL_SPACING;
+            position.y += VERTICAL_SPACING_MED;
             position.width = originalPosition.width;
-            position.height = SINGLE_LINE_HEIGHT;
+            position.height = originalPosition.height;
 
-            trigger.intValue = (int)(TriggerType)EditorGUI.EnumPopup(position, trigger.displayName, (TriggerType)trigger.intValue);
-
-            position.y += SINGLE_LINE_HEIGHT;
-
-            // Trigger options
-
-            switch ((TriggerType)trigger.intValue)
+            switch ((DialogueItemType)type.intValue)
             {
-                case TriggerType.Choice:
-
-                    position.y += VERTICAL_SPACING;
-                    EditorGUI.PropertyField(position, choices);
-                    break;
-
-                case TriggerType.Custom:
-
-                    position.y += TRIGGER_SPACING;
+                case DialogueItemType.Standard:
                     EditorGUI.PropertyField(position, onEnd);
+                    break;
+                case DialogueItemType.Decision:
+                    EditorGUI.PropertyField(position, choices, true);
                     break;
             }
 

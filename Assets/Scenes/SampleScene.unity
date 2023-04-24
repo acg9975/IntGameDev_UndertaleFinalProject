@@ -1844,75 +1844,71 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   content:
-  - sprite: {fileID: 0}
+  - conditions:
+    - parameter: 
+      value: 
+    type: 0
+    sprite: {fileID: 0}
     text: Hello, im a salesman
     onEnd:
       m_PersistentCalls:
         m_Calls: []
-    setPrefs: []
-    choices: []
-  - sprite: {fileID: 0}
+    choices:
+      parameter: 
+      option1:
+        value: 
+        text: 
+        onEnd:
+          m_PersistentCalls:
+            m_Calls: []
+      option2:
+        value: 
+        text: 
+        onEnd:
+          m_PersistentCalls:
+            m_Calls: []
+  - conditions: []
+    type: 0
+    sprite: {fileID: 0}
     text: Which is your favorite?
     onEnd:
       m_PersistentCalls:
         m_Calls: []
-    setPrefs: []
     choices:
-    - text: Lemonade
-      content:
-      - sprite: {fileID: 0}
-        text: Great choice!
+      parameter: 
+      option1:
+        value: Lemonade
+        text: 
         onEnd:
           m_PersistentCalls:
             m_Calls: []
-        setPrefs:
-        - key: DrinkPreference
-          value: Lemonade
-      - sprite: {fileID: 0}
-        text: Lemonade runs in my family!
+      option2:
+        value: 
+        text: 
         onEnd:
           m_PersistentCalls:
             m_Calls: []
-        setPrefs: []
-    - text: Coke
-      content:
-      - sprite: {fileID: 0}
-        text: Oh... I hate you
-        onEnd:
-          m_PersistentCalls:
-            m_Calls: []
-        setPrefs:
-        - key: DrinkPreference
-          value: Coke
-  - sprite: {fileID: 0}
+  - conditions: []
+    type: 0
+    sprite: {fileID: 0}
     text: Anyway.... What i was saying is...
     onEnd:
       m_PersistentCalls:
         m_Calls: []
-    setPrefs: []
     choices:
-    - text: Lemonade
-      content:
-      - sprite: {fileID: 0}
-        text: Great choice!
+      parameter: 
+      option1:
+        value: 
+        text: 
         onEnd:
           m_PersistentCalls:
             m_Calls: []
-        setPrefs: []
-      - sprite: {fileID: 0}
-        text: Lemonade runs in my family!
+      option2:
+        value: 
+        text: 
         onEnd:
           m_PersistentCalls:
             m_Calls: []
-        setPrefs: []
-    - text: Coke
-      content:
-      - sprite: {fileID: 0}
-        text: Oh... I hate you
-        onEnd:
-          m_PersistentCalls:
-            m_Calls: []
-        setPrefs: []
 --- !u!1 &1392281801
 GameObject:
   m_ObjectHideFlags: 0
@@ -2014,17 +2010,79 @@ MonoBehaviour:
   textboxPrefab: {fileID: 3392875753123741850, guid: a75fba7265650014c8aee6ac619c25e9, type: 3}
   dialogue:
     content:
-    - sprite: {fileID: -1619752381, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
-      text: Hello, my name is Serif
-      trigger: 2
-      choices: []
+    - conditions: []
+      type: 0
+      sprite: {fileID: -1619752381, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
+      text: Hello, I'm sans the skeleton!
       onEnd:
         m_PersistentCalls:
           m_Calls: []
-    - sprite: {fileID: -893850241, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
-      text: You're not from around here are you?
-      trigger: 2
-      choices: []
+      choices:
+        parameter: 
+        option1:
+          value: 
+          text: 
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          value: 
+          text: 
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions: []
+      type: 1
+      sprite: {fileID: -1571271296, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
+      text: uhhh.. what's your favorite pokemon
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        parameter: FavoritePokemon
+        option1:
+          value: Pikachu
+          text: Pikachu!
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          value: None
+          text: Uhhh... I've never played before
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: FavoritePokemon
+        value: Pikachu
+      - parameter: HasMetDerek
+        value: true
+      type: 0
+      sprite: {fileID: -1526311129, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
+      text: Oh, well Derek has a Pikachu if you want one
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        parameter: FavoritePokemon
+        option1:
+          value: Pikachu
+          text: Pikachu!
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          value: None
+          text: Uhhh... I've never played before
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: FavoritePokemon
+        value: None
+      type: 0
+      sprite: {fileID: -1956576422, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
+      text: Then perish
       onEnd:
         m_PersistentCalls:
           m_Calls:
@@ -2040,6 +2098,20 @@ MonoBehaviour:
               m_StringArgument: 
               m_BoolArgument: 0
             m_CallState: 2
+      choices:
+        parameter: FavoritePokemon
+        option1:
+          value: Pikachu
+          text: Pikachu!
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          value: None
+          text: Uhhh... I've never played before
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
 --- !u!61 &1392281807
 BoxCollider2D:
   m_ObjectHideFlags: 0

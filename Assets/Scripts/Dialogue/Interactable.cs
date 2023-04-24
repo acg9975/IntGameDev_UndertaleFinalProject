@@ -41,9 +41,9 @@ public class Interactable : MonoBehaviour
 
     private void CheckDialogue()
     {
-        currentDialogue = currentDialogue.Trigger();
+        currentDialogue.Trigger();
 
-        if (currentDialogue == null || currentDialogue.Item == null)
+        if (currentDialogue.Item == null)
             EndDialogue();
         else
             dialogueBox.UpdateText(currentDialogue.Item);
