@@ -3,7 +3,7 @@ using UnityEditor;
 using static Dialogue;
 using static Dialogue.DialogueItem;
 
-public class DialogueEditor
+namespace DialogueEditor
 {
     [CustomPropertyDrawer(typeof(DialogueItem))]
     public class DialogueItemEditor : PropertyDrawer
@@ -118,6 +118,70 @@ public class DialogueEditor
                     EditorGUI.PropertyField(position, choices, true);
                     break;
             }
+
+            EditorGUI.EndProperty();
+        }
+    }
+
+    [CustomPropertyDrawer(typeof(Preference))]
+    public class PrefrenceEditor : PropertyDrawer
+    {
+        private float SINGLE_LINE_HEIGHT = EditorGUIUtility.singleLineHeight;
+        private float VERTICAL_SPACING = EditorGUIUtility.standardVerticalSpacing;
+        private float LABEL_WIDTH = EditorGUIUtility.labelWidth;
+
+        private const float SIGN_SPACING = 20f;
+
+        public override float GetPropertyHeight(SerializedProperty prop, GUIContent label)
+        {
+            return
+                VERTICAL_SPACING + SINGLE_LINE_HEIGHT
+                + VERTICAL_SPACING + SINGLE_LINE_HEIGHT
+                + VERTICAL_SPACING;
+        }
+
+        public override void OnGUI(Rect position, SerializedProperty prop, GUIContent label)
+        {
+            Rect originalPosition = position;
+            float fieldWidth = (originalPosition.width - SIGN_SPACING) / 2f;
+
+            var parameter = prop.FindPropertyRelative("parameter");
+            var value = prop.FindPropertyRelative("value");
+
+            EditorGUI.BeginProperty(position, label, prop);
+
+            // Labels
+
+            position.y += VERTICAL_SPACING;
+            position.width = fieldWidth;
+            position.height = SINGLE_LINE_HEIGHT;
+
+            EditorGUI.LabelField(position, "Parameter");
+
+            position.x += fieldWidth + SIGN_SPACING;
+
+            EditorGUI.LabelField(position, "Value");
+
+            position.y += SINGLE_LINE_HEIGHT;
+
+            // Fields
+
+            position.x = originalPosition.x;
+            position.y += VERTICAL_SPACING;
+
+            parameter.stringValue = EditorGUI.TextField(position, parameter.stringValue);
+
+            position.x += fieldWidth;
+            position.width = SIGN_SPACING;
+
+            GUIStyle centeredStyle = new GUIStyle(EditorStyles.label);
+            centeredStyle.alignment = TextAnchor.MiddleCenter;
+            EditorGUI.LabelField(position, "=", centeredStyle);
+
+            position.x += SIGN_SPACING;
+            position.width = fieldWidth;
+
+            value.stringValue = EditorGUI.TextArea(position, value.stringValue);
 
             EditorGUI.EndProperty();
         }

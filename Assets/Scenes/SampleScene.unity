@@ -2018,15 +2018,14 @@ MonoBehaviour:
         m_PersistentCalls:
           m_Calls: []
       choices:
-        parameter: 
         option1:
-          value: 
+          setValues: []
           text: 
           onEnd:
             m_PersistentCalls:
               m_Calls: []
         option2:
-          value: 
+          setValues: []
           text: 
           onEnd:
             m_PersistentCalls:
@@ -2039,15 +2038,20 @@ MonoBehaviour:
         m_PersistentCalls:
           m_Calls: []
       choices:
-        parameter: FavoritePokemon
         option1:
-          value: Pikachu
+          setValues: []
           text: Pikachu!
           onEnd:
             m_PersistentCalls:
               m_Calls: []
         option2:
-          value: None
+          setValues:
+          - parameter: 
+            value: 
+          - parameter: 
+            value: 
+          - parameter: 
+            value: 
           text: Uhhh... I've never played before
           onEnd:
             m_PersistentCalls:
@@ -2064,15 +2068,14 @@ MonoBehaviour:
         m_PersistentCalls:
           m_Calls: []
       choices:
-        parameter: FavoritePokemon
         option1:
-          value: Pikachu
+          setValues: []
           text: Pikachu!
           onEnd:
             m_PersistentCalls:
               m_Calls: []
         option2:
-          value: None
+          setValues: []
           text: Uhhh... I've never played before
           onEnd:
             m_PersistentCalls:
@@ -2099,15 +2102,14 @@ MonoBehaviour:
               m_BoolArgument: 0
             m_CallState: 2
       choices:
-        parameter: FavoritePokemon
         option1:
-          value: Pikachu
+          setValues: []
           text: Pikachu!
           onEnd:
             m_PersistentCalls:
               m_Calls: []
         option2:
-          value: None
+          setValues: []
           text: Uhhh... I've never played before
           onEnd:
             m_PersistentCalls:
