@@ -1799,6 +1799,120 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1371367844}
   m_CullTransparentMesh: 1
+--- !u!1 &1384281853
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1384281854}
+  - component: {fileID: 1384281855}
+  m_Layer: 0
+  m_Name: TestDialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1384281854
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384281853}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1384281855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384281853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b01dfbc7cb8e454dafc8341ba433e8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  content:
+  - sprite: {fileID: 0}
+    text: Hello, im a salesman
+    onEnd:
+      m_PersistentCalls:
+        m_Calls: []
+    setPrefs: []
+    choices: []
+  - sprite: {fileID: 0}
+    text: Which is your favorite?
+    onEnd:
+      m_PersistentCalls:
+        m_Calls: []
+    setPrefs: []
+    choices:
+    - text: Lemonade
+      content:
+      - sprite: {fileID: 0}
+        text: Great choice!
+        onEnd:
+          m_PersistentCalls:
+            m_Calls: []
+        setPrefs:
+        - key: DrinkPreference
+          value: Lemonade
+      - sprite: {fileID: 0}
+        text: Lemonade runs in my family!
+        onEnd:
+          m_PersistentCalls:
+            m_Calls: []
+        setPrefs: []
+    - text: Coke
+      content:
+      - sprite: {fileID: 0}
+        text: Oh... I hate you
+        onEnd:
+          m_PersistentCalls:
+            m_Calls: []
+        setPrefs:
+        - key: DrinkPreference
+          value: Coke
+  - sprite: {fileID: 0}
+    text: Anyway.... What i was saying is...
+    onEnd:
+      m_PersistentCalls:
+        m_Calls: []
+    setPrefs: []
+    choices:
+    - text: Lemonade
+      content:
+      - sprite: {fileID: 0}
+        text: Great choice!
+        onEnd:
+          m_PersistentCalls:
+            m_Calls: []
+        setPrefs: []
+      - sprite: {fileID: 0}
+        text: Lemonade runs in my family!
+        onEnd:
+          m_PersistentCalls:
+            m_Calls: []
+        setPrefs: []
+    - text: Coke
+      content:
+      - sprite: {fileID: 0}
+        text: Oh... I hate you
+        onEnd:
+          m_PersistentCalls:
+            m_Calls: []
+        setPrefs: []
 --- !u!1 &1392281801
 GameObject:
   m_ObjectHideFlags: 0
@@ -1901,7 +2015,14 @@ MonoBehaviour:
   dialogue:
     content:
     - sprite: {fileID: -1619752381, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
-      text: bad time moment
+      text: Hello, my name is Serif
+      trigger: 2
+      choices: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+    - sprite: {fileID: -893850241, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
+      text: You're not from around here are you?
       trigger: 2
       choices: []
       onEnd:

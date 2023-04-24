@@ -1,23 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TestDialogue : MonoBehaviour
 {
+    private int id;
+    [SerializeField] private DialogueItemBranch[] content;
+
     [System.Serializable]
     public class DialogueItem
     {
-        public enum TriggerType { None, SkipTo, Custom }
-
         public Sprite sprite;
         public string text;
-
-        [System.Serializable]
-        public struct DialoguePath
-        {
-            public DialogueItem[] dialogue;
-        }
-        public DialoguePath[] choicePaths;
+        public UnityEvent onEnd;
+        public PrefSetter[] setPrefs;
     }
-    [SerializeField] public DialogueItem[] dialogue;
+
+    [System.Serializable]
+    public class DialogueItemBranch : DialogueItem
+    {
+        public DialoguePath[] choices;
+    }
+
+    [System.Serializable]
+    public class PrefSetter
+    {
+        public string key;
+        public string value;
+    }
+
+    [System.Serializable]
+    public class DialoguePath
+    {
+        private int id;
+        [SerializeField] private string text;
+        [SerializeField] private DialogueItem[] content;
+    }
 }
