@@ -104,9 +104,8 @@ public class CombatMenuNavigator : MonoBehaviour
                         CombatManager.instance.showInventory();
                         break;
                     case "Mercy":
-                        combatMode = CombatManager.CombatMode.Mercy;
+                        CombatManager.instance.combatMode = CombatManager.CombatMode.Mercy;
                         UpdateCombatUI();
-                        Debug.Log("Mercy mode activated");
                         selected = 0;
                         StartCoroutine(spaceBarDelay());
                         break;
@@ -118,15 +117,12 @@ public class CombatMenuNavigator : MonoBehaviour
 
         if (combatMode == CombatManager.CombatMode.Mercy)
         {
-            Debug.Log("Comabt mode mercy");
             if (Input.GetKeyDown(KeyCode.W))
             {
-                Debug.Log("W");
                 selected--;
             }
             else if (Input.GetKeyDown(KeyCode.S))
             {
-                Debug.Log("S");
                 selected++;
             }
 
@@ -150,27 +146,22 @@ public class CombatMenuNavigator : MonoBehaviour
                     mercyButtons[i].color = Color.white;
                 }
             }
-            Debug.Log("Selected" + selected);
 
-            Debug.Log(combatMode);
             if (Input.GetKeyDown(KeyCode.Space) && canPressbutton)
             {
-                Debug.Log("THIS WAS PRESSED");
                 switch (mercyButtons[selected].name)
                 {
                     
                     case "Spare":
                         //activate combat manager spare routine
-                        Debug.Log("spare");
                         CombatManager.instance.spareSequence();
-                        combatMode = CombatManager.CombatMode.Inactive;
+                        CombatManager.instance.combatMode = CombatManager.CombatMode.Inactive;
                         UpdateCombatUI();
                         break;
                     case "Flee":
-                        Debug.Log("flee");
                         //activate combat manager flee chance
                         CombatManager.instance.fleeSequence();
-                        combatMode = CombatManager.CombatMode.Inactive;
+                        CombatManager.instance.combatMode = CombatManager.CombatMode.Inactive;
 
                         UpdateCombatUI();
                         break;
@@ -180,8 +171,7 @@ public class CombatMenuNavigator : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.Escape))
             {
-                Debug.Log("Escape pressed");
-                combatMode = CombatManager.CombatMode.Menu; 
+                CombatManager.instance.combatMode = CombatManager.CombatMode.Menu; 
                 UpdateCombatUI();
 
             }
@@ -193,8 +183,6 @@ public class CombatMenuNavigator : MonoBehaviour
             yield return new WaitForSeconds(1f);
             canPressbutton = true;
         }
-
-
     }
 
     public void changeDialogueBoxText()
@@ -202,6 +190,8 @@ public class CombatMenuNavigator : MonoBehaviour
         //will communicate with dialogue box with the specific text needed.
         //Maybe this should take in a string. The string being sourced from the different bits of dialogue that would be said when scared, fighting, or generally reacting
 
+
+        //Would it be easier to include a combat dialogue script to control what the NPC's say during dialogue?
 
 
     }

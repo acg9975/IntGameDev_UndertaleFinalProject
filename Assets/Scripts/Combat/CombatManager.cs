@@ -144,7 +144,7 @@ public class CombatManager : MonoBehaviour
     private void TriggerWave()
     {
         combatMode = CombatMode.PlayerDefend;
-        Debug.Log("PLAYER DEFEND");
+        //Debug.Log("PLAYER DEFEND");
         SpawnPlayer();
         CombatMenuNavigator.instance.UpdateCombatUI();
 
@@ -201,7 +201,7 @@ public class CombatManager : MonoBehaviour
 
     private IEnumerator waitforturn()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(3f);
         TriggerWave();
     }
 
@@ -247,8 +247,9 @@ public class CombatManager : MonoBehaviour
         {
             //throw up negative text - "You were unable to escape"
             Debug.Log("Player fails!");
-            TriggerWave();
         }
+        CombatMenuNavigator.instance.UpdateCombatUI();
+
         yield return new WaitForSeconds(5f);
         if (isSuccessful)
         {
@@ -259,6 +260,7 @@ public class CombatManager : MonoBehaviour
         {
             TriggerWave();
         }
+        CombatMenuNavigator.instance.UpdateCombatUI();
 
     }
 
@@ -286,6 +288,7 @@ public class CombatManager : MonoBehaviour
         {
             //display success text
             Debug.Log("Player spare success");
+
         }
         else
         {
@@ -312,7 +315,7 @@ public class CombatManager : MonoBehaviour
     {
         
         //currently the same as enemy death, but later on will have different functionality
-        //player might gain items on enemy death - player will not gain items from this
+        //player might gain items on enemy death
         SceneTransition.ChangeScene(SceneTransition.previousScene);
     }
     public void playerFlee()
@@ -323,5 +326,36 @@ public class CombatManager : MonoBehaviour
 
 
     }
+
+
+    public void actSequence()//parameters will need to be an enemy weakness enum state
+    {
+
+        //player has 4 options
+        //check - criticise - compliment - threat
+        //certain enemies are weaker to certain options
+        //we need a check in the enemybehavior scriptable object to see which the enemy is susceptible to
+        //enum weakTo {check - criticise - compliment - threat}
+        //
+        //use this as a mediator to move to the coroutine
+        StartCoroutine(actTimer());
+        //coroutine then takes in what the player chose and compares to what enemy is weak to
+        //possibly show more than just "threat failed" or so based on what narrative designers make
+        //but if its what the enemy is vulnerable to - show "threat success" and turn isSpareable to true
+        //then allow them to spare the character in the next turn. 
+
+        //we should probably implement a static counter for amount of enemies killed
+
+
+    }
+
+    IEnumerator actTimer()
+    {
+
+        yield return new WaitForSeconds(1f);
+    
+    }
+
+
 
 }

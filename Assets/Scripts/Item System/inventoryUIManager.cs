@@ -132,7 +132,7 @@ public class inventoryUIManager : MonoBehaviour
             //if there is at least one item in inventory, allow space to 
             if (cap != 0 && SceneManager.GetActiveScene().name == "Combat")
             {
-                
+
                 //find the item we are gonna use and then use it
                 item it = PlayerData.inventory.findItem(position);
                 PlayerData.inventory.useItem(it);
@@ -168,6 +168,7 @@ public class inventoryUIManager : MonoBehaviour
 
 
     }
+
 
     IEnumerator canActivateInventoryTimer()
     {
