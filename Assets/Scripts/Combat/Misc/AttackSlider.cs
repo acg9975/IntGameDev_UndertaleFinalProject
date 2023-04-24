@@ -45,12 +45,12 @@ public class AttackSlider : MonoBehaviour
             {
                 //attack fails
                 
-                attackValue = AttackValue.low;
+                attackValue = AttackValue.fail;
             }
             else if ((transform.position.x >= -5.3f && transform.position.x < -2.41) || (transform.position.x > 2.41f && transform.position.x <= 5.3f))
             {
                 //if in yellow zone
-                attackValue = AttackValue.medium;
+                attackValue = AttackValue.low;
             }
             else if ((transform.position.x >= -2.4f && transform.position.x < -0.70f) || (transform.position.x > 0.7f && transform.position.x < 2.4f))
             {
