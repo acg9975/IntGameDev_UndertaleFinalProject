@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b300a4a2142dcd34ba0e8938484d84a5, type: 3}
+  m_Name: BoomerangAttackObj
+  m_EditorClassIdentifier: 
+  duration: 10
+  upProjectilePrefab: {fileID: 9025367689045611282, guid: 5df9cd0fb06704641a4540d73e95162d, type: 3}
+  downProjectilePrefab: {fileID: 4313568851784636233, guid: 8cc60d8673dfb5849a803af419de6ff2, type: 3}
+  spawnDelay: 1
