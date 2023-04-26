@@ -1670,7 +1670,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1339964287
 Transform:
   m_ObjectHideFlags: 0
@@ -2745,7 +2745,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a16ca81f283832248825dc6581619af7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 11400000, guid: 348db38d5c99fac47a12282218a07ce5, type: 2}
   playerPrefab: {fileID: 2216183577570962082, guid: 3b697d0d3629fab4b88f71464c66116e, type: 3}
   playerSpawn: {fileID: 2082467482}
   combatMode: 0
@@ -2770,7 +2769,7 @@ MonoBehaviour:
   playerAttackBox: {fileID: 670709295}
   playerDefendBox: {fileID: 446302462}
   mercyBox: {fileID: 1339964286}
-  db: {fileID: 0}
+  db: {fileID: 3392875753244181808}
   healthText: {fileID: 1640942624}
   enemyHealthText: {fileID: 1512388600}
   combatButtons:
