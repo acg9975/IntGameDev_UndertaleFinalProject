@@ -60,7 +60,7 @@ public class Dialogue
         id = 0;
     }
 
-    public void Trigger(int selectedOption = 0)
+    public void Trigger()
     {
         switch (Item.type)
         {
@@ -68,7 +68,7 @@ public class Dialogue
                 Item.onEnd?.Invoke();
                 break;
             case DialogueItem.DialogueItemType.Decision:
-                SelectOption(selectedOption);
+                SelectOption(DialogueBox.selectedIndex);
                 break;
         }
 

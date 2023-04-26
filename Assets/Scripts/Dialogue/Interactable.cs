@@ -9,7 +9,6 @@ public class Interactable : MonoBehaviour
     private DialogueBox dialogueBox;
     
     [SerializeField] private Dialogue dialogue;
-    private Dialogue currentDialogue;
 
     private bool dialogueTriggered = false;
 
@@ -31,22 +30,21 @@ public class Interactable : MonoBehaviour
         dialogueTriggered = true;
         OverworldMovement.canMove = false;
 
-        currentDialogue = dialogue;
-        currentDialogue.Reset();
+        dialogue.Reset();
 
         dialogueBox = Instantiate(textboxPrefab, transform.position - Vector3.down * -2.5f, Quaternion.identity).GetComponent<DialogueBox>();
-        dialogueBox.UpdateText(currentDialogue.Item);
+        dialogueBox.UpdateText(dialogue.Item);
     }
 
 
     private void CheckDialogue()
     {
-        currentDialogue.Trigger();
+        dialogue.Trigger();
 
-        if (currentDialogue.Item == null)
+        if (dialogue.Item == null)
             EndDialogue();
         else
-            dialogueBox.UpdateText(currentDialogue.Item);
+            dialogueBox.UpdateText(dialogue.Item);
     }
 
     private void EndDialogue()
