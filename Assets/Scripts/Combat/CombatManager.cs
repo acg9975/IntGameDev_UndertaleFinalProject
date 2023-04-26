@@ -7,6 +7,7 @@ public class CombatManager : MonoBehaviour
     public static CombatManager instance;
 
     public static EnemyBehavior Enemy;
+    [SerializeField] private EnemyBehavior enemy;
 
     [SerializeField] private GameObject playerPrefab;
     private GameObject player;
@@ -40,6 +41,9 @@ public class CombatManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+
+        if (Enemy == null)
+            SetEnemy(enemy);
     }
 
 
@@ -78,7 +82,7 @@ public class CombatManager : MonoBehaviour
     {
         combatMode = CombatMode.Menu;
         Destroy(player);
-        CombatMenuNavigator.instance.UpdateCombatUI();
+        CombatMenuNavigator.instance.UpdateCombatUI(Enemy.NextDescription());
     }
 
     public void PlayerAttacks()

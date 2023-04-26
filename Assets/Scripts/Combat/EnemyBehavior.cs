@@ -53,6 +53,8 @@ public class EnemyBehavior : ScriptableObject
 
         public string GetNextDescription()
         {
+            if (descriptions.Length == 0) return null;
+            
             if (iterationType == IterationType.InOrder)
             {
                 descriptionIndex++;

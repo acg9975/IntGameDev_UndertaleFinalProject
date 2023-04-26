@@ -18,3 +18,7 @@ MonoBehaviour:
   - iterationType: 1
     attacks:
     - {fileID: 11400000, guid: 0cf21005c97750d4ba4818d00cfe0bc1, type: 2}
+    descriptions:
+    - Test description 1
+    - Test description 2
+    - Test description 3

@@ -9,6 +9,7 @@ public class CombatMenuNavigator : MonoBehaviour
     public static CombatMenuNavigator instance;
 
     [SerializeField] private GameObject dialogueBox;
+    [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private GameObject playerAttackBox;
     [SerializeField] private GameObject playerDefendBox;
     [SerializeField] private GameObject mercyBox;
@@ -32,11 +33,13 @@ public class CombatMenuNavigator : MonoBehaviour
         instance = this;
     }
 
-    public void UpdateCombatUI()
+    public void UpdateCombatUI(string description = null)
     {
         CombatManager.CombatMode combatMode = CombatManager.instance.combatMode;
 
         dialogueBox.SetActive(combatMode == CombatManager.CombatMode.Menu || combatMode == CombatManager.CombatMode.Inactive);
+        dialogueText.text = description;
+
         playerAttackBox.SetActive(combatMode == CombatManager.CombatMode.PlayerAttack);
         playerDefendBox.SetActive(combatMode == CombatManager.CombatMode.PlayerDefend);
         mercyBox.SetActive(combatMode == CombatManager.CombatMode.Mercy);
