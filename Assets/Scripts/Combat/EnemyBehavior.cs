@@ -31,8 +31,10 @@ public class EnemyBehavior : ScriptableObject
 
         public IterationType iterationType;
         public Attack[] attacks;
+        [TextArea(1, 4)] public string[] descriptions;
 
         private int attackIndex = -1;
+        private int descriptionIndex = -1;
 
         public Attack GetNextAttack()
         {
@@ -46,6 +48,21 @@ public class EnemyBehavior : ScriptableObject
             else
             {
                 return attacks[Random.Range(0, attacks.Length)];
+            }
+        }
+
+        public string GetNextDescription()
+        {
+            if (iterationType == IterationType.InOrder)
+            {
+                descriptionIndex++;
+                if (descriptionIndex >= descriptions.Length) descriptionIndex = 0;
+
+                return descriptions[descriptionIndex];
+            }
+            else
+            {
+                return descriptions[Random.Range(0, descriptions.Length)];
             }
         }
     }
@@ -70,5 +87,10 @@ public class EnemyBehavior : ScriptableObject
     public void StopWave()
     {
         currentAttack.Stop();
+    }
+
+    public string NextDescription()
+    {
+        return phases[phaseIndex].GetNextDescription();
     }
 }
