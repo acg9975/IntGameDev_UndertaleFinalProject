@@ -17,4 +17,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SceneTwo.unity
     guid: 8956a33e4d796da488acfc04cc74d7ec
+  - enabled: 1
+    path: Assets/Scenes/Scenes Layout Tatiana/Overworld Scene1_Produce.unity
+    guid: 607b6eb1637084bbba347d3f2babed8b
+  - enabled: 1
+    path: Assets/Scenes/Scenes Layout Tatiana/Overworld Scene3_Toiletries.unity
+    guid: 23f422c0d42a541a0a439b87853ea89d
+  - enabled: 1
+    path: Assets/Scenes/Scenes Layout Tatiana/Overworld Scene2_Supplements.unity
+    guid: 094632c85b44e4527bb6842bb498d50f
+  - enabled: 1
+    path: Assets/Scenes/Scenes Layout Tatiana/Backworld.unity
+    guid: bbfd81e348e594f098bdb403bffb0be1
   m_configObjects: {}
