@@ -178,8 +178,8 @@ public class CombatManager : MonoBehaviour
     void playerDeath()
     {
         //goto main menu
-        PlayerData.Health = PlayerData.MaxHealth;
         SceneTransition.ChangeScene("MainMenu");
+        PlayerData.Health = PlayerData.MaxHealth;
     }
 
     void spawnSlider()
