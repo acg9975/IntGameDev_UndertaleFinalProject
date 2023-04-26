@@ -22,6 +22,8 @@ public class EnemyBehavior : ScriptableObject
         }
     }
 
+    private Attack currentAttack;
+
     [System.Serializable]
     public class Phase
     {
@@ -59,15 +61,14 @@ public class EnemyBehavior : ScriptableObject
 
     public float NextWave()
     {
-        Attack attack = phases[phaseIndex].GetNextAttack();
+        currentAttack = phases[phaseIndex].GetNextAttack();
 
-        attack.Run();
-        return attack.duration;
+        currentAttack.Run();
+        return currentAttack.duration;
     }
 
     public void StopWave()
     {
-        Attack attack = phases[phaseIndex].GetNextAttack();
-        attack.Stop();
+        currentAttack.Stop();
     }
 }
