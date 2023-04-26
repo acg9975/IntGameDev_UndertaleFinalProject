@@ -73,4 +73,12 @@ public class SceneTransition : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         SceneManager.LoadScene(scene);
     }
+
+    private IEnumerator onDeath()
+    {
+        yield return new WaitForSeconds(1.0f);
+        PlayerData.Health = PlayerData.MaxHealth;
+        SceneManager.LoadScene("MainMenu");
+
+    }
 }

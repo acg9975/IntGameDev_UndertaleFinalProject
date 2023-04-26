@@ -1912,7 +1912,7 @@ MonoBehaviour:
             m_MethodName: FightEnemy
             m_Mode: 2
             m_Arguments:
-              m_ObjectArgument: {fileID: 11400000, guid: 348db38d5c99fac47a12282218a07ce5, type: 2}
+              m_ObjectArgument: {fileID: 11400000, guid: 80fb24413ed6d454fa1323f46ab12c88, type: 2}
               m_ObjectArgumentAssemblyTypeName: EnemyBehavior, Assembly-CSharp
               m_IntArgument: 0
               m_FloatArgument: 0

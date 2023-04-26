@@ -2,34 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Test", menuName = "Combat/Attacks/Test")]
-public class Attack_Test : Attack
+[CreateAssetMenu(fileName = "Test", menuName = "Combat/Attacks/CurvedAttack")]
+public class CurvedAttackTest : Attack
 {
+    // Start is called before the first frame update
     [SerializeField] protected GameObject projectilePrefab;
-    [SerializeField] protected float projectileSpeed = 1f;
+
     [SerializeField] protected float spawnDelay = 1f;
-    [SerializeField] protected float spawnRadius = 3f;
 
     protected float spawnTimer = 0f;
 
     protected IEnumerator runRoutine;
+    private bool canRun;
 
     public override void Run()
     {
+        canRun = true;
         runRoutine = RunRoutine();
         CombatManager.instance.StartCoroutine(runRoutine);
     }
 
     protected IEnumerator RunRoutine()
     {
-        while (true)
+        while (canRun)
         {
-            Vector2 spawnPos = CombatManager.AttackCenter + Random.insideUnitCircle.normalized * spawnRadius;
+            float y = Random.Range(-1.5f,1.6f);
+                
+            Vector2 spawnPos = new Vector2(CombatManager.AttackCenter.x + 1.8f, y);
             GameObject projectile = Instantiate(projectilePrefab, spawnPos, Quaternion.identity);
             projectiles.Add(projectile);
-
-            //projectile.MoveTowards(CombatMovement.PlayerPosition, projectileSpeed);
-            projectile.GetComponent<AttackProjectile>().MoveTowards(CombatMovement.PlayerPosition, projectileSpeed);
+            Destroy(projectile, 1.5f);
             yield return new WaitForSeconds(spawnDelay);
         }
     }
@@ -37,7 +39,10 @@ public class Attack_Test : Attack
     public override void Stop()
     {
         base.Stop();
-
-        CombatManager.instance.StopCoroutine(runRoutine);
+        if (runRoutine != null)
+        {
+            CombatManager.instance.StopCoroutine(runRoutine);
+            canRun = false;
+        }
     }
 }
