@@ -2019,14 +2019,34 @@ MonoBehaviour:
           m_Calls: []
       choices:
         option1:
-          setValues: []
           text: 
+          setValues: []
           onEnd:
             m_PersistentCalls:
               m_Calls: []
         option2:
-          setValues: []
           text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions: []
+      type: 0
+      sprite: {fileID: -1571271296, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
+      text: Uhhh... What's your favorite pokemon?
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: Pikachu!
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: Uhhh... I've never played before
+          setValues: []
           onEnd:
             m_PersistentCalls:
               m_Calls: []
@@ -2039,50 +2059,44 @@ MonoBehaviour:
           m_Calls: []
       choices:
         option1:
-          setValues: []
           text: Pikachu!
+          setValues:
+          - parameter: FavoritePokemon
+            value: Pikachu
           onEnd:
             m_PersistentCalls:
               m_Calls: []
         option2:
-          setValues:
-          - parameter: 
-            value: 
-          - parameter: 
-            value: 
-          - parameter: 
-            value: 
           text: Uhhh... I've never played before
+          setValues:
+          - parameter: FavoritePokemon
+            value: None
           onEnd:
             m_PersistentCalls:
               m_Calls: []
     - conditions:
       - parameter: FavoritePokemon
         value: Pikachu
-      - parameter: HasMetDerek
-        value: true
       type: 0
       sprite: {fileID: -1526311129, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
-      text: Oh, well Derek has a Pikachu if you want one
+      text: Oh, well Yamlet has a Pikachu if you want one
       onEnd:
         m_PersistentCalls:
           m_Calls: []
       choices:
         option1:
-          setValues: []
           text: Pikachu!
+          setValues: []
           onEnd:
             m_PersistentCalls:
               m_Calls: []
         option2:
-          setValues: []
           text: Uhhh... I've never played before
+          setValues: []
           onEnd:
             m_PersistentCalls:
               m_Calls: []
-    - conditions:
-      - parameter: FavoritePokemon
-        value: None
+    - conditions: []
       type: 0
       sprite: {fileID: -1956576422, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
       text: Then perish
@@ -2103,14 +2117,14 @@ MonoBehaviour:
             m_CallState: 2
       choices:
         option1:
-          setValues: []
           text: Pikachu!
+          setValues: []
           onEnd:
             m_PersistentCalls:
               m_Calls: []
         option2:
-          setValues: []
           text: Uhhh... I've never played before
+          setValues: []
           onEnd:
             m_PersistentCalls:
               m_Calls: []

@@ -27,18 +27,18 @@ namespace DialogueEditor
             switch ((DialogueItemType)type.intValue)
             {
                 case DialogueItemType.Standard:
-                    extraHeight += EditorGUI.GetPropertyHeight(onEnd);
+                    extraHeight += VERTICAL_SPACING + IMAGE_HEIGHT;
+                    extraHeight += VERTICAL_SPACING_MED + EditorGUI.GetPropertyHeight(onEnd);
                     break;
                 case DialogueItemType.Decision:
-                    extraHeight += EditorGUI.GetPropertyHeight(choices);
+                    extraHeight += VERTICAL_SPACING_MED + EditorGUI.GetPropertyHeight(choices);
                     break;
             }
 
             return
                 VERTICAL_SPACING + EditorGUI.GetPropertyHeight(conditions)
                 + VERTICAL_SPACING + EditorGUI.GetPropertyHeight(type)
-                + VERTICAL_SPACING + IMAGE_HEIGHT
-                + VERTICAL_SPACING_MED + extraHeight
+                + extraHeight
                 + VERTICAL_SPACING;
         }
 
@@ -79,45 +79,92 @@ namespace DialogueEditor
 
             // Element Label
 
-            position.x -= 22;
-            position.y += VERTICAL_SPACING + (IMAGE_HEIGHT - SINGLE_LINE_HEIGHT) / 2f;
-            position.width = LABEL_WIDTH;
-            position.height = SINGLE_LINE_HEIGHT;
+            Rect indexPosition = position;
 
-            EditorGUI.LabelField(position, index, new GUIStyle(EditorStyles.boldLabel));
+            indexPosition.x -= 22;
+            indexPosition.y = originalPosition.y + VERTICAL_SPACING * 2 + SINGLE_LINE_HEIGHT;
+            indexPosition.width = LABEL_WIDTH;
+            indexPosition.height = SINGLE_LINE_HEIGHT;
 
-            // Sprite and Text
+            EditorGUI.LabelField(indexPosition, index, new GUIStyle(EditorStyles.boldLabel));
 
-            position.x = originalPosition.x;
-            position.y -= (IMAGE_HEIGHT - SINGLE_LINE_HEIGHT) / 2f;
-            position.width = IMAGE_HEIGHT;
-            position.height = IMAGE_HEIGHT;
-
-            sprite.objectReferenceValue = EditorGUI.ObjectField(position, sprite.objectReferenceValue, typeof(Sprite), false);
-
-            position.x += IMAGE_HEIGHT + 10;
-            position.width = originalPosition.width - IMAGE_HEIGHT - 10;
-
-            text.stringValue = EditorGUI.TextArea(position, text.stringValue, new GUIStyle(EditorStyles.textArea));
-
-            position.y += IMAGE_HEIGHT;
-
-            // Type options
+            // if type == Standard, show Sprite, Text, OnEnd
+            // if type == Decision, show Choices
 
             position.x = originalPosition.x;
-            position.y += VERTICAL_SPACING_MED;
             position.width = originalPosition.width;
             position.height = originalPosition.height;
 
-            switch ((DialogueItemType)type.intValue)
+            switch ((DialogueItemType) type.intValue)
             {
                 case DialogueItemType.Standard:
+
+                    // Sprite and Text
+
+                    position.y += VERTICAL_SPACING;
+                    position.width = IMAGE_HEIGHT;
+                    position.height = IMAGE_HEIGHT;
+
+                    sprite.objectReferenceValue = EditorGUI.ObjectField(position, sprite.objectReferenceValue, typeof(Sprite), false);
+
+                    position.x += IMAGE_HEIGHT + 10;
+                    position.width = originalPosition.width - IMAGE_HEIGHT - 10;
+
+                    text.stringValue = EditorGUI.TextArea(position, text.stringValue, new GUIStyle(EditorStyles.textArea));
+
+                    // onEnd
+
+                    position.x = originalPosition.x;
+                    position.y += IMAGE_HEIGHT + VERTICAL_SPACING_MED;
+                    position.width = originalPosition.width;
+                    position.height = originalPosition.height;
+
                     EditorGUI.PropertyField(position, onEnd);
+
                     break;
+
                 case DialogueItemType.Decision:
+
+                    // Choices
+
+                    position.y += VERTICAL_SPACING_MED;
+
                     EditorGUI.PropertyField(position, choices, true);
+
                     break;
             }
+
+            //// Sprite and Text
+
+            //position.x = originalPosition.x;
+            //position.width = IMAGE_HEIGHT;
+            //position.height = IMAGE_HEIGHT;
+
+            //sprite.objectReferenceValue = EditorGUI.ObjectField(position, sprite.objectReferenceValue, typeof(Sprite), false);
+
+            //position.x += IMAGE_HEIGHT + 10;
+            //position.width = originalPosition.width - IMAGE_HEIGHT - 10;
+
+            //text.stringValue = EditorGUI.TextArea(position, text.stringValue, new GUIStyle(EditorStyles.textArea));
+
+            //position.y += IMAGE_HEIGHT;
+
+            //// Type options
+
+            //position.x = originalPosition.x;
+            //position.y += VERTICAL_SPACING_MED;
+            //position.width = originalPosition.width;
+            //position.height = originalPosition.height;
+
+            //switch ((DialogueItemType)type.intValue)
+            //{
+            //    case DialogueItemType.Standard:
+            //        EditorGUI.PropertyField(position, onEnd);
+            //        break;
+            //    case DialogueItemType.Decision:
+            //        EditorGUI.PropertyField(position, choices, true);
+            //        break;
+            //}
 
             EditorGUI.EndProperty();
         }
@@ -128,7 +175,6 @@ namespace DialogueEditor
     {
         private float SINGLE_LINE_HEIGHT = EditorGUIUtility.singleLineHeight;
         private float VERTICAL_SPACING = EditorGUIUtility.standardVerticalSpacing;
-        private float LABEL_WIDTH = EditorGUIUtility.labelWidth;
 
         private const float SIGN_SPACING = 20f;
 
