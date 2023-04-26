@@ -43,8 +43,8 @@ public class Dialogue
     [System.Serializable]
     public class Option
     {
-        public Preference[] setValues;
         public string text;
+        public Preference[] setValues;
         public UnityEvent onEnd;
     }
 
