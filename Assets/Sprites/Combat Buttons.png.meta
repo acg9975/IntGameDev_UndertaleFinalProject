@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -115,7 +115,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Combat Buttons_0
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 976
+        width: 826
+        height: 477
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80f75c5fce0c749b3a976fc4419c4558
+      internalID: -1637893953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Combat Buttons_1
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 976
+        width: 826
+        height: 475
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e451ac9a935b7428fae7f6f1af2fb55f
+      internalID: -1894100154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Combat Buttons_2
+      rect:
+        serializedVersion: 2
+        x: 1953
+        y: 976
+        width: 824
+        height: 477
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dc9c38c7c77849ffaafb4dc7ac12015
+      internalID: -247737766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Combat Buttons_3
+      rect:
+        serializedVersion: 2
+        x: 2887
+        y: 976
+        width: 826
+        height: 477
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4735243f39097494da5069ddf6ae005a
+      internalID: 1113241473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Combat Buttons_4
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 225
+        width: 826
+        height: 477
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7b0e1cbadb93415985ec5223b6fca1e
+      internalID: -1887276059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Combat Buttons_5
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 225
+        width: 826
+        height: 475
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95935175e84024300be88b29fe7d9d54
+      internalID: -590127524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Combat Buttons_6
+      rect:
+        serializedVersion: 2
+        x: 1953
+        y: 225
+        width: 824
+        height: 477
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31f8d0eea81f14acfbc3440c774c3497
+      internalID: 1750609369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Combat Buttons_7
+      rect:
+        serializedVersion: 2
+        x: 2887
+        y: 225
+        width: 826
+        height: 477
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dc4acd556104440bac83c043ee7040b
+      internalID: 416070700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline:
     - - {x: -1880.5, y: 97}
       - {x: -1880.5, y: 665}
@@ -158,7 +326,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Combat Buttons_5: -590127524
+      Combat Buttons_2: -247737766
+      Combat Buttons_7: 416070700
+      Combat Buttons_6: 1750609369
+      Combat Buttons_4: -1887276059
+      Combat Buttons_3: 1113241473
+      Combat Buttons_0: -1637893953
+      Combat Buttons_1: -1894100154
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
