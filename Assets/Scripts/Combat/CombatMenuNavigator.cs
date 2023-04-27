@@ -24,6 +24,8 @@ public class CombatMenuNavigator : MonoBehaviour
     private Image[] combatButtons;
     int selected;
 
+    [SerializeField] private Color selectedCombatColor;
+
     [SerializeField]private TextMeshProUGUI[] mercyButtons;
 
     bool canPressbutton = false;
@@ -82,7 +84,7 @@ public class CombatMenuNavigator : MonoBehaviour
 
 
             //get the image and change the color of it - give feedback that a button is selected
-            combatButtons[selected].color = new Color32(65, 65, 65, 255);
+            combatButtons[selected].color = selectedCombatColor;
             for (int i = 0; i < combatButtons.Length; i++)
             {
                 if (i != selected)
