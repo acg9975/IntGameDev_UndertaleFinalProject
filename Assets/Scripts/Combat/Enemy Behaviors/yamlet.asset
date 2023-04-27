@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bc6f9462afc347418b98db90dbe5b0e, type: 3}
   m_Name: yamlet
   m_EditorClassIdentifier: 
-  maxHealth: 0
+  maxHealth: 2
   health: 0
-  phases: []
+  phases:
+  - iterationType: 1
+    attacks:
+    - {fileID: 11400000, guid: 0cf21005c97750d4ba4818d00cfe0bc1, type: 2}
+    descriptions: []
