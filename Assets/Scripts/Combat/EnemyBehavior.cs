@@ -21,6 +21,9 @@ public class EnemyBehavior : ScriptableObject
             health = Mathf.Clamp(value, 0, MaxHealth);
         }
     }
+    public enum WeakTo { criticise, compliment, threat };
+    public WeakTo weakTo= WeakTo.criticise;
+    private int weaknessCheck = 3;
 
     private Attack currentAttack;
 

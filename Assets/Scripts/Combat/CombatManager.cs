@@ -245,15 +245,17 @@ public class CombatManager : MonoBehaviour
         {
             //throw up positive text - "You were able to escape"
             Debug.Log("Player is successful! They escape");
+            CombatMenuNavigator.instance.changeDialogueBoxText("You manage to escape!");
         }
         else
         {
+            CombatMenuNavigator.instance.changeDialogueBoxText("You attempt to flee but are unsuccessful!");
             //throw up negative text - "You were unable to escape"
             Debug.Log("Player fails!");
         }
         CombatMenuNavigator.instance.UpdateCombatUI();
 
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(3f);
         if (isSuccessful)
         {
             //player flees
@@ -291,12 +293,14 @@ public class CombatManager : MonoBehaviour
         {
             //display success text
             Debug.Log("Player spare success");
+            CombatMenuNavigator.instance.changeDialogueBoxText("The enemy sees that they are outmatched. They take the opportunity to flee.");
 
         }
         else
         {
             //display failure text
             Debug.Log("Player spare fail");
+            CombatMenuNavigator.instance.changeDialogueBoxText("Your enemy laughs at your attempt to spare them");
 
         }
 
@@ -356,7 +360,7 @@ public class CombatManager : MonoBehaviour
     {
 
         yield return new WaitForSeconds(1f);
-    
+        
     }
 
 

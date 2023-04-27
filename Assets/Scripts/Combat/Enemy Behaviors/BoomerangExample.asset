@@ -18,3 +18,5 @@ MonoBehaviour:
   - iterationType: 1
     attacks:
     - {fileID: 11400000, guid: 3e948eaab844ca54e84635e05133226e, type: 2}
+    descriptions:
+    - I hate you

@@ -60,7 +60,7 @@ public class CombatMenuNavigator : MonoBehaviour
 
         if (combatMode == CombatManager.CombatMode.Menu)
         {
-            Debug.Log("Combat Mode menu - CombatManagerNav");
+            //Debug.Log("Combat Mode menu - CombatManagerNav");
             if (Input.GetKeyDown(KeyCode.A))
             {
                 selected--;
@@ -102,6 +102,7 @@ public class CombatMenuNavigator : MonoBehaviour
                         CombatManager.instance.PlayerAttacks();
                         break;
                     case "Act":
+                        CombatManager.instance.actSequence();
                         break;
                     case "Item":
                         CombatManager.instance.showInventory();
@@ -188,7 +189,7 @@ public class CombatMenuNavigator : MonoBehaviour
         }
     }
 
-    public void changeDialogueBoxText()
+    public void changeDialogueBoxText(string msg)
     {
         //will communicate with dialogue box with the specific text needed.
         //Maybe this should take in a string. The string being sourced from the different bits of dialogue that would be said when scared, fighting, or generally reacting
