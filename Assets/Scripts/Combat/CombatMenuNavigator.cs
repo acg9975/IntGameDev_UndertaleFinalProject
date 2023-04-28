@@ -13,6 +13,7 @@ public class CombatMenuNavigator : MonoBehaviour
     [SerializeField] private GameObject playerAttackBox;
     [SerializeField] private GameObject playerDefendBox;
     [SerializeField] private GameObject mercyBox;
+    [SerializeField] private GameObject actBox;
 
     [SerializeField]private DialogueBox db;
 
@@ -27,6 +28,7 @@ public class CombatMenuNavigator : MonoBehaviour
     [SerializeField] private Color selectedCombatColor;
 
     [SerializeField]private TextMeshProUGUI[] mercyButtons;
+    [SerializeField] private TextMeshProUGUI[] actButtons;
 
     bool canPressbutton = false;
 
@@ -40,20 +42,21 @@ public class CombatMenuNavigator : MonoBehaviour
         CombatManager.CombatMode combatMode = CombatManager.instance.combatMode;
 
         dialogueBox.SetActive(combatMode == CombatManager.CombatMode.Menu || combatMode == CombatManager.CombatMode.Inactive);
-        dialogueText.text = description;
+        if (description != null)
+        {
+            dialogueText.text = description;
+        }
+        Debug.Log(description);
 
         playerAttackBox.SetActive(combatMode == CombatManager.CombatMode.PlayerAttack);
         playerDefendBox.SetActive(combatMode == CombatManager.CombatMode.PlayerDefend);
         mercyBox.SetActive(combatMode == CombatManager.CombatMode.Mercy);
-
+        actBox.SetActive(combatMode == CombatManager.CombatMode.Act);
 
         //inventory is set active in inventoryUIManager
 
         healthText.text = PlayerData.Health + "/" + PlayerData.MaxHealth;
         enemyHealthText.text = CombatManager.Enemy.Health + "/" + CombatManager.Enemy.MaxHealth;
-
-
-
     }
 
     private void Update()
@@ -62,7 +65,7 @@ public class CombatMenuNavigator : MonoBehaviour
 
         if (combatMode == CombatManager.CombatMode.Menu)
         {
-            Debug.Log("Combat Mode menu - CombatManagerNav");
+            //Debug.Log("Combat Mode menu - CombatManagerNav");
             if (Input.GetKeyDown(KeyCode.A))
             {
                 selected--;
@@ -96,7 +99,7 @@ public class CombatMenuNavigator : MonoBehaviour
             //handle pressing spacebar to select option - use the button gameobject's name to find whats necessary - possibly use enum?
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                Debug.Log(combatButtons[selected].name);
+                //Debug.Log(combatButtons[selected].name);
                 switch (combatButtons[selected].name)
                 {
                     case "Fight":
@@ -104,6 +107,10 @@ public class CombatMenuNavigator : MonoBehaviour
                         CombatManager.instance.PlayerAttacks();
                         break;
                     case "Act":
+                        CombatManager.instance.combatMode = CombatManager.CombatMode.Act;
+                        UpdateCombatUI();
+                        selected = 0;
+                        StartCoroutine(spaceBarDelay());
                         break;
                     case "Item":
                         CombatManager.instance.showInventory();
@@ -159,16 +166,16 @@ public class CombatMenuNavigator : MonoBehaviour
                     
                     case "Spare":
                         //activate combat manager spare routine
-                        CombatManager.instance.spareSequence();
                         CombatManager.instance.combatMode = CombatManager.CombatMode.Inactive;
                         UpdateCombatUI();
+                        CombatManager.instance.spareSequence();
                         break;
                     case "Flee":
                         //activate combat manager flee chance
-                        CombatManager.instance.fleeSequence();
                         CombatManager.instance.combatMode = CombatManager.CombatMode.Inactive;
 
                         UpdateCombatUI();
+                        CombatManager.instance.fleeSequence();
                         break;
                     default:
                         break;
@@ -183,6 +190,71 @@ public class CombatMenuNavigator : MonoBehaviour
 
         }
 
+        if (combatMode == CombatManager.CombatMode.Act)
+        {
+            // add in ws selection 
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                selected--;
+            }
+            else if (Input.GetKeyDown(KeyCode.D))
+            {
+                selected++;
+            }
+
+            // if its the menu - have one option selected, out of an array of the buttons available
+            if (selected > actButtons.Length - 1)
+            {
+                selected = 0;
+            }
+            else if (selected < 0)
+            {
+                selected = actButtons.Length - 1;
+            }
+
+
+            //get the image and change the color of it - give feedback that a button is selected
+            actButtons[selected].color = new Color32(150, 65, 65, 255);
+            for (int i = 0; i < actButtons.Length; i++)
+            {
+                if (i != selected)
+                {
+                    actButtons[i].color = Color.white;
+                }
+            }
+
+            if (Input.GetKeyDown(KeyCode.Space) && canPressbutton)
+            {
+                switch (actButtons[selected].name)
+                {
+                    case "Check":
+                        CombatManager.instance.checkSequence();
+                        break;
+                    case "Criticize":
+                        CombatManager.instance.actSequence(EnemyBehavior.WeakTo.criticize);
+                        break;
+                    case "Compliment":
+                        CombatManager.instance.actSequence(EnemyBehavior.WeakTo.compliment);
+                        break;
+                    case "Threat":
+                        CombatManager.instance.actSequence(EnemyBehavior.WeakTo.threat);
+                        break;
+                    default:
+                        break;
+                }
+            }
+            else if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                CombatManager.instance.combatMode = CombatManager.CombatMode.Menu;
+                UpdateCombatUI();
+
+            }
+
+        }
+
+
+
+
         IEnumerator spaceBarDelay()
         {
             yield return new WaitForSeconds(1f);
@@ -190,7 +262,7 @@ public class CombatMenuNavigator : MonoBehaviour
         }
     }
 
-    public void changeDialogueBoxText()
+    public void changeDialogueBoxText(string msg)
     {
         //will communicate with dialogue box with the specific text needed.
         //Maybe this should take in a string. The string being sourced from the different bits of dialogue that would be said when scared, fighting, or generally reacting

@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Combat Buttons_0
+      name: FightSelectedSprite
       rect:
         serializedVersion: 2
         x: 43
@@ -131,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80f75c5fce0c749b3a976fc4419c4558
-      internalID: -1637893953
+      spriteID: 7365e088d4921e84fb0df324a0e3396f
+      internalID: 1851177655
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Combat Buttons_1
+      name: ActSelected
       rect:
         serializedVersion: 2
         x: 1008
@@ -152,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e451ac9a935b7428fae7f6f1af2fb55f
-      internalID: -1894100154
+      spriteID: bd7a2fad4cef5da4989d81918e22e0ea
+      internalID: -2075582858
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Combat Buttons_2
+      name: ItemSelectedSprite
       rect:
         serializedVersion: 2
         x: 1953
@@ -173,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5dc9c38c7c77849ffaafb4dc7ac12015
-      internalID: -247737766
+      spriteID: 0152dd6610571fe489f6252a8ab8edf5
+      internalID: -1552409879
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Combat Buttons_3
+      name: MercySelectedSprite
       rect:
         serializedVersion: 2
         x: 2887
@@ -194,14 +194,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4735243f39097494da5069ddf6ae005a
-      internalID: 1113241473
+      spriteID: 09a23b2e00f4aed4a8a534b6538ae22c
+      internalID: 1666932455
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Combat Buttons_4
+      name: FightSprite
       rect:
         serializedVersion: 2
         x: 43
@@ -215,14 +215,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7b0e1cbadb93415985ec5223b6fca1e
-      internalID: -1887276059
+      spriteID: a5d496289671b6d4a996b1391ff9ee59
+      internalID: 236044048
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Combat Buttons_5
+      name: ActSprite
       rect:
         serializedVersion: 2
         x: 1008
@@ -236,14 +236,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95935175e84024300be88b29fe7d9d54
-      internalID: -590127524
+      spriteID: 81c9f1e8affbbeb48b7d9c4dba862048
+      internalID: 625246289
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Combat Buttons_6
+      name: ItemSprite
       rect:
         serializedVersion: 2
         x: 1953
@@ -257,14 +257,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31f8d0eea81f14acfbc3440c774c3497
-      internalID: 1750609369
+      spriteID: fca791f2a65d06a4c8c71d3bdb579248
+      internalID: -1115065416
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Combat Buttons_7
+      name: MercySprite
       rect:
         serializedVersion: 2
         x: 2887
@@ -278,8 +278,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9dc4acd556104440bac83c043ee7040b
-      internalID: 416070700
+      spriteID: 98d2d6af97780bd4ab570bd6d44f49b9
+      internalID: -1386388573
       vertices: []
       indices: 
       edges: []
@@ -327,14 +327,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Combat Buttons_5: -590127524
-      Combat Buttons_2: -247737766
-      Combat Buttons_7: 416070700
-      Combat Buttons_6: 1750609369
-      Combat Buttons_4: -1887276059
-      Combat Buttons_3: 1113241473
-      Combat Buttons_0: -1637893953
-      Combat Buttons_1: -1894100154
+      MercySprite: -1386388573
+      FightSelectedSprite: 1851177655
+      ActSprite: 625246289
+      ItemSelectedSprite: -1552409879
+      ActSelected: -2075582858
+      FightSprite: 236044048
+      MercySelectedSprite: 1666932455
+      ItemSprite: -1115065416
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
