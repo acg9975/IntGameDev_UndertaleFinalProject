@@ -179,7 +179,10 @@ public class EnemyBehavior : ScriptableObject
 
     public void nextPhase()
     {
-        phaseIndex++;
+        if (phaseIndex < phases.Length - 1)
+        {
+            phaseIndex++;
+        }
         wfp = phases[phaseIndex].WeaknessFailPhrase;
         wep = phases[phaseIndex].WeaknessExploitedPhrase;
 
