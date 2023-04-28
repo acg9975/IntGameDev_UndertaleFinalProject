@@ -27,7 +27,7 @@ MonoBehaviour:
     weaknessExploitedPhrase: What the?
     weaknessFailPhrase: Did you really think that would work
     healthRange: 90
-    weaknessRange: 0
+    weaknessRange: 2
   - iterationType: 1
     attacks:
     - {fileID: 11400000, guid: 3e948eaab844ca54e84635e05133226e, type: 2}
@@ -38,7 +38,7 @@ MonoBehaviour:
     weaknessExploitedPhrase: How dare you?
     weaknessFailPhrase: Please, your weak actions mean nothing to me
     healthRange: 40
-    weaknessRange: 0
+    weaknessRange: 1
   - iterationType: 0
     attacks:
     - {fileID: 11400000, guid: 3e948eaab844ca54e84635e05133226e, type: 2}
@@ -47,6 +47,6 @@ MonoBehaviour:
     descriptions:
     - ...now die!
     weaknessExploitedPhrase: Good for nothing low life
-    weaknessFailPhrase: 
+    weaknessFailPhrase: ...
     healthRange: 0
     weaknessRange: 0
