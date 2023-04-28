@@ -179,7 +179,15 @@ public class EnemyBehavior : ScriptableObject
 
     public void nextPhase()
     {
-        phaseIndex++;
+        if (phaseIndex == phases.Length - 1)
+        {
+            phaseIndex++;
+        }
+        else
+        {
+
+        }
+
         wfp = phases[phaseIndex].WeaknessFailPhrase;
         wep = phases[phaseIndex].WeaknessExploitedPhrase;
 
@@ -209,6 +217,7 @@ public class EnemyBehavior : ScriptableObject
         }
         */
         //much simpler but more work required, if we are below the range described in the current phase, move to next phase
+        
         if (Health < phases[phaseIndex].HealthRange)
         {
             nextPhase();
