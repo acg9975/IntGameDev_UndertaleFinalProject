@@ -156,7 +156,7 @@ public class inventoryUIManager : MonoBehaviour
                 {
                     CombatManager.instance.combatMode = CombatManager.CombatMode.Menu;
                     StartCoroutine(canActivateInventoryTimer());
-                    Debug.Log("canActivateinv false");
+                    //Debug.Log("canActivateinv false");
 
                 }
                 else {
@@ -177,7 +177,7 @@ public class inventoryUIManager : MonoBehaviour
         canActivateInventory = false;
         yield return new WaitForSeconds(1);//wait for half a second to turn this back on
         canActivateInventory = true ;
-        Debug.Log("canActivateinv true  ");
+        //Debug.Log("canActivateinv true  ");
 
     }
 

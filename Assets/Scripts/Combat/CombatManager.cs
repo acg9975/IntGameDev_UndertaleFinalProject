@@ -15,7 +15,7 @@ public class CombatManager : MonoBehaviour
     [SerializeField] private Transform playerSpawn;
     public static Vector2 AttackCenter { get { return instance.playerSpawn.position; } }
 
-    public enum CombatMode { Menu, PlayerAttack, PlayerDefend, Inventory, Inactive, Mercy}
+    public enum CombatMode { Menu, PlayerAttack, PlayerDefend, Inventory, Inactive, Mercy, Act}
     [HideInInspector] public CombatMode combatMode = CombatMode.Menu;
 
     private IEnumerator waveRoutine;
@@ -50,6 +50,7 @@ public class CombatManager : MonoBehaviour
     public static void SetEnemy(EnemyBehavior enemy)
     {
         Enemy = enemy;
+        Enemy.PhraseInitialization();
     }
 
     private void Start()
@@ -146,6 +147,9 @@ public class CombatManager : MonoBehaviour
     
     private void TriggerWave()
     {
+        //we check if we need to change the phase yet or not
+        Enemy.checkChangePhase();
+
         combatMode = CombatMode.PlayerDefend;
         //Debug.Log("PLAYER DEFEND");
         SpawnPlayer();
@@ -216,6 +220,8 @@ public class CombatManager : MonoBehaviour
         inventoryUIManager.instance.setActive(true);
     }
 
+    
+
     public void fleeSequence()
     {
         //player has a 10% chance to flee. if they do, then they automatically leave the battle
@@ -245,15 +251,14 @@ public class CombatManager : MonoBehaviour
         {
             //throw up positive text - "You were able to escape"
             Debug.Log("Player is successful! They escape");
-            CombatMenuNavigator.instance.changeDialogueBoxText("You manage to escape!");
+            CombatMenuNavigator.instance.UpdateCombatUI("You manage to escape!");
         }
         else
         {
-            CombatMenuNavigator.instance.changeDialogueBoxText("You attempt to flee but are unsuccessful!");
+            CombatMenuNavigator.instance.UpdateCombatUI("You attempt to flee but are unsuccessful!");
             //throw up negative text - "You were unable to escape"
             Debug.Log("Player fails!");
         }
-        CombatMenuNavigator.instance.UpdateCombatUI();
 
         yield return new WaitForSeconds(3f);
         if (isSuccessful)
@@ -272,16 +277,13 @@ public class CombatManager : MonoBehaviour
     public void spareSequence()
     {
         //if enemy health is low enough (25%), and if the enemy can flee (make bool for this), allow them to flee
-
         //if it is not low enough, flash dialogue box with enemy taunting the player. set this for 5 seconds, and then move to enemy's turn
-        if (Enemy.Health <= Enemy.MaxHealth * 0.25f)
+        if ((Enemy.Health <= Enemy.MaxHealth * 0.25f  && Enemy.CanBeSpared )|| Enemy.WeaknessCheck == 0)
         {
-            Debug.Log("Enemy health is low");
             StartCoroutine(spareTimer(true));
         }
         else
         {
-            Debug.Log("enemy health is not low enough");
             StartCoroutine(spareTimer(false));
         }
 
@@ -293,15 +295,13 @@ public class CombatManager : MonoBehaviour
         {
             //display success text
             Debug.Log("Player spare success");
-            CombatMenuNavigator.instance.changeDialogueBoxText("The enemy sees that they are outmatched. They take the opportunity to flee.");
-
+            CombatMenuNavigator.instance.UpdateCombatUI("The enemy sees that they are outmatched. They take the opportunity to flee.");
         }
         else
         {
             //display failure text
             Debug.Log("Player spare fail");
-            CombatMenuNavigator.instance.changeDialogueBoxText("Your enemy laughs at your attempt to spare them");
-
+            CombatMenuNavigator.instance.UpdateCombatUI("Your enemy laughs at your attempt to spare them");
         }
 
         yield return new WaitForSeconds(5f);
@@ -335,34 +335,67 @@ public class CombatManager : MonoBehaviour
     }
 
 
-    public void actSequence()//parameters will need to be an enemy weakness enum state
+    public void actSequence(EnemyBehavior.WeakTo wt)//parameters will need to be an enemy weakness enum state
     {
-
         //player has 4 options
         //check - criticise - compliment - threat
         //certain enemies are weaker to certain options
         //we need a check in the enemybehavior scriptable object to see which the enemy is susceptible to
         //enum weakTo {check - criticise - compliment - threat}
-        //
-        //use this as a mediator to move to the coroutine
-        StartCoroutine(actTimer());
+        combatMode = CombatMode.Inactive;
+        if (Enemy.weakTo == wt)
+        {
+            //get the current phase's correct phrase
+            CombatMenuNavigator.instance.UpdateCombatUI(Enemy.WEP);
+            Enemy.WeaknessCheck--;
+            StartCoroutine(actTimer(true));
+
+        }
+        else
+        {
+            CombatMenuNavigator.instance.UpdateCombatUI(Enemy.WFP);
+            StartCoroutine(actTimer(false));
+        }
         //coroutine then takes in what the player chose and compares to what enemy is weak to
         //possibly show more than just "threat failed" or so based on what narrative designers make
         //but if its what the enemy is vulnerable to - show "threat success" and turn isSpareable to true
         //then allow them to spare the character in the next turn. 
 
         //we should probably implement a static counter for amount of enemies killed
-
-
     }
 
-    IEnumerator actTimer()
+    IEnumerator actTimer(bool successful)
     {
+        if (successful)
+        {
+            CombatMenuNavigator.instance.UpdateCombatUI(Enemy.WEP);
 
-        yield return new WaitForSeconds(1f);
-        
+        }
+        else
+        {
+            CombatMenuNavigator.instance.UpdateCombatUI(Enemy.WFP);
+
+        }
+        //weird bug in the ordering of when these are called, causing the updateCombatUI function to be called at the wrong point passing in null instead of the proper text
+        yield return new WaitForSeconds(3f);
+        TriggerWave();
+
     }
 
+    public void checkSequence()
+    {
+        //once selected, show the player what the enemy is weak to then move to the checkTimer and then enemy attack
+        StartCoroutine(checkTimer());
+        combatMode = CombatMode.Inactive;
+        CombatMenuNavigator.instance.UpdateCombatUI("Enemy is weak to " + Enemy.weakTo + ". You need " + Enemy.WeaknessCheck + " more attempts to get them to flee!");
 
+    }
+
+    private IEnumerator checkTimer()
+    {
+        yield return new WaitForSeconds(3f);
+        TriggerWave();
+
+    }
 
 }
