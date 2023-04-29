@@ -179,8 +179,12 @@ public class CombatManager : MonoBehaviour
     {
         //give player item if necessary and say what the player was given
         //return player back to overworld
-        SceneTransition.ChangeScene(SceneTransition.previousScene);
+
+        Vector3 pos = new Vector3(PlayerPrefs.GetFloat("lastOverworldX"), PlayerPrefs.GetFloat("lastOverworldY"),0 );
+        SceneTransition.ChangeScene(SceneTransition.previousScene, pos);
         //SceneTransition.instance.ChangeScene(SceneTransition.previousScene);
+        //destroy NPC
+
     }
 
     void playerDeath()

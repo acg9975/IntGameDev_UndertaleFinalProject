@@ -63,15 +63,25 @@ public class SceneTransition : MonoBehaviour
         //make the scene fadeout
         //- create an object that becomes completely black over two seconds and covers the screen
         //- change scene after two seconds 
+        Debug.Log(position + " : Done");
         GameObject fos = Instantiate(FOS, position, Quaternion.identity);
         fos.GetComponent<FadeOutSquare>().StartFadeIn();
-        StartCoroutine(LoadSceneRoutine(scene));
+        StartCoroutine(LoadSceneRoutine(scene, position));
     }
 
     private IEnumerator LoadSceneRoutine(string scene)
     {
         yield return new WaitForSeconds(1.0f);
         SceneManager.LoadScene(scene);
+    }
+    private IEnumerator LoadSceneRoutine(string scene, Vector3 position)
+    {
+        yield return new WaitForSeconds(1.0f);
+        SceneManager.LoadScene(scene);
+        yield return new WaitForSeconds(0.1f);
+        GameObject fos = Instantiate(FOS, position, Quaternion.identity);
+        fos.GetComponent<FadeOutSquare>().StartFadeOut();
+        GameObject.Find("Player").GetComponent<Transform>().position = position;
     }
 
     private IEnumerator onDeath()

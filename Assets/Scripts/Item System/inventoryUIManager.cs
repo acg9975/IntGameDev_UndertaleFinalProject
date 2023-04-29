@@ -49,7 +49,7 @@ public class inventoryUIManager : MonoBehaviour
         //we only display the name of the item if that slot is filled
         //get handle to inventory and fill in the items as needed
         int cap = PlayerData.inventory.getCurrentItemArray().Length;
-        Debug.Log("current cap"+ cap);
+        //Debug.Log("current cap"+ cap);
         for (int i = 0; i < cap; i++)
         {
             itemText[i].text = PlayerData.inventory.getCurrentItemArray()[i].itemName;
@@ -73,7 +73,7 @@ public class inventoryUIManager : MonoBehaviour
             
             for (int i = itemText.Length - 1; i >= cap ; i--)
             {
-                Debug.Log("i:"+i);
+                //Debug.Log("i:"+i);
                 itemText[i].gameObject.SetActive(false);
                 
             }
