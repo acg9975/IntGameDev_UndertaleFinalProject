@@ -12,6 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bc6f9462afc347418b98db90dbe5b0e, type: 3}
   m_Name: yamlet
   m_EditorClassIdentifier: 
-  maxHealth: 0
-  health: 0
-  phases: []
+  maxHealth: 10
+  health: 10
+  phases:
+  - iterationType: 1
+    attacks:
+    - {fileID: 11400000, guid: a16761c6949f1434fb9d462eb3eb1504, type: 2}
+    descriptions:
+    - Yamlet is poised to strike!
+    - Yamlet thinks the lady broth protest too much.
+    - Cucumbersome.
