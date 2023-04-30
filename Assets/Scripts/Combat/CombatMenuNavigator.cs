@@ -150,7 +150,7 @@ public class CombatMenuNavigator : MonoBehaviour
 
 
             //get the image and change the color of it - give feedback that a button is selected
-            mercyButtons[selected].color = new Color32(150, 65, 65, 255);
+            mercyButtons[selected].color = selectedCombatColor;
             for (int i = 0; i < mercyButtons.Length; i++)
             {
                 if (i != selected)
@@ -214,7 +214,7 @@ public class CombatMenuNavigator : MonoBehaviour
 
 
             //get the image and change the color of it - give feedback that a button is selected
-            actButtons[selected].color = new Color32(150, 65, 65, 255);
+            actButtons[selected].color = selectedCombatColor;
             for (int i = 0; i < actButtons.Length; i++)
             {
                 if (i != selected)
