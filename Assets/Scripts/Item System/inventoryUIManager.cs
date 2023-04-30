@@ -49,7 +49,7 @@ public class inventoryUIManager : MonoBehaviour
         //we only display the name of the item if that slot is filled
         //get handle to inventory and fill in the items as needed
         int cap = PlayerData.inventory.getCurrentItemArray().Length;
-        Debug.Log("current cap"+ cap);
+        //Debug.Log("current cap"+ cap);
         for (int i = 0; i < cap; i++)
         {
             itemText[i].text = PlayerData.inventory.getCurrentItemArray()[i].itemName;
@@ -73,7 +73,7 @@ public class inventoryUIManager : MonoBehaviour
             
             for (int i = itemText.Length - 1; i >= cap ; i--)
             {
-                Debug.Log("i:"+i);
+                //Debug.Log("i:"+i);
                 itemText[i].gameObject.SetActive(false);
                 
             }
@@ -149,14 +149,14 @@ public class inventoryUIManager : MonoBehaviour
             }
             else if(cap == 0)//set it to false after space is pressed - therefore escape and space can both be used
             {
-                Debug.Log("setting to false");
+                //Debug.Log("setting to false");
                 setActive(false);
                 //if in combat, go to combat mode menu
                 if (SceneManager.GetActiveScene().name == "Combat")
                 {
                     CombatManager.instance.combatMode = CombatManager.CombatMode.Menu;
                     StartCoroutine(canActivateInventoryTimer());
-                    Debug.Log("canActivateinv false");
+                    //Debug.Log("canActivateinv false");
 
                 }
                 else {
@@ -177,7 +177,7 @@ public class inventoryUIManager : MonoBehaviour
         canActivateInventory = false;
         yield return new WaitForSeconds(1);//wait for half a second to turn this back on
         canActivateInventory = true ;
-        Debug.Log("canActivateinv true  ");
+        //Debug.Log("canActivateinv true  ");
 
     }
 

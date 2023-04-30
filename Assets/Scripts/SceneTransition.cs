@@ -63,22 +63,46 @@ public class SceneTransition : MonoBehaviour
         //make the scene fadeout
         //- create an object that becomes completely black over two seconds and covers the screen
         //- change scene after two seconds 
+        Debug.Log(position + " : Done");
         GameObject fos = Instantiate(FOS, position, Quaternion.identity);
         fos.GetComponent<FadeOutSquare>().StartFadeIn();
-        StartCoroutine(LoadSceneRoutine(scene));
+        StartCoroutine(LoadSceneRoutine(scene, position));
     }
 
     private IEnumerator LoadSceneRoutine(string scene)
     {
+        Debug.Log("Changing scene now");
         yield return new WaitForSeconds(1.0f);
         SceneManager.LoadScene(scene);
     }
+    private IEnumerator LoadSceneRoutine(string scene, Vector3 position)
+    {
+        yield return new WaitForSeconds(1.0f);
+        SceneManager.LoadScene(scene);
+        yield return new WaitForSeconds(0.1f);
+        GameObject fos = Instantiate(FOS, position, Quaternion.identity);
+        fos.GetComponent<FadeOutSquare>().StartFadeOut();
+        GameObject.Find("Player").GetComponent<Transform>().position = position;
+        WorldOrganizer.instance.updateWorld();
+    }
+    public void onDeath()
+    {
+        StartCoroutine(onDeathRoutine());
+    }
 
-    private IEnumerator onDeath()
+    private IEnumerator onDeathRoutine()
     {
         yield return new WaitForSeconds(1.0f);
         PlayerData.Health = PlayerData.MaxHealth;
         SceneManager.LoadScene("MainMenu");
 
     }
+
+
+    public void onGameEnd()
+    {
+        instance.StartCoroutine(LoadSceneRoutine("MainMenu"));
+        Debug.Log("Main Menu Loading");
+    }
+
 }

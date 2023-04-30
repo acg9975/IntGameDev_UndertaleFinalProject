@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -115,7 +115,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: FightSelectedSprite
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 976
+        width: 826
+        height: 477
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7365e088d4921e84fb0df324a0e3396f
+      internalID: 1851177655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ActSelected
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 976
+        width: 826
+        height: 475
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd7a2fad4cef5da4989d81918e22e0ea
+      internalID: -2075582858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItemSelectedSprite
+      rect:
+        serializedVersion: 2
+        x: 1953
+        y: 976
+        width: 824
+        height: 477
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0152dd6610571fe489f6252a8ab8edf5
+      internalID: -1552409879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MercySelectedSprite
+      rect:
+        serializedVersion: 2
+        x: 2887
+        y: 976
+        width: 826
+        height: 477
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09a23b2e00f4aed4a8a534b6538ae22c
+      internalID: 1666932455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FightSprite
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 225
+        width: 826
+        height: 477
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5d496289671b6d4a996b1391ff9ee59
+      internalID: 236044048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ActSprite
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 225
+        width: 826
+        height: 475
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81c9f1e8affbbeb48b7d9c4dba862048
+      internalID: 625246289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItemSprite
+      rect:
+        serializedVersion: 2
+        x: 1953
+        y: 225
+        width: 824
+        height: 477
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fca791f2a65d06a4c8c71d3bdb579248
+      internalID: -1115065416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MercySprite
+      rect:
+        serializedVersion: 2
+        x: 2887
+        y: 225
+        width: 826
+        height: 477
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98d2d6af97780bd4ab570bd6d44f49b9
+      internalID: -1386388573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline:
     - - {x: -1880.5, y: 97}
       - {x: -1880.5, y: 665}
@@ -158,7 +326,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MercySprite: -1386388573
+      FightSelectedSprite: 1851177655
+      ActSprite: 625246289
+      ItemSelectedSprite: -1552409879
+      ActSelected: -2075582858
+      FightSprite: 236044048
+      MercySelectedSprite: 1666932455
+      ItemSprite: -1115065416
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

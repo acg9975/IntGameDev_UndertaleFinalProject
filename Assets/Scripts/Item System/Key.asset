@@ -9,14 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bc6f9462afc347418b98db90dbe5b0e, type: 3}
-  m_Name: BoomerangExample
+  m_Script: {fileID: 11500000, guid: 07b71fec92dbd354fbd96e6015b07df4, type: 3}
+  m_Name: Key
   m_EditorClassIdentifier: 
-  maxHealth: 10
-  health: 0
-  phases:
-  - iterationType: 1
-    attacks:
-    - {fileID: 11400000, guid: 3e948eaab844ca54e84635e05133226e, type: 2}
-    descriptions:
-    - I hate you
+  itemName: Key
+  itemDescription: Solves test puzzle
+  healingAmount: 0

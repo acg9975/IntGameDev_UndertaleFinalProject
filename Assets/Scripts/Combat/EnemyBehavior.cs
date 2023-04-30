@@ -7,6 +7,42 @@ public class EnemyBehavior : ScriptableObject
 {
     [SerializeField] [Min(0)] private int maxHealth;
     [SerializeField] [Min(0)] private int health;
+    [SerializeField]private Sprite enemySprite;
+    public Sprite EnemySprite
+    {
+        get
+        {
+            return enemySprite;
+        }
+    }
+
+    [SerializeField] private bool canBeSpared;
+    public bool CanBeSpared
+    {
+        get
+        {
+            return canBeSpared;
+        }
+    }
+
+    private string wfp;//weaknessfailphrase
+    private string wep;//weaknessexploitedphrase
+    //these get changed according to the current phrase
+    public string WFP
+    {
+        get
+        {
+            return wfp;
+        }
+    }
+    public string WEP
+    {
+        get
+        {
+            return wep;
+        }
+    }
+
 
     public int MaxHealth { get { return maxHealth; } }
 
@@ -19,6 +55,21 @@ public class EnemyBehavior : ScriptableObject
         set
         {
             health = Mathf.Clamp(value, 0, MaxHealth);
+        }
+    }
+    public enum WeakTo { criticize, compliment, threat };
+    public WeakTo weakTo= WeakTo.criticize;
+    [SerializeField]
+    private int weaknessCheck = 3;
+    public int WeaknessCheck
+    {
+        get
+        {
+            return weaknessCheck;
+        }
+        set
+        {
+            weaknessCheck = Mathf.Clamp(value, 0, 99);
         }
     }
 
@@ -35,6 +86,44 @@ public class EnemyBehavior : ScriptableObject
 
         private int attackIndex = -1;
         private int descriptionIndex = -1;
+        [SerializeField][Tooltip("Phrase used when the player chooses the correct weakness")]
+        private string weaknessExploitedPhrase = "";
+
+        [SerializeField][Tooltip("Phrase used when the player chooses the wrong weakness")]
+        private string weaknessFailPhrase = "";
+        public string WeaknessFailPhrase
+        {
+            get
+            {
+                return weaknessFailPhrase;
+            }
+        }
+        public string WeaknessExploitedPhrase
+        {
+            get
+            {
+                return weaknessExploitedPhrase;
+            }
+        }
+
+        [SerializeField] [Tooltip("If health is not higher than this, then it goes to the next phase")]
+        private int healthRange = 0;
+        public int HealthRange
+        {
+            get
+            {
+                return healthRange;
+            }
+        }
+        [SerializeField][Tooltip("If weaknessCheck is below this amount, we go to the other phase")]
+        private int weaknessRange = 0;
+        public int WeaknessRange
+        {
+            get
+            {
+                return weaknessRange;
+            }
+        }
 
         public Attack GetNextAttack()
         {
@@ -95,4 +184,61 @@ public class EnemyBehavior : ScriptableObject
     {
         return phases[phaseIndex].GetNextDescription();
     }
+
+    public void nextPhase()
+    {
+        if (phaseIndex < phases.Length - 1)
+        {
+            phaseIndex++;
+        }
+        wfp = phases[phaseIndex].WeaknessFailPhrase;
+        wep = phases[phaseIndex].WeaknessExploitedPhrase;
+
+    }
+
+    public void checkChangePhase()
+    {
+        /*failed attempt, discard
+        //this is made to check if we need to change the phase of this enemy
+        //if the health / phases length
+        if (phases.Length > 1)
+        {
+
+        }
+        int blockOfHealth = maxHealth / phases.Length;
+
+        //if we have an enemy with 9 health, a block of health would be 3
+        //we then see what block of health the player is in. As healthblocks will always scale with the amount of health
+        //we can
+
+        //if in  first health block (3), go to last phase
+        //if in second health block (6), go to second to last phase
+        //if in third health block (9), go to third to last 
+        if (Health <= blockOfHealth )
+        {
+            phaseIndex = phases.Length - 1 ;
+        }
+        */
+        //much simpler but more work required, if we are below the range described in the current phase, move to next phase
+        if (Health < phases[phaseIndex].HealthRange)
+        {
+            nextPhase();
+        }
+
+
+        //if the current
+        if (weaknessCheck < phases[phaseIndex].WeaknessRange)
+        {
+            nextPhase();
+        }
+    }
+
+    public void PhraseInitialization()
+    {
+        //called at the start of the battle to set phrases
+        wep = phases[phaseIndex].WeaknessExploitedPhrase;
+        wfp = phases[phaseIndex].WeaknessFailPhrase;
+
+    }
+
 }
