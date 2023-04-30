@@ -84,6 +84,13 @@ public class SceneTransition : MonoBehaviour
         GameObject.Find("Player").GetComponent<Transform>().position = position;
     }
 
+    private IEnumerator LoadSceneRoutine(string scene, Vector3 position, string NPCtoDestroy)
+    {
+        //pass in the name of the enemy to destroy as well as previous information and destroy it when the scene is loaded.
+        //or have another script keep track of what NPCs are destroyed and what puzzles are completed.
+        yield return new WaitForSeconds(1f);
+    }
+
     private IEnumerator onDeath()
     {
         yield return new WaitForSeconds(1.0f);

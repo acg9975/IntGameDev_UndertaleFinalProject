@@ -83,10 +83,7 @@ public class Dialogue
             PlayerPrefs.SetString(pref.parameter, pref.value);
 
         option.onEnd?.Invoke();
-        if (option.onEnd != null)
-        {
-
-        }
+        
     }
 
     private void FindNextItem()
