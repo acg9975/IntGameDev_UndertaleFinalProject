@@ -331,36 +331,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!1 &28708279 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4164502599485516899, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
-  m_PrefabInstance: {fileID: 4164502599496655316}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &28708281 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4164502599485516909, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
   m_PrefabInstance: {fileID: 4164502599496655316}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &28708286
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 28708279}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ab173ce265eee4b3596ca4b2f1a1bd6b, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &102583917
 GameObject:
   m_ObjectHideFlags: 0
@@ -4929,7 +4904,7 @@ Transform:
   m_GameObject: {fileID: 1821206828}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 61.56, y: -9.25, z: 0}
-  m_LocalScale: {x: 1.3, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -5184,22 +5159,6 @@ PrefabInstance:
     - target: {fileID: 4164502599485516909, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164502599485516911, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
-      propertyPath: m_Size.x
-      value: 0.78001696
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164502599485516911, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
-      propertyPath: m_Size.y
-      value: 0.55734855
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164502599485516911, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164502599485516911, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.22137573
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}

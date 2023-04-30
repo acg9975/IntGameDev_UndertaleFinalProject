@@ -14,6 +14,7 @@ public class OverworldMovement : MonoBehaviour
     private Vector3 dir;
 
     private Rigidbody2D rb;
+    private Animator anim;
 
     public static bool canMove = true;
     public item item;
@@ -25,6 +26,7 @@ public class OverworldMovement : MonoBehaviour
         instance = this;
 
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
@@ -46,6 +48,9 @@ public class OverworldMovement : MonoBehaviour
 
             if (move != Vector3.zero)
                 dir = move;
+
+            anim.SetInteger("Horizontal", (int) move.x);
+            anim.SetInteger("Vertical", (int) move.y);
         }
     }
 
