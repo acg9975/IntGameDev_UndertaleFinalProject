@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ede77edda8dad2440a8d383b96a712f4
+guid: 11aee0c349f66a645a6deabbca5022ef
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -127,91 +127,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Overworld_Assests_1_0
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 3
-        width: 30
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 10, y: 31, z: 10, w: 14}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ca074ba9f0e814f438607aab35dc672a
-      internalID: -1715626153
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_Assests_1_1
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 27
-        width: 47
-        height: 42
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 4, y: 6, z: 4, w: 12}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6f14887b94adcd045a548e17e534facb
-      internalID: -811167160
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_Assests_1_2
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 15
-        width: 27
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 596171879b99e70458270040425118d7
-      internalID: 1589820173
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_Assests_1_3
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 2
-        width: 33
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 3, y: 0, z: 16, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dc0f6142df7d15d47aeb4fa7162af97a
-      internalID: -1855947354
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -222,11 +138,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Overworld_Assests_1_0: -1715626153
-      Overworld_Assests_1_2: 1589820173
-      Overworld_Assests_1_1: -811167160
-      Overworld_Assests_1_3: -1855947354
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
