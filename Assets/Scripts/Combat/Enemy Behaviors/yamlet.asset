@@ -14,8 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 2
   health: 0
+  enemySprite: {fileID: 932394018, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+  canBeSpared: 1
+  weakTo: 0
+  weaknessCheck: 1
   phases:
   - iterationType: 1
     attacks:
     - {fileID: 11400000, guid: 0cf21005c97750d4ba4818d00cfe0bc1, type: 2}
-    descriptions: []
+    descriptions:
+    - Leave me alone,you little runt
+    weaknessExploitedPhrase: Ouchie!
+    weaknessFailPhrase: 
+    healthRange: 0
+    weaknessRange: 0
