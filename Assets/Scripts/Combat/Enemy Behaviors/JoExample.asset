@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: JoExample
   m_EditorClassIdentifier: 
   maxHealth: 100
-  health: 100
+  health: 94
+  enemySprite: {fileID: -265690492, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
   canBeSpared: 0
   weakTo: 0
   weaknessCheck: 3
   phases:
   - iterationType: 0
     attacks:
-    - {fileID: 11400000, guid: dea7d2f18135b49498546f3a8594e795, type: 2}
+    - {fileID: 11400000, guid: 3e948eaab844ca54e84635e05133226e, type: 2}
     - {fileID: 11400000, guid: 0cf21005c97750d4ba4818d00cfe0bc1, type: 2}
     descriptions:
     - ....

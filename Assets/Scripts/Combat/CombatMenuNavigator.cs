@@ -46,7 +46,7 @@ public class CombatMenuNavigator : MonoBehaviour
         {
             dialogueText.text = description;
         }
-        Debug.Log(description);
+        //Debug.Log(description);
 
         playerAttackBox.SetActive(combatMode == CombatManager.CombatMode.PlayerAttack);
         playerDefendBox.SetActive(combatMode == CombatManager.CombatMode.PlayerDefend);

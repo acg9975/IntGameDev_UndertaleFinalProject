@@ -7,6 +7,14 @@ public class EnemyBehavior : ScriptableObject
 {
     [SerializeField] [Min(0)] private int maxHealth;
     [SerializeField] [Min(0)] private int health;
+    [SerializeField]private Sprite enemySprite;
+    public Sprite EnemySprite
+    {
+        get
+        {
+            return enemySprite;
+        }
+    }
 
     [SerializeField] private bool canBeSpared;
     public bool CanBeSpared

@@ -71,6 +71,7 @@ public class SceneTransition : MonoBehaviour
 
     private IEnumerator LoadSceneRoutine(string scene)
     {
+        Debug.Log("Changing scene now");
         yield return new WaitForSeconds(1.0f);
         SceneManager.LoadScene(scene);
     }
@@ -82,20 +83,26 @@ public class SceneTransition : MonoBehaviour
         GameObject fos = Instantiate(FOS, position, Quaternion.identity);
         fos.GetComponent<FadeOutSquare>().StartFadeOut();
         GameObject.Find("Player").GetComponent<Transform>().position = position;
+        WorldOrganizer.instance.updateWorld();
     }
-
-    private IEnumerator LoadSceneRoutine(string scene, Vector3 position, string NPCtoDestroy)
+    public void onDeath()
     {
-        //pass in the name of the enemy to destroy as well as previous information and destroy it when the scene is loaded.
-        //or have another script keep track of what NPCs are destroyed and what puzzles are completed.
-        yield return new WaitForSeconds(1f);
+        StartCoroutine(onDeathRoutine());
     }
 
-    private IEnumerator onDeath()
+    private IEnumerator onDeathRoutine()
     {
         yield return new WaitForSeconds(1.0f);
         PlayerData.Health = PlayerData.MaxHealth;
         SceneManager.LoadScene("MainMenu");
 
     }
+
+
+    public void onGameEnd()
+    {
+        instance.StartCoroutine(LoadSceneRoutine("MainMenu"));
+        Debug.Log("Main Menu Loading");
+    }
+
 }

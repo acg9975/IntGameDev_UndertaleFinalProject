@@ -13,6 +13,18 @@ public class CombatManager : MonoBehaviour
     private GameObject player;
 
     [SerializeField] private Transform playerSpawn;
+    [SerializeField] private SpriteRenderer enemySprite;
+    public Sprite EnemySprite
+    {
+        get
+        {
+            return enemySprite.sprite;
+        }
+        set
+        {
+            enemySprite.sprite = value;
+        }
+    }
     public static Vector2 AttackCenter { get { return instance.playerSpawn.position; } }
 
     public enum CombatMode { Menu, PlayerAttack, PlayerDefend, Inventory, Inactive, Mercy, Act}
@@ -41,7 +53,6 @@ public class CombatManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-
         if (Enemy == null)
             SetEnemy(enemy);
     }
@@ -56,6 +67,7 @@ public class CombatManager : MonoBehaviour
     private void Start()
     {
         Enemy.Init();
+        EnemySprite = Enemy.EnemySprite;
         ShowCombatMenu();
     }
 
@@ -182,6 +194,14 @@ public class CombatManager : MonoBehaviour
 
         Vector3 pos = new Vector3(PlayerPrefs.GetFloat("lastOverworldX"), PlayerPrefs.GetFloat("lastOverworldY"),0 );
         SceneTransition.ChangeScene(SceneTransition.previousScene, pos);
+
+        //Check for individual enemy's death and change it in player prefs
+        if (Enemy.name == "yamlet")
+        {
+            PlayerPrefs.SetString("YamletStatus", "Dead");
+            PlayerPrefs.SetString("SerifStatus", "Moved");
+
+        }
         //SceneTransition.instance.ChangeScene(SceneTransition.previousScene);
         //destroy NPC
 
@@ -190,8 +210,10 @@ public class CombatManager : MonoBehaviour
     void playerDeath()
     {
         //goto main menu
-        SceneTransition.ChangeScene("MainMenu");
-        PlayerData.Health = PlayerData.MaxHealth;
+        SceneTransition.instance.onDeath();
+
+        //SceneTransition.ChangeScene("MainMenu");
+        //PlayerData.Health = PlayerData.MaxHealth;
     }
 
     void spawnSlider()
@@ -290,7 +312,6 @@ public class CombatManager : MonoBehaviour
         {
             StartCoroutine(spareTimer(false));
         }
-
     }
 
     IEnumerator spareTimer(bool isSuccessful)
@@ -324,15 +345,23 @@ public class CombatManager : MonoBehaviour
 
     public void playerSpare()
     {
-        
+
         //currently the same as enemy death, but later on will have different functionality
         //player might gain items on enemy death
-        SceneTransition.ChangeScene(SceneTransition.previousScene);
+
+        Vector3 pos = new Vector3(PlayerPrefs.GetFloat("lastOverworldX"), PlayerPrefs.GetFloat("lastOverworldY"), 0);
+        SceneTransition.ChangeScene(SceneTransition.previousScene, pos);
+        if (Enemy.name == "yamlet")
+        {
+            PlayerPrefs.SetString("YamletStatus", "Alive");
+        }
     }
     public void playerFlee()
     {
         //currently the same as enemy death, but later on will have different functionality
         //player might gain items on enemy death - player will not gain items from this
+
+        //MAY NEED TO REMOVE THIS FUNCTIONALITY
         SceneTransition.ChangeScene(SceneTransition.previousScene);
 
 

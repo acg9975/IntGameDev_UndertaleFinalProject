@@ -149,7 +149,7 @@ public class inventoryUIManager : MonoBehaviour
             }
             else if(cap == 0)//set it to false after space is pressed - therefore escape and space can both be used
             {
-                Debug.Log("setting to false");
+                //Debug.Log("setting to false");
                 setActive(false);
                 //if in combat, go to combat mode menu
                 if (SceneManager.GetActiveScene().name == "Combat")
