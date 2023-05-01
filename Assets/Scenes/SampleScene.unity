@@ -5287,6 +5287,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4768154712817077488, guid: baa20a9f76afc414e994408e2e2a18b5, type: 3}
+      propertyPath: dialogue.content.Array.data[0].onEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 11400000, guid: 913ba95b61c823340866dc584fcc2e90, type: 2}
     - target: {fileID: 4768154712817077490, guid: baa20a9f76afc414e994408e2e2a18b5, type: 3}
       propertyPath: m_Name
       value: Yamlet
