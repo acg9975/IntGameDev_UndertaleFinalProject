@@ -36,9 +36,9 @@ public class DialogueBox : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A))
             selectedIndex--;
-        if (Input.GetKeyUp(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.D))
             selectedIndex++;
 
         if (selectedIndex < 0)
