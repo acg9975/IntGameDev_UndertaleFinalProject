@@ -196,7 +196,7 @@ public class CombatManager : MonoBehaviour
         SceneTransition.ChangeScene(SceneTransition.previousScene, pos);
 
         //Check for individual enemy's death and change it in player prefs
-        if (Enemy.name == "yamlet")
+        if (Enemy.name == "Yamlet")
         {
             PlayerPrefs.SetString("YamletStatus", "Dead");
             PlayerPrefs.SetString("SerifStatus", "Moved");
