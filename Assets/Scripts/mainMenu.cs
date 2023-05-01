@@ -10,7 +10,7 @@ public class mainMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("SampleScene 1");
         }
     }
 }
