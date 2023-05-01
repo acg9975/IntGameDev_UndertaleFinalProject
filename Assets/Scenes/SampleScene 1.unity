@@ -25795,7 +25795,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.21133333}
@@ -43744,6 +43744,10 @@ PrefabInstance:
       propertyPath: dialogue.content.Array.data[1].choices.option2.text
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5162866607667087963, guid: 0efcae981a2f32a41860ce8949d7aba1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5162866607667087965, guid: 0efcae981a2f32a41860ce8949d7aba1, type: 3}
       propertyPath: m_Name
       value: Serif
@@ -49759,22 +49763,6 @@ PrefabInstance:
     - target: {fileID: 4164502599485516909, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164502599485516911, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
-      propertyPath: m_Size.x
-      value: 0.78001696
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164502599485516911, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
-      propertyPath: m_Size.y
-      value: 0.55734855
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164502599485516911, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164502599485516911, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.22137573
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
