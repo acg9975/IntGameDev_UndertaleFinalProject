@@ -83,6 +83,7 @@ public class Dialogue
             PlayerPrefs.SetString(pref.parameter, pref.value);
 
         option.onEnd?.Invoke();
+        
     }
 
     private void FindNextItem()

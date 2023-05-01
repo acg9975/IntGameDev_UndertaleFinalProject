@@ -10,7 +10,7 @@ public class BoomerangAttack : Attack
     [SerializeField] protected GameObject downProjectilePrefab;
 
 
-    [SerializeField] protected float spawnDelay = 1f;
+    [SerializeField] protected float spawnDelay = 1.5f;
 
     protected float spawnTimer = 0f;
 

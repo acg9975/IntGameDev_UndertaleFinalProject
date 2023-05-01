@@ -59,5 +59,12 @@ public class Interactable : MonoBehaviour
     {
         CombatManager.SetEnemy(enemyBehavior);
         SceneTransition.ChangeScene("Combat");
+
+        //save player position by just getting the player position and calling it a day
+        Vector3 playerPos = GameObject.Find("Player").GetComponent<Transform>().position;
+
+        PlayerPrefs.SetFloat("lastOverworldX", playerPos.x);
+        PlayerPrefs.SetFloat("lastOverworldY", playerPos.y);
+        Debug.Log("x " + playerPos.x + " y " + playerPos.y);
     }
 }
