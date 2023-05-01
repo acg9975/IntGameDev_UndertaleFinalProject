@@ -12,6 +12,7 @@ public class WorldOrganizer : MonoBehaviour
     [SerializeField][Tooltip("Used to place Serif at a specific spot in the overworld after an event")] GameObject SerifAfterMoving;
     [SerializeField] private Vector3 SerifMoveLocation;
 
+    [SerializeField] private item healthKey;
 
     public static WorldOrganizer instance;
 
@@ -29,6 +30,7 @@ public class WorldOrganizer : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(this);
+            givePlayerStartingItem();
         }
     }
 
@@ -59,6 +61,10 @@ public class WorldOrganizer : MonoBehaviour
         //}
     }
 
-
+    //TEMP
+    public void givePlayerStartingItem()
+    {
+        PlayerData.inventory.addItem(healthKey);
+    }
 
 }
