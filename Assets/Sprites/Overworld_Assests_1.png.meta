@@ -1,16 +1,12 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 0fc6e3d17fb4f4f72aecf924cf7925a9
-=======
-guid: ede77edda8dad2440a8d383b96a712f4
->>>>>>> 5060641e733b495cef704f2163fb7bbe1c33452a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -37,11 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-<<<<<<< HEAD
-    filterMode: 1
-=======
     filterMode: 0
->>>>>>> 5060641e733b495cef704f2163fb7bbe1c33452a
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -52,14 +44,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-<<<<<<< HEAD
-  spriteMeshType: 1
-=======
   spriteMeshType: 0
->>>>>>> 5060641e733b495cef704f2163fb7bbe1c33452a
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -74,19 +62,15 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 0
-  cookieLightType: 0
+  applyGammaDecoding: 1
+  cookieLightType: 2
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-<<<<<<< HEAD
-    textureCompression: 1
-=======
     textureCompression: 0
->>>>>>> 5060641e733b495cef704f2163fb7bbe1c33452a
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -98,7 +82,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,7 +94,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -122,28 +106,25 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-<<<<<<< HEAD
-=======
   - serializedVersion: 3
     buildTarget: Windows Store Apps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
->>>>>>> 5060641e733b495cef704f2163fb7bbe1c33452a
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -151,7 +132,6 @@ TextureImporter:
       name: Overworld_Assests_1_0
       rect:
         serializedVersion: 2
-<<<<<<< HEAD
         x: 3
         y: 5
         width: 30
@@ -159,26 +139,12 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-=======
-        x: 2
-        y: 3
-        width: 30
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 10, y: 32, z: 10, w: 14}
->>>>>>> 5060641e733b495cef704f2163fb7bbe1c33452a
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-<<<<<<< HEAD
-      spriteID: a55e13a296fbf466fb3df5ab3bb10de1
-      internalID: 1491055155
-=======
-      spriteID: ca074ba9f0e814f438607aab35dc672a
-      internalID: -1715626153
->>>>>>> 5060641e733b495cef704f2163fb7bbe1c33452a
+      spriteID: 0cd602d7b0c6d2a438b9c9a34fecb257
+      internalID: 1152457256
       vertices: []
       indices: 
       edges: []
@@ -187,33 +153,19 @@ TextureImporter:
       name: Overworld_Assests_1_1
       rect:
         serializedVersion: 2
-        x: 36
-<<<<<<< HEAD
-        y: 29
-        width: 47
-        height: 42
+        x: 35
+        y: 16
+        width: 27
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-=======
-        y: 27
-        width: 47
-        height: 42
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 5, y: 6, z: 5, w: 12}
->>>>>>> 5060641e733b495cef704f2163fb7bbe1c33452a
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-<<<<<<< HEAD
-      spriteID: 972dd3117b4f34635a9adf40573a328f
-      internalID: -2074561290
-=======
-      spriteID: 6f14887b94adcd045a548e17e534facb
-      internalID: -811167160
->>>>>>> 5060641e733b495cef704f2163fb7bbe1c33452a
+      spriteID: 0ff0ac30d5179f9418be6f0d105d507e
+      internalID: 170830825
       vertices: []
       indices: 
       edges: []
@@ -222,33 +174,19 @@ TextureImporter:
       name: Overworld_Assests_1_2
       rect:
         serializedVersion: 2
-<<<<<<< HEAD
-        x: 35
-        y: 16
-        width: 27
-        height: 11
+        x: 53
+        y: 2
+        width: 33
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
-=======
-        x: 34
-        y: 15
-        width: 27
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
->>>>>>> 5060641e733b495cef704f2163fb7bbe1c33452a
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-<<<<<<< HEAD
-      spriteID: a1ca83a41f7584bd1880c1fbeccad51c
-      internalID: -115775680
-=======
-      spriteID: 596171879b99e70458270040425118d7
-      internalID: 1589820173
->>>>>>> 5060641e733b495cef704f2163fb7bbe1c33452a
+      spriteID: 31ff57d33514b6c489753883e5c2a5ea
+      internalID: -1101320062
       vertices: []
       indices: 
       edges: []
@@ -257,33 +195,19 @@ TextureImporter:
       name: Overworld_Assests_1_3
       rect:
         serializedVersion: 2
-<<<<<<< HEAD
-        x: 53
-=======
-        x: 34
->>>>>>> 5060641e733b495cef704f2163fb7bbe1c33452a
-        y: 2
-        width: 33
-        height: 12
+        x: 36
+        y: 29
+        width: 47
+        height: 42
       alignment: 0
-<<<<<<< HEAD
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-=======
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 3, y: 0, z: 16, w: 0}
->>>>>>> 5060641e733b495cef704f2163fb7bbe1c33452a
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-<<<<<<< HEAD
-      spriteID: 17e76cf2cb11b4b8a8b177ac51b08bd8
-      internalID: -1748302002
-=======
-      spriteID: dc0f6142df7d15d47aeb4fa7162af97a
-      internalID: -1855947354
->>>>>>> 5060641e733b495cef704f2163fb7bbe1c33452a
+      spriteID: b3e53b34ccc6b7f458883029d55eb16e
+      internalID: 1009876151
       vertices: []
       indices: 
       edges: []
@@ -291,7 +215,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: f74d50d1d23d23b498172253e84165bc
     internalID: 0
     vertices: []
     indices: 
@@ -299,17 +223,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-<<<<<<< HEAD
-      Overworld_Assests_1_0: 1491055155
-      Overworld_Assests_1_2: -115775680
-      Overworld_Assests_1_1: -2074561290
-      Overworld_Assests_1_3: -1748302002
-=======
-      Overworld_Assests_1_0: -1715626153
-      Overworld_Assests_1_2: 1589820173
-      Overworld_Assests_1_1: -811167160
-      Overworld_Assests_1_3: -1855947354
->>>>>>> 5060641e733b495cef704f2163fb7bbe1c33452a
+      Overworld_Assests_1_0: 1152457256
+      Overworld_Assests_1_2: -1101320062
+      Overworld_Assests_1_1: 170830825
+      Overworld_Assests_1_3: 1009876151
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
