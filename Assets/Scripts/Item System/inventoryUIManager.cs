@@ -212,7 +212,7 @@ public class inventoryUIManager : MonoBehaviour
             {
                 updateText();
                 isUIActive = false;
-                OverworldMovement.canMove = false;
+                OverworldMovement.canMove = true;
                 setActive(false);
             }
         }
