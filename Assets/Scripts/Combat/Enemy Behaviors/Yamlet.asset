@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bc6f9462afc347418b98db90dbe5b0e, type: 3}
   m_Name: Yamlet
   m_EditorClassIdentifier: 
-  maxHealth: 1
-  health: 1
+  maxHealth: 16
+  health: 0
   enemySprite: {fileID: 1426889037, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
   canBeSpared: 1
   weakTo: 0
