@@ -53,4 +53,33 @@ public class CombatMovement : MonoBehaviour
 
         }
     }
+
+    public void damageJuice()
+    {
+        //flash the sprite renderer
+        SpriteRenderer sr = GetComponentInChildren<SpriteRenderer>();//GetComponent<SpriteRenderer>();
+
+        StartCoroutine(damageJuiceRoutine(sr));
+
+    }
+    private IEnumerator damageJuiceRoutine(SpriteRenderer sr)
+    {
+
+        float timetoStopFlashing = Time.time + 2f;
+        //Debug.Log(timetoStopFlashing + " vs " + Time.time);
+        while (Time.time <= timetoStopFlashing && PlayerData.IsAlive)
+        {
+            sr.enabled = false;
+            //Debug.Log("inactive");
+            yield return new WaitForSeconds(0.1f);
+            sr.enabled = true;
+            //Debug.Log("active");
+            yield return new WaitForSeconds(0.1f);
+        }
+        //Debug.Log("active");
+        sr.enabled = true;
+
+
+
+    }
 }
