@@ -6,7 +6,6 @@ using UnityEngine;
 public class AttackProjectile : MonoBehaviour
 {
     protected Rigidbody2D rb;
-
     [SerializeField] protected int damage = 1;
 
     private void Awake()
@@ -25,7 +24,9 @@ public class AttackProjectile : MonoBehaviour
         {
             PlayerData.Health -= damage;
             CombatMenuNavigator.instance.UpdateCombatUI();
+            CombatManager.instance.causeDamageJuice();
             Destroy(gameObject);
+            
         }
     }
 }
