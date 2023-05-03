@@ -83,7 +83,6 @@ public class SceneTransition : MonoBehaviour
         GameObject fos = Instantiate(FOS, position, Quaternion.identity);
         fos.GetComponent<FadeOutSquare>().StartFadeOut();
         GameObject.Find("Player").GetComponent<Transform>().position = position;
-        WorldOrganizer.instance.updateWorld();
     }
     public void onDeath()
     {
