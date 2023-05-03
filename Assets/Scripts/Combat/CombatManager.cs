@@ -431,4 +431,11 @@ public class CombatManager : MonoBehaviour
 
     }
 
+
+    public void causeDamageJuice()
+    {
+        player.GetComponent<CombatMovement>().damageJuice();
+
+    }
+
 }
