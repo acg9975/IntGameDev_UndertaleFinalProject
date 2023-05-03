@@ -29,6 +29,7 @@ public class Dialogue
         public Sprite sprite;
         public string text;
 
+        public Preference[] setValues;
         public UnityEvent onEnd;
         public Choices choices;
     }
@@ -65,10 +66,17 @@ public class Dialogue
         switch (Item.type)
         {
             case DialogueItem.DialogueItemType.Standard:
+
+                foreach (Preference pref in Item.setValues)
+                    PlayerPrefs.SetString(pref.parameter, pref.value);
+
                 Item.onEnd?.Invoke();
+
                 break;
             case DialogueItem.DialogueItemType.Decision:
+
                 SelectOption(DialogueBox.selectedIndex);
+
                 break;
         }
 
