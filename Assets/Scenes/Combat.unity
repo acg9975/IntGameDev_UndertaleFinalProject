@@ -2104,11 +2104,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   YamletSpawnPrefab: {fileID: 0}
-  YamletActDefeatPrefab: {fileID: 0}
+  YamletSparedPrefab: {fileID: 0}
   CatmanSpawnPrefab: {fileID: 0}
   SerifSpawnPrefab: {fileID: 0}
   SerifAfterMoving: {fileID: 0}
   SerifMoveLocation: {x: 0, y: 0, z: 0}
+  healthKey: {fileID: 0}
 --- !u!4 &1228882555
 Transform:
   m_ObjectHideFlags: 0
@@ -3555,7 +3556,7 @@ Transform:
   m_Children:
   - {fileID: 792748949}
   m_Father: {fileID: 3392875752067657484}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1814333726
 GameObject:
@@ -3960,7 +3961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a16ca81f283832248825dc6581619af7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 11400000, guid: 92d2ecbe5c240f540b851011d3eaf515, type: 2}
+  enemy: {fileID: 11400000, guid: 1ade67a161dfdd44f810a28903feaedf, type: 2}
   playerPrefab: {fileID: 2216183577570962082, guid: 3b697d0d3629fab4b88f71464c66116e, type: 3}
   playerSpawn: {fileID: 2082467482}
   enemySprite: {fileID: 792748950}
@@ -4437,8 +4438,8 @@ RectTransform:
   - {fileID: 488714657}
   - {fileID: 1339964287}
   - {fileID: 961947997}
-  - {fileID: 1785155531}
   - {fileID: 742973072}
+  - {fileID: 1785155531}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

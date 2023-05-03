@@ -5,11 +5,14 @@ using UnityEngine;
 public class GiveItem : MonoBehaviour
 {
     [SerializeField]
-    private item key;
+    private item[] keys;
 
     public void giveKey()
     {
-        PlayerData.inventory.addItem(key);
+        foreach (var key in keys)
+        {
+            PlayerData.inventory.addItem(key);
+        }
     }
 
 }

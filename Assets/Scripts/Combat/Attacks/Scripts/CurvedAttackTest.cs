@@ -9,6 +9,7 @@ public class CurvedAttackTest : Attack
     [SerializeField] protected GameObject projectilePrefab;
 
     [SerializeField] protected float spawnDelay = 1f;
+    [SerializeField] protected float destroyDelay = 1.5f;
 
     protected float spawnTimer = 0f;
 
@@ -31,7 +32,7 @@ public class CurvedAttackTest : Attack
             Vector2 spawnPos = new Vector2(CombatManager.AttackCenter.x + 1.8f, y);
             GameObject projectile = Instantiate(projectilePrefab, spawnPos, Quaternion.identity);
             projectiles.Add(projectile);
-            Destroy(projectile, 1.5f);
+            Destroy(projectile, destroyDelay);
             yield return new WaitForSeconds(spawnDelay);
         }
     }
