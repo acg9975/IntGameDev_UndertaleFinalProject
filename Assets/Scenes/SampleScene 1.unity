@@ -26080,6 +26080,7 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: -265690492, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
       text: Hey,
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls: []
@@ -26100,6 +26101,7 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: -265690492, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
       text: Take this key and unlock the area over there
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls:
@@ -42750,6 +42752,9 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: -1499177175, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
       text: hello
+      setValues:
+      - parameter: 
+        value: 
       onEnd:
         m_PersistentCalls:
           m_Calls: []
@@ -42770,6 +42775,7 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: -893850241, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
       text: im nervous
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls: []
@@ -42790,6 +42796,7 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: -1956576422, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
       text: lets fight
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls:

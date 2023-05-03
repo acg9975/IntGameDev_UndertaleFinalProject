@@ -19,6 +19,7 @@ namespace DialogueEditor
         {
             var conditions = prop.FindPropertyRelative("conditions");
             var type = prop.FindPropertyRelative("type");
+            var setValues = prop.FindPropertyRelative("setValues");
             var onEnd = prop.FindPropertyRelative("onEnd");
             var choices = prop.FindPropertyRelative("choices");
 
@@ -28,6 +29,7 @@ namespace DialogueEditor
             {
                 case DialogueItemType.Standard:
                     extraHeight += VERTICAL_SPACING + IMAGE_HEIGHT;
+                    extraHeight += VERTICAL_SPACING_MED + EditorGUI.GetPropertyHeight(setValues);
                     extraHeight += VERTICAL_SPACING_MED + EditorGUI.GetPropertyHeight(onEnd);
                     break;
                 case DialogueItemType.Decision:
@@ -51,6 +53,7 @@ namespace DialogueEditor
             var type = prop.FindPropertyRelative("type");
             var sprite = prop.FindPropertyRelative("sprite");
             var text = prop.FindPropertyRelative("text");
+            var setValues = prop.FindPropertyRelative("setValues");
             var onEnd = prop.FindPropertyRelative("onEnd");
             var choices = prop.FindPropertyRelative("choices");
 
@@ -88,7 +91,7 @@ namespace DialogueEditor
 
             EditorGUI.LabelField(indexPosition, index, new GUIStyle(EditorStyles.boldLabel));
 
-            // if type == Standard, show Sprite, Text, OnEnd
+            // if type == Standard, show Sprite, Text, SetValues, OnEnd
             // if type == Decision, show Choices
 
             position.x = originalPosition.x;
@@ -112,12 +115,24 @@ namespace DialogueEditor
 
                     text.stringValue = EditorGUI.TextArea(position, text.stringValue, new GUIStyle(EditorStyles.textArea));
 
+                    position.y += IMAGE_HEIGHT;
+
+                    // setValues
+
+                    position.x = originalPosition.x + 14;
+                    position.y += VERTICAL_SPACING_MED;
+                    position.width = originalPosition.width - 10;
+                    position.height = originalPosition.height;
+
+                    EditorGUI.PropertyField(position, setValues, true);
+
+                    position.y += EditorGUI.GetPropertyHeight(setValues);
+
                     // onEnd
 
                     position.x = originalPosition.x;
-                    position.y += IMAGE_HEIGHT + VERTICAL_SPACING_MED;
+                    position.y += VERTICAL_SPACING_MED;
                     position.width = originalPosition.width;
-                    position.height = originalPosition.height;
 
                     EditorGUI.PropertyField(position, onEnd);
 
@@ -133,38 +148,6 @@ namespace DialogueEditor
 
                     break;
             }
-
-            //// Sprite and Text
-
-            //position.x = originalPosition.x;
-            //position.width = IMAGE_HEIGHT;
-            //position.height = IMAGE_HEIGHT;
-
-            //sprite.objectReferenceValue = EditorGUI.ObjectField(position, sprite.objectReferenceValue, typeof(Sprite), false);
-
-            //position.x += IMAGE_HEIGHT + 10;
-            //position.width = originalPosition.width - IMAGE_HEIGHT - 10;
-
-            //text.stringValue = EditorGUI.TextArea(position, text.stringValue, new GUIStyle(EditorStyles.textArea));
-
-            //position.y += IMAGE_HEIGHT;
-
-            //// Type options
-
-            //position.x = originalPosition.x;
-            //position.y += VERTICAL_SPACING_MED;
-            //position.width = originalPosition.width;
-            //position.height = originalPosition.height;
-
-            //switch ((DialogueItemType)type.intValue)
-            //{
-            //    case DialogueItemType.Standard:
-            //        EditorGUI.PropertyField(position, onEnd);
-            //        break;
-            //    case DialogueItemType.Decision:
-            //        EditorGUI.PropertyField(position, choices, true);
-            //        break;
-            //}
 
             EditorGUI.EndProperty();
         }
