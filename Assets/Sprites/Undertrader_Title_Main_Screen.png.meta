@@ -1,0 +1,641 @@
+fileFormatVersion: 2
+guid: 77dbae3e07d694e2c872c98d817db6f9
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Undertrader_Title_Main_Screen_0
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 429
+        width: 2570
+        height: 303
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4713a78c6cee4688abe690732ea7854
+      internalID: -389373679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Undertrader_Title_Main_Screen_1
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 490
+        width: 229
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4cb0ba29db724166b73beed721bbf82
+      internalID: -1733009421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Undertrader_Title_Main_Screen_2
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 493
+        width: 207
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d72608f0f14f34adcb7aaf0ef48f2546
+      internalID: -1985377979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Undertrader_Title_Main_Screen_3
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 493
+        width: 182
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52e7bf4c0916345cd853f049a7da9e30
+      internalID: -1283699446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Undertrader_Title_Main_Screen_4
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 491
+        width: 228
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a7e5af69795b489ba799d6ce1e9c4da
+      internalID: 1667584712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Undertrader_Title_Main_Screen_5
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 493
+        width: 243
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55e47fd9131a24c62815bf3d55fa9a94
+      internalID: -1488136401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Undertrader_Title_Main_Screen_6
+      rect:
+        serializedVersion: 2
+        x: 1509
+        y: 489
+        width: 226
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c042bab3353244739bd1c6e4c75a0af
+      internalID: 534123288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Undertrader_Title_Main_Screen_7
+      rect:
+        serializedVersion: 2
+        x: 1746
+        y: 491
+        width: 205
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dca4f0756328e4386b75cd7114bb1b90
+      internalID: 524912352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Undertrader_Title_Main_Screen_8
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 490
+        width: 206
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6bf9d813bc564778aad33a3c7894721
+      internalID: 594363987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Undertrader_Title_Main_Screen_9
+      rect:
+        serializedVersion: 2
+        x: 2195
+        y: 490
+        width: 182
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 763892ca842144db38b8d6f13a71500e
+      internalID: -1737073945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Undertrader_Title_Main_Screen_10
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 489
+        width: 228
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15befbddc12014a3ca784d90c2d28f3e
+      internalID: -236334207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Undertrader_Title_Main_Screen_11
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 183
+        width: 835
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef190e2393ba4455f9df92d7a352e3a6
+      internalID: 1094880742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Undertrader_Title_Main_Screen_12
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 227
+        width: 86
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77f45daac693f466ab19cd653db02641
+      internalID: -901501218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Undertrader_Title_Main_Screen_13
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 227
+        width: 84
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6a98e1add93048b1bd5e1ef4f547d7e
+      internalID: -1978697064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Undertrader_Title_Main_Screen_14
+      rect:
+        serializedVersion: 2
+        x: 1235
+        y: 227
+        width: 42
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9801341f0898b42d49477e00186430d2
+      internalID: -1886696928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Undertrader_Title_Main_Screen_15
+      rect:
+        serializedVersion: 2
+        x: 1313
+        y: 227
+        width: 41
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 008d7cd7229e942c19055698965a9dd0
+      internalID: 1084697286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Undertrader_Title_Main_Screen_16
+      rect:
+        serializedVersion: 2
+        x: 1358
+        y: 227
+        width: 42
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae1a58d2b4a864140a03a4ec463d0d55
+      internalID: 86460629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Undertrader_Title_Main_Screen_17
+      rect:
+        serializedVersion: 2
+        x: 1403
+        y: 227
+        width: 83
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa8bfae5a226d42eca34686f65141d47
+      internalID: 167471891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Undertrader_Title_Main_Screen_18
+      rect:
+        serializedVersion: 2
+        x: 1487
+        y: 227
+        width: 43
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf5321f54d4574d3a964d1469140f9b9
+      internalID: 1643600163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Undertrader_Title_Main_Screen_19
+      rect:
+        serializedVersion: 2
+        x: 1546
+        y: 227
+        width: 43
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa9fa9d24dcdf4560bbd36b552ba024a
+      internalID: 308329171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Undertrader_Title_Main_Screen_20
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 227
+        width: 41
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2365111de32cb402bb7a202c6678a430
+      internalID: 1957544693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Undertrader_Title_Main_Screen_21
+      rect:
+        serializedVersion: 2
+        x: 1637
+        y: 227
+        width: 43
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70a88d4560d8344408848fb5d57a1711
+      internalID: -566976456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Undertrader_Title_Main_Screen_22
+      rect:
+        serializedVersion: 2
+        x: 1696
+        y: 227
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a7dbd38b13ba4ec8bf06dbc57765b59
+      internalID: -1561453066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Undertrader_Title_Main_Screen_15: 1084697286
+      Undertrader_Title_Main_Screen_5: -1488136401
+      Undertrader_Title_Main_Screen_0: -389373679
+      Undertrader_Title_Main_Screen_9: -1737073945
+      Undertrader_Title_Main_Screen_4: 1667584712
+      Undertrader_Title_Main_Screen_6: 534123288
+      Undertrader_Title_Main_Screen_18: 1643600163
+      Undertrader_Title_Main_Screen_3: -1283699446
+      Undertrader_Title_Main_Screen_8: 594363987
+      Undertrader_Title_Main_Screen_7: 524912352
+      Undertrader_Title_Main_Screen_2: -1985377979
+      Undertrader_Title_Main_Screen_11: 1094880742
+      Undertrader_Title_Main_Screen_16: 86460629
+      Undertrader_Title_Main_Screen_21: -566976456
+      Undertrader_Title_Main_Screen_19: 308329171
+      Undertrader_Title_Main_Screen_17: 167471891
+      Undertrader_Title_Main_Screen_20: 1957544693
+      Undertrader_Title_Main_Screen_10: -236334207
+      Undertrader_Title_Main_Screen_14: -1886696928
+      Undertrader_Title_Main_Screen_12: -901501218
+      Undertrader_Title_Main_Screen_22: -1561453066
+      Undertrader_Title_Main_Screen_13: -1978697064
+      Undertrader_Title_Main_Screen_1: -1733009421
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
