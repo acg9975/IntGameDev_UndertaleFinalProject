@@ -32,4 +32,25 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scenes Layout Tatiana/Backworld.unity
     guid: bbfd81e348e594f098bdb403bffb0be1
+  - enabled: 1
+    path: Assets/Scenes/the bus/front (spawn).unity
+    guid: 389d35cebe26290478004d458fd1df3f
+  - enabled: 1
+    path: Assets/Scenes/the bus/event1.unity
+    guid: 366939f17827eba4d88f57174c3e0e1b
+  - enabled: 1
+    path: Assets/Scenes/the bus/event2.unity
+    guid: fc830e13217f51745bad2cfe8a3dd96b
+  - enabled: 1
+    path: Assets/Scenes/the bus/gauntlet.unity
+    guid: 4b34e2b63b8445d4fb4eebc73df8c899
+  - enabled: 1
+    path: Assets/Scenes/the bus/passage (front).unity
+    guid: 6929f16fd46467f44904114863d68159
+  - enabled: 1
+    path: Assets/Scenes/the bus/passage (back).unity
+    guid: e07d8947a24e74e4791e2587a75b3133
+  - enabled: 1
+    path: Assets/Scenes/the bus/storage.unity
+    guid: bd9de4641b8f40046a63b19a2bdfd941
   m_configObjects: {}
