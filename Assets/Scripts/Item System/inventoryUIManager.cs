@@ -208,10 +208,14 @@ public class inventoryUIManager : MonoBehaviour
         else if (isUIActive)
         {
             itemSelection();
-
+            if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.C))
+            {
+                updateText();
+                isUIActive = false;
+                OverworldMovement.canMove = true;
+                setActive(false);
+            }
         }
-
-
 
     }
 }

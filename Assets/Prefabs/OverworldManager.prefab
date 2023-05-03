@@ -50,3 +50,4 @@ MonoBehaviour:
   SerifSpawnPrefab: {fileID: 0}
   SerifAfterMoving: {fileID: 0}
   SerifMoveLocation: {x: 0, y: 0, z: 0}
+  healthKey: {fileID: 11400000, guid: ca9861d3fbdf2354abdde4caf4b2617f, type: 2}
