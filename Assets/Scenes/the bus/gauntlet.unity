@@ -218,68 +218,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &260894217
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4164502599485516899, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164502599485516909, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164502599485516909, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.1806812
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164502599485516909, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -9.173197
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164502599485516909, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164502599485516909, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164502599485516909, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164502599485516909, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164502599485516909, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164502599485516909, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164502599485516909, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4164502599485516909, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
---- !u!4 &260894218 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4164502599485516909, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
-  m_PrefabInstance: {fileID: 260894217}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &321535305
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,7 +343,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 362257554}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.4094677, y: -6.1874433, z: 0}
+  m_LocalPosition: {x: 3.4094677, y: -3.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -431,6 +369,7 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: 1426889037, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
       text: Halt!
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls: []
@@ -451,6 +390,7 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: 1426889037, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
       text: I, too, have been instructed to impede your progress.
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls: []
@@ -472,6 +412,7 @@ MonoBehaviour:
       sprite: {fileID: -362027459, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
       text: I must make for Denmark soon, but I could also use a practice duel. I'm
         to fight Laertes, after all.
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls: []
@@ -492,6 +433,7 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: 932394018, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
       text: What say you, Rosencranberry?
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls: []
@@ -512,6 +454,7 @@ MonoBehaviour:
       type: 1
       sprite: {fileID: -362027459, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
       text: What say you?
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls: []
@@ -542,6 +485,7 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: 1426889037, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
       text: Have at you!
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls:
@@ -580,6 +524,7 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: 932394018, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
       text: Very well, then. Farewell.
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls:
@@ -716,7 +661,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 408371362}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.1806812, y: -9.173197, z: -10}
+  m_LocalPosition: {x: 3.48, y: 5.99, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -836,7 +781,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 812707059}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.379469, y: -0.7074435, z: 0}
+  m_LocalPosition: {x: 3.379469, y: 0.62, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -862,6 +807,7 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: 0}
       text: halt~! you can't go any farther~!
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls: []
@@ -882,6 +828,7 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: 0}
       text: jo herself told me to stop you~!
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls: []
@@ -902,6 +849,7 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: 0}
       text: even though there was nothing stopping you from walking around me...
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls: []
@@ -922,6 +870,7 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: 0}
       text: here i come~!
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls:
@@ -1776,7 +1725,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1131866852}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.4394684, y: 5.3325567, z: 0}
+  m_LocalPosition: {x: 4.4394684, y: 4.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1802,6 +1751,7 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: 1840998398, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
       text: Are you gonna fight me, too?
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls: []
@@ -1822,6 +1772,7 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: -1526311129, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
       text: nah.
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls: []
@@ -1844,6 +1795,7 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: -1956576422, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
       text: i'd kick your ass.
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls: []
@@ -1866,6 +1818,7 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: -893850241, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
       text: you'd kick my ass.
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls: []
@@ -1977,6 +1930,68 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 653c4ca23dceaef4092175a11c338c80, type: 3}
+--- !u!1001 &1706861671
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4164502599485516899, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4164502599485516909, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4164502599485516909, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 4164502599485516909, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 4164502599485516909, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4164502599485516909, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4164502599485516909, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4164502599485516909, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4164502599485516909, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4164502599485516909, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4164502599485516909, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4164502599485516909, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
+--- !u!4 &1706861672 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4164502599485516909, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
+  m_PrefabInstance: {fileID: 1706861671}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1714111836
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1994,7 +2009,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5277079628083683244, guid: 653c4ca23dceaef4092175a11c338c80, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.59
+      value: -7.03
       objectReference: {fileID: 0}
     - target: {fileID: 5277079628083683244, guid: 653c4ca23dceaef4092175a11c338c80, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3046,7 +3061,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 260894218}
+  m_Follow: {fileID: 1706861672}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 5
@@ -3073,7 +3088,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2102388457}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.1806812, y: -9.173197, z: -10}
+  m_LocalPosition: {x: 3.48, y: 5.99, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

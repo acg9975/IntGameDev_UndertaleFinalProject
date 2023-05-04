@@ -423,7 +423,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 882549849}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.5, y: 5.42, z: -10}
+  m_LocalPosition: {x: 0.72, y: 9.21, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -638,11 +638,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4164502599485516909, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.5
+      value: 0.72
       objectReference: {fileID: 0}
     - target: {fileID: 4164502599485516909, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.42
+      value: 9.21
       objectReference: {fileID: 0}
     - target: {fileID: 4164502599485516909, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -709,7 +709,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39549b95ce84fac458535de11d308ee2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyItem: {fileID: 11400000, guid: a1c7c9bd250725e4cb09c911f6c529f5, type: 2}
+  keyItems:
+  - {fileID: 11400000, guid: a1c7c9bd250725e4cb09c911f6c529f5, type: 2}
 --- !u!61 &1288491995
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -820,7 +821,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5277079628083683244, guid: 653c4ca23dceaef4092175a11c338c80, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.2100003
+      value: 4.98
       objectReference: {fileID: 0}
     - target: {fileID: 5277079628083683244, guid: 653c4ca23dceaef4092175a11c338c80, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4062,7 +4063,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1767404345}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.5, y: 5.42, z: -10}
+  m_LocalPosition: {x: 0.72, y: 9.21, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4198,7 +4199,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5277079628083683244, guid: 653c4ca23dceaef4092175a11c338c80, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.2
+      value: 4.97
       objectReference: {fileID: 0}
     - target: {fileID: 5277079628083683244, guid: 653c4ca23dceaef4092175a11c338c80, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4420,6 +4421,7 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: -1341461904, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
       text: Hi.
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls: []
@@ -4440,6 +4442,7 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: -1619752381, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
       text: hey.
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls: []
@@ -4460,6 +4463,7 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: -1341461904, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
       text: Um, it's a little tough to get by with this big stand in the way.
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls: []
@@ -4480,6 +4484,7 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: -1571271296, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
       text: yeah, it is.
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls: []
@@ -4500,6 +4505,7 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: -893850241, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
       text: someone should really do something about that.
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls: []
