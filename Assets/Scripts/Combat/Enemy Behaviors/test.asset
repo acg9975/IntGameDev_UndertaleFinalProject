@@ -21,7 +21,7 @@ MonoBehaviour:
   phases:
   - iterationType: 0
     attacks:
-    - {fileID: 11400000, guid: 4f85c3f2da167e348b4e573fd760c924, type: 2}
+    - {fileID: 11400000, guid: 6a6242753cb8e3741bff711404119205, type: 2}
     descriptions:
     - :(
     weaknessExploitedPhrase: 

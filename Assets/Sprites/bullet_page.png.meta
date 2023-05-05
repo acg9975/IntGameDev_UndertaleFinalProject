@@ -68,7 +68,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 0
+    resizeAlgorithm: 1
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
@@ -141,7 +141,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bullet_page_0
+      name: FlowerBig
       rect:
         serializedVersion: 2
         x: 5
@@ -162,7 +162,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bullet_page_1
+      name: AttackAnim0
       rect:
         serializedVersion: 2
         x: 41
@@ -183,7 +183,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bullet_page_2
+      name: AttackAnim5
       rect:
         serializedVersion: 2
         x: 53
@@ -204,7 +204,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bullet_page_3
+      name: Spear
       rect:
         serializedVersion: 2
         x: 3
@@ -246,7 +246,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bullet_page_5
+      name: AttackAnim1
       rect:
         serializedVersion: 2
         x: 33
@@ -267,7 +267,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bullet_page_6
+      name: AttackAnim3
       rect:
         serializedVersion: 2
         x: 38
@@ -288,7 +288,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bullet_page_7
+      name: Scoop
       rect:
         serializedVersion: 2
         x: 3
@@ -309,7 +309,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bullet_page_8
+      name: AttackAnim4
       rect:
         serializedVersion: 2
         x: 52
@@ -330,7 +330,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bullet_page_9
+      name: AttackAnim6
       rect:
         serializedVersion: 2
         x: 64
@@ -435,7 +435,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bullet_page_14
+      name: AttackAnim2
       rect:
         serializedVersion: 2
         x: 44
@@ -456,7 +456,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bullet_page_15
+      name: AttackAnim7
       rect:
         serializedVersion: 2
         x: 61
@@ -498,7 +498,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bullet_page_17
+      name: Sword1
       rect:
         serializedVersion: 2
         x: 13
@@ -519,7 +519,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bullet_page_18
+      name: Sword2
       rect:
         serializedVersion: 2
         x: 19
@@ -540,7 +540,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bullet_page_19
+      name: FlowerSmall
       rect:
         serializedVersion: 2
         x: 14
@@ -613,28 +613,28 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bullet_page_18: -1977709811
-      bullet_page_15: -1958146717
+      Sword2: -1977709811
       bullet_page_20: -2014369264
-      bullet_page_7: 459159225
       bullet_page_10: 459069714
-      bullet_page_2: 628704358
       bullet_page_4: -245014016
-      bullet_page_6: 1273909955
+      FlowerBig: -2087630749
       bullet_page_12: -2027138545
-      bullet_page_9: -157527187
-      bullet_page_0: -2087630749
-      bullet_page_3: -996261489
-      bullet_page_5: 1660703656
-      bullet_page_14: -999593027
+      Spear: -996261489
+      AttackAnim4: -175448760
+      Scoop: 459159225
       bullet_page_13: -314982940
-      bullet_page_19: 961008574
-      bullet_page_8: -175448760
-      bullet_page_1: -2102702802
+      AttackAnim1: 1660703656
+      AttackAnim3: 1273909955
+      AttackAnim2: -999593027
+      Sword1: -2061710959
+      AttackAnim7: -1958146717
       bullet_page_16: 680729827
+      AttackAnim5: 628704358
+      FlowerSmall: 961008574
       bullet_page_11: -2077915054
-      bullet_page_17: -2061710959
       bullet_page_21: 1904506977
+      AttackAnim0: -2102702802
+      AttackAnim6: -157527187
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

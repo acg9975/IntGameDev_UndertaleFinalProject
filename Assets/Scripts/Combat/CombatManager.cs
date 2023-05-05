@@ -113,11 +113,13 @@ public class CombatManager : MonoBehaviour
     public void setSliderInfo(AttackSlider.AttackValue av)
     {
         //attack enemy for the amount of damage specified
+        bool playAnim = true;
         switch (av)
         {
             case AttackSlider.AttackValue.fail:
                 //no damage
                 Enemy.Health -= 0;
+                playAnim = false;
                 break;
             case AttackSlider.AttackValue.low:
                 Enemy.Health -= 2;
@@ -131,18 +133,22 @@ public class CombatManager : MonoBehaviour
         }
 
         CombatMenuNavigator.instance.UpdateCombatUI();
-        StartCoroutine(playerAttackFinish());
+        StartCoroutine(playerAttackFinish(playAnim));
 
     }
 
-    IEnumerator playerAttackFinish()
+    IEnumerator playerAttackFinish(bool anim)
     {
-        //spawn in attack sprite on enemy sprite
-        //currently this is a particle system so we just find and activate it
-        GameObject AS = Instantiate(attackSprite, attackSpriteTransform.position, Quaternion.identity);
-        AS.GetComponent<ParticleSystem>().Play();
-        Destroy(AS,1.5f);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.25f);
+        if (anim)
+        {
+            //spawn in attack sprite on enemy sprite
+            //currently this is a particle system so we just find and activate it
+            GameObject AS = Instantiate(attackSprite, attackSpriteTransform.position, Quaternion.identity);
+            Destroy(AS, 0.7f);
+        }
+
+        yield return new WaitForSeconds(1.1f);
         //send an order to display any dialogue in a sort of textbox
         //add a waitforseconds 
 

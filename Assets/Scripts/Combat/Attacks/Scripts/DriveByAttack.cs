@@ -36,6 +36,8 @@ public class DriveByAttack : Attack
             projectiles.Add(projectile);
             yield return new WaitForSeconds(waveSpawnDelay);
             GameObject projectile2 = Instantiate(projectilePrefab, pos2Spawn, new Quaternion(0, 0, 0, 0));
+            //projectile 2 should face downwards
+
             projectile2.GetComponent<AttackProjectile>().MoveTowards(Vector3.down * moveDistance, projSpeed);
             Destroy(projectile2, projDeleteDelay);
             projectiles.Add(projectile2);
