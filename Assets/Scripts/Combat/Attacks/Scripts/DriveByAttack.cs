@@ -32,18 +32,20 @@ public class DriveByAttack : Attack
             //spawns the first one projectile going up. It takes 1.5f seconds to cross
             GameObject projectile = Instantiate(projectilePrefab, pos1Spawn, new Quaternion(0, 0, 0, 0));
             projectile.GetComponent<AttackProjectile>().MoveTowards(Vector3.up * moveDistance, projSpeed);
+            projectile.GetComponentInChildren<SpriteRenderer>().flipY = true;
+
             Destroy(projectile, projDeleteDelay);
             projectiles.Add(projectile);
             yield return new WaitForSeconds(waveSpawnDelay);
             GameObject projectile2 = Instantiate(projectilePrefab, pos2Spawn, new Quaternion(0, 0, 0, 0));
-            //projectile 2 should face downwards
-
             projectile2.GetComponent<AttackProjectile>().MoveTowards(Vector3.down * moveDistance, projSpeed);
             Destroy(projectile2, projDeleteDelay);
             projectiles.Add(projectile2);
             yield return new WaitForSeconds(waveSpawnDelay);
             GameObject projectile3 = Instantiate(projectilePrefab, pos3Spawn, new Quaternion(0,0,0,0));
             projectile3.GetComponent<AttackProjectile>().MoveTowards(Vector3.up * moveDistance, projSpeed);
+            projectile3.GetComponentInChildren<SpriteRenderer>().flipY = true;
+
             Destroy(projectile3, projDeleteDelay);
             projectiles.Add(projectile3);
             yield return new WaitForSeconds(waveSpawnDelay);
