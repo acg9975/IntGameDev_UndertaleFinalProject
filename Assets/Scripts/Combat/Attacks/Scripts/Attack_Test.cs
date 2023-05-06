@@ -26,10 +26,15 @@ public class Attack_Test : Attack
         {
             Vector2 spawnPos = CombatManager.AttackCenter + Random.insideUnitCircle.normalized * spawnRadius;
             GameObject projectile = Instantiate(projectilePrefab, spawnPos, Quaternion.identity);
+
+
             projectiles.Add(projectile);
 
             //projectile.MoveTowards(CombatMovement.PlayerPosition, projectileSpeed);
-            projectile.GetComponent<AttackProjectile>().MoveTowards(CombatMovement.PlayerPosition, projectileSpeed);
+
+            projectile.GetComponentInChildren<AttackProjectile>().MoveTowards(CombatMovement.PlayerPosition, projectileSpeed, true);
+            //projectile.GetComponentInChildren<Transform>().LookAt(CombatMovement.PlayerPosition, Vector3.back);
+            Destroy(projectile, 4f);
             yield return new WaitForSeconds(spawnDelay);
         }
     }

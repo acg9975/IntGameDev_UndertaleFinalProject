@@ -66,11 +66,11 @@ public class CombatMenuNavigator : MonoBehaviour
         if (combatMode == CombatManager.CombatMode.Menu)
         {
             //Debug.Log("Combat Mode menu - CombatManagerNav");
-            if (Input.GetKeyDown(KeyCode.A))
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 selected--;
             }
-            else if (Input.GetKeyDown(KeyCode.D))
+            else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
             {
                 selected++;
             }
@@ -129,11 +129,11 @@ public class CombatMenuNavigator : MonoBehaviour
 
         if (combatMode == CombatManager.CombatMode.Mercy)
         {
-            if (Input.GetKeyDown(KeyCode.W))
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
             {
                 selected--;
             }
-            else if (Input.GetKeyDown(KeyCode.S))
+            else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
             {
                 selected++;
             }
@@ -193,11 +193,11 @@ public class CombatMenuNavigator : MonoBehaviour
         if (combatMode == CombatManager.CombatMode.Act)
         {
             // add in ws selection 
-            if (Input.GetKeyDown(KeyCode.A))
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 selected--;
             }
-            else if (Input.GetKeyDown(KeyCode.D))
+            else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
             {
                 selected++;
             }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: test
   m_EditorClassIdentifier: 
   maxHealth: 55
-  health: 49
+  health: 53
   enemySprite: {fileID: 0}
   canBeSpared: 0
   weakTo: 0
@@ -21,7 +21,7 @@ MonoBehaviour:
   phases:
   - iterationType: 0
     attacks:
-    - {fileID: 11400000, guid: e2cd87a481370ff4cb6421b97668eb87, type: 2}
+    - {fileID: 11400000, guid: 19f4fdf98a4a19f45b277f627c0b8d8d, type: 2}
     descriptions:
     - :(
     weaknessExploitedPhrase: 

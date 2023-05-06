@@ -16,6 +16,19 @@ public class CombatMovement : MonoBehaviour
 
     public static bool canMove = true;
 
+    private bool canTakeDamage = true;
+    public bool CanTakeDamage
+    {
+        get
+        {
+            return canTakeDamage;
+        }
+    }
+    [SerializeField] private Sprite healthySprite;
+    [SerializeField] private Sprite damagedSprite;
+
+    //have an array of sprites. switch between them when okay (big) vs recovering (small & flashing)
+
     private void Awake()
     {
         instance = this;
@@ -64,22 +77,26 @@ public class CombatMovement : MonoBehaviour
     }
     private IEnumerator damageJuiceRoutine(SpriteRenderer sr)
     {
-
         float timetoStopFlashing = Time.time + 2f;
+        sr.sprite = damagedSprite;
+        canTakeDamage = false;
         //Debug.Log(timetoStopFlashing + " vs " + Time.time);
         while (Time.time <= timetoStopFlashing && PlayerData.IsAlive)
         {
             sr.enabled = false;
+
             //Debug.Log("inactive");
             yield return new WaitForSeconds(0.1f);
+
             sr.enabled = true;
+            
             //Debug.Log("active");
             yield return new WaitForSeconds(0.1f);
         }
         //Debug.Log("active");
         sr.enabled = true;
-
-
+        canTakeDamage = true;
+        sr.sprite = healthySprite;
 
     }
 }
