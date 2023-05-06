@@ -18,15 +18,37 @@ public class AttackProjectile : MonoBehaviour
         rb.velocity = (target - (Vector2)transform.position).normalized * speed;
     }
 
+    public void MoveTowards(Vector2 target, float speed, bool changeSpriteDirection)
+    {
+        rb.velocity = (target - (Vector2)transform.position).normalized * speed;
+        if (changeSpriteDirection)
+        {
+            //GetComponentInChildren<Transform>().Rotate();
+            //Quaternion x = Quaternion.LookRotation(target, transform.up);
+            //transform.rotation = x;
+        }
+    }
+
     public virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            PlayerData.Health -= damage;
-            CombatMenuNavigator.instance.UpdateCombatUI();
             CombatManager.instance.causeDamageJuice();
-            Destroy(gameObject);
-            
+            if (CombatMovement.instance.CanTakeDamage)
+            {
+                PlayerData.Health -= damage;
+            }
+            CombatMenuNavigator.instance.UpdateCombatUI();
+            if (transform.parent != null)
+            {
+                Destroy(transform.parent.gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
+
+            }
+
         }
     }
 }

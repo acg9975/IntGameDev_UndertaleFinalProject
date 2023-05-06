@@ -13,6 +13,7 @@ public class GiveItem : MonoBehaviour
         {
             PlayerData.inventory.addItem(key);
         }
+        inventoryUIManager.instance.itemAddedNotif();
     }
 
 }

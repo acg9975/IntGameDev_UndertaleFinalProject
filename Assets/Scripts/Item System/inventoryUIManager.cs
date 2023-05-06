@@ -27,6 +27,8 @@ public class inventoryUIManager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI[] itemText;
     int position = 0;
+    [SerializeField]private GameObject itemAddedNotifPrefab;
+
     public void setActive(bool v)
     {
         if (v && !canActivateInventory)
@@ -95,11 +97,11 @@ public class inventoryUIManager : MonoBehaviour
                 CombatManager.instance.combatMode = CombatManager.CombatMode.Menu;
             }
             //handle selection
-            if (Input.GetKeyDown(KeyCode.W))
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
             {
                 position--;
             }
-            else if (Input.GetKeyDown(KeyCode.S))
+            else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.UpArrow))
             {
                 position++;
             }
@@ -218,4 +220,18 @@ public class inventoryUIManager : MonoBehaviour
         }
 
     }
+
+    public void itemAddedNotif()
+    {
+        //intended to be used in the overworld
+        StartCoroutine(itemAddedNotifRoutine());
+    }
+
+    IEnumerator itemAddedNotifRoutine()
+    {
+        itemAddedNotifPrefab.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        itemAddedNotifPrefab.SetActive(false);
+    }
+
 }

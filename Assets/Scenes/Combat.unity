@@ -3788,6 +3788,7 @@ MonoBehaviour:
   - {fileID: 866385912}
   - {fileID: 444798912}
   - {fileID: 885107477}
+  itemAddedNotifPrefab: {fileID: 0}
 --- !u!1 &1869709980
 GameObject:
   m_ObjectHideFlags: 0

@@ -169,3 +169,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
+  healthySprite: {fileID: -2087630749, guid: 563062ba2b7044b3eb5b2f6278f9ed6d, type: 3}
+  damagedSprite: {fileID: 961008574, guid: 563062ba2b7044b3eb5b2f6278f9ed6d, type: 3}
