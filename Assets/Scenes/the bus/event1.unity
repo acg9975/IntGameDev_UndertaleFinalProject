@@ -446,8 +446,8 @@ MonoBehaviour:
       sprite: {fileID: 0}
       text: (You grab the rice off the shelf.)
       setValues:
-      - parameter: rice
-        value: 1
+      - parameter: riceGet
+        value: true
       onEnd:
         m_PersistentCalls:
           m_Calls: []
@@ -2771,9 +2771,7 @@ MonoBehaviour:
       text: (You grab the fishcake off the shelf.)
       setValues:
       - parameter: fishcakeGet
-        value: 0
-      - parameter: 
-        value: 0
+        value: true
       onEnd:
         m_PersistentCalls:
           m_Calls: []
@@ -3324,7 +3322,8 @@ MonoBehaviour:
     - conditions: []
       type: 0
       sprite: {fileID: -1757652543, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
-      text: You have to assemble them yourself.
+      text: You have to assemble them yourself. Today, it's impossible tartare, served
+        over cilantro lime rice.
       setValues: []
       onEnd:
         m_PersistentCalls:
@@ -3343,13 +3342,180 @@ MonoBehaviour:
             m_PersistentCalls:
               m_Calls: []
     - conditions:
-      - parameter: rice
-        value: '1
-
-'
+      - parameter: riceGet
+        value: true
+      - parameter: fishcakeGet
+        value: true
+      - parameter: limeGet
+        value: true
       type: 0
       sprite: {fileID: -1757652543, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
-      text: Oh, hey. You found them.
+      text: Thanks.
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: riceGet
+        value: true
+      - parameter: fishcakeGet
+        value: true
+      - parameter: limeGet
+        value: true
+      type: 0
+      sprite: {fileID: 0}
+      text: (Catman dumps the ingredients from their bags onto the bare counter.)
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: riceGet
+        value: true
+      - parameter: fishcakeGet
+        value: true
+      - parameter: limeGet
+        value: true
+      type: 0
+      sprite: {fileID: 0}
+      text: (He mushes the plant-fishcake into a misshapen lump and slaps it onto
+        the rice.)
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: riceGet
+        value: true
+      - parameter: fishcakeGet
+        value: true
+      - parameter: limeGet
+        value: true
+      type: 0
+      sprite: {fileID: 0}
+      text: (Picking up the lime, he looks around for a knife before baring his left
+        claws and slashing the lime open.)
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: riceGet
+        value: true
+      - parameter: fishcakeGet
+        value: true
+      - parameter: limeGet
+        value: true
+      type: 0
+      sprite: {fileID: 0}
+      text: (It cuts his other paw.)
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: riceGet
+        value: true
+      - parameter: fishcakeGet
+        value: true
+      - parameter: limeGet
+        value: true
+      type: 0
+      sprite: {fileID: 0}
+      text: (He hisses, dropping his cigarette on the floor. Then he squeezes the
+        lime over the cilantro rice and the plant-fishcake.)
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: riceGet
+        value: true
+      - parameter: fishcakeGet
+        value: true
+      - parameter: limeGet
+        value: true
+      type: 0
+      sprite: {fileID: -1757652543, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: Here.
       setValues: []
       onEnd:
         m_PersistentCalls:
@@ -3366,6 +3532,33 @@ MonoBehaviour:
               m_StringArgument: 
               m_BoolArgument: 0
             m_CallState: 2
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: riceGet
+        value: true
+      - parameter: fishcakeGet
+        value: true
+      - parameter: limeGet
+        value: true
+      type: 0
+      sprite: {fileID: 1840998398, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: Eee...
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
       choices:
         option1:
           text: 
@@ -3500,7 +3693,7 @@ MonoBehaviour:
       text: (You grab the lime off the shelf.)
       setValues:
       - parameter: limeGet
-        value: 0
+        value: true
       onEnd:
         m_PersistentCalls:
           m_Calls: []
