@@ -272,12 +272,449 @@ MonoBehaviour:
     content:
     - conditions:
       - parameter: event2Layer
-        value: 3
+        value: 4
+      type: 0
+      sprite: {fileID: 1790035049, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: ...
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: event2Layer
+        value: 4
+      - parameter: wasItGood
+        value: n
+      type: 0
+      sprite: {fileID: 1790035049, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: Hopefully, those products changed your mind a little.
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: event2Layer
+        value: 5
+      - parameter: wasItGood
+        value: y
       type: 0
       sprite: {fileID: -1939337318, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
-      text: Hon, you are not very girlboss. I almost want to find a different recruit
-        for my downline.
+      text: How were the cosmetics? Even better, right?
       setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: event2Layer
+        value: 5
+      type: 0
+      sprite: {fileID: -2138747196, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: Actually, I'm just exhausted now...
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: event2Layer
+        value: 5
+      type: 0
+      sprite: {fileID: -1939337318, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: And I have just the thing for you...!
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: event2Layer
+        value: 5
+      type: 0
+      sprite: {fileID: -2138747196, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: Could it please be just rice and some water? I'll find my own way home.
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: event2Layer
+        value: 5
+      type: 0
+      sprite: {fileID: 1790035049, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: 'Sure thing. '
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: event2Layer
+        value: 5
+      type: 0
+      sprite: {fileID: -1939337318, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: But first! Here are the different starter packs, all at a discount.
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: event2Layer
+        value: 5
+      type: 0
+      sprite: {fileID: -1939337318, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: Expedited shipping so you can get started selling right away!
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: event2Layer
+        value: 5
+      type: 0
+      sprite: {fileID: -2138747196, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: Ma'am... I don't have any money. If there's no rice, I'll take a water...
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: event2Layer
+        value: 5
+      type: 0
+      sprite: {fileID: 1790035049, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: You're sure? You don't want to join my team...?
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: event2Layer
+        value: 5
+      type: 0
+      sprite: {fileID: -2138747196, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: I can't. Could you get me some water, please?
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: event2Layer
+        value: 5
+      type: 0
+      sprite: {fileID: 1790035049, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: ...I'll check in the back to see if we have any. Stay here.
+      setValues:
+      - parameter: 
+        value: 
+      onEnd:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 130537560}
+            m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_MethodName: SetActive
+            m_Mode: 6
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: event2Layer
+        value: 4
+      type: 0
+      sprite: {fileID: 1790035049, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: Come on, go look at the cosmetics. I'll fill you in more when you come
+        back.
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: event2Layer
+        value: 4
+      type: 0
+      sprite: {fileID: 0}
+      text: (Doesn't seem like she'll take no for an answer.)
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: event2Layer
+        value: 3
+      type: 0
+      sprite: {fileID: 1790035049, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: Ugh. First you tell me I should be doing more womanly work. Then you
+        accuse me of something!?
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: event2Layer
+        value: 3
+      type: 0
+      sprite: {fileID: 1790035049, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: 'Hon, you are not very girlboss. '
+      setValues:
+      - parameter: whatIsGirlboss
+        value: unanswered
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: event2Layer
+        value: 3
+      type: 0
+      sprite: {fileID: 1790035049, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: I almost want to find a different recruit for my downline.
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: event2Layer
+        value: 3
+      type: 0
+      sprite: {fileID: -1341461904, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: A different huh? for your whuh?? I'm not huh???
+      setValues:
+      - parameter: event2Layer
+        value: 4
       onEnd:
         m_PersistentCalls:
           m_Calls: []
@@ -471,7 +908,19 @@ MonoBehaviour:
       setValues: []
       onEnd:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 547946463}
+            m_TargetAssemblyTypeName: Cinemachine.CinemachineVirtualCamera, Cinemachine
+            m_MethodName: set_Follow
+            m_Mode: 2
+            m_Arguments:
+              m_ObjectArgument: {fileID: 130537562}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       choices:
         option1:
           text: 
@@ -494,7 +943,19 @@ MonoBehaviour:
       setValues: []
       onEnd:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 547946463}
+            m_TargetAssemblyTypeName: Cinemachine.CinemachineVirtualCamera, Cinemachine
+            m_MethodName: set_Follow
+            m_Mode: 2
+            m_Arguments:
+              m_ObjectArgument: {fileID: 1193593272}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       choices:
         option1:
           text: 
@@ -563,7 +1024,19 @@ MonoBehaviour:
       setValues: []
       onEnd:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 547946463}
+            m_TargetAssemblyTypeName: Cinemachine.CinemachineVirtualCamera, Cinemachine
+            m_MethodName: set_Follow
+            m_Mode: 2
+            m_Arguments:
+              m_ObjectArgument: {fileID: 1320093149}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       choices:
         option1:
           text: 
@@ -586,7 +1059,19 @@ MonoBehaviour:
       setValues: []
       onEnd:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 547946463}
+            m_TargetAssemblyTypeName: Cinemachine.CinemachineVirtualCamera, Cinemachine
+            m_MethodName: set_Follow
+            m_Mode: 2
+            m_Arguments:
+              m_ObjectArgument: {fileID: 1013928730}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       choices:
         option1:
           text: 
@@ -609,7 +1094,19 @@ MonoBehaviour:
       setValues: []
       onEnd:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 547946463}
+            m_TargetAssemblyTypeName: Cinemachine.CinemachineVirtualCamera, Cinemachine
+            m_MethodName: set_Follow
+            m_Mode: 2
+            m_Arguments:
+              m_ObjectArgument: {fileID: 130537562}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       choices:
         option1:
           text: 
@@ -634,7 +1131,19 @@ MonoBehaviour:
         value: 2
       onEnd:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 547946463}
+            m_TargetAssemblyTypeName: Cinemachine.CinemachineVirtualCamera, Cinemachine
+            m_MethodName: set_Follow
+            m_Mode: 2
+            m_Arguments:
+              m_ObjectArgument: {fileID: 1193593272}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       choices:
         option1:
           text: 
@@ -686,7 +1195,7 @@ MonoBehaviour:
           text: It was delicious
           setValues:
           - parameter: wasItGood
-            value: yes
+            value: y
           onEnd:
             m_PersistentCalls:
               m_Calls:
@@ -706,7 +1215,7 @@ MonoBehaviour:
           text: It was disgusting
           setValues:
           - parameter: wasItGood
-            value: no
+            value: n
           onEnd:
             m_PersistentCalls:
               m_Calls:
@@ -761,7 +1270,7 @@ MonoBehaviour:
       - parameter: event2Layer
         value: 0
       - parameter: wasItGood
-        value: no
+        value: n
       type: 0
       sprite: {fileID: -2138747196, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
       text: But it was so gross!
@@ -786,7 +1295,7 @@ MonoBehaviour:
       - parameter: event2Layer
         value: 0
       - parameter: wasItGood
-        value: yes
+        value: y
       type: 0
       sprite: {fileID: -2138747196, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
       text: 'It was a fine snack, but... '
@@ -1037,6 +1546,10 @@ MonoBehaviour:
       setValues:
       - parameter: event2Layer
         value: 1
+      - parameter: horseLayer
+        value: 1
+      - parameter: seenEverything
+        value: n
       onEnd:
         m_PersistentCalls:
           m_Calls:
@@ -1189,6 +1702,175 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 653c4ca23dceaef4092175a11c338c80, type: 3}
+--- !u!1 &214452221
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 214452225}
+  - component: {fileID: 214452224}
+  - component: {fileID: 214452223}
+  - component: {fileID: 214452222}
+  m_Layer: 0
+  m_Name: toilet paper rolledup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &214452222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214452221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35f969c25eb17f540b7ad09cfaf0a55a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textboxPrefab: {fileID: 3392875753123741850, guid: a75fba7265650014c8aee6ac619c25e9, type: 3}
+  dialogue:
+    content:
+    - conditions: []
+      type: 0
+      sprite: {fileID: 0}
+      text: (The toilet paper roll thanks you for enduring that embarassing moment.)
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions: []
+      type: 0
+      sprite: {fileID: 0}
+      text: (Graciously, you may pass.)
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+--- !u!61 &214452223
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214452221}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.076529026, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0.53125, y: 0, z: 0.09375, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.78125, y: 0.5625}
+    newSize: {x: 0.63959706, y: 0.5625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 2
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5080204, y: 0.5625}
+  m_EdgeRadius: 0
+--- !u!212 &214452224
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214452221}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -141372065, guid: cae2f14415ff11144b93a52977729a78, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 2
+  m_Size: {x: 0.63959706, y: 0.5625}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &214452225
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214452221}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.7986, y: -6.34, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &333917433
 GameObject:
   m_ObjectHideFlags: 0
@@ -1391,7 +2073,132 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textboxPrefab: {fileID: 3392875753123741850, guid: a75fba7265650014c8aee6ac619c25e9, type: 3}
   dialogue:
-    content: []
+    content:
+    - conditions: []
+      type: 0
+      sprite: {fileID: 0}
+      text: (A pretty bottle.)
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: potionSeen
+        value: y
+      type: 0
+      sprite: {fileID: 0}
+      text: (Upon closer inspection, it appears to be some kind of soap.)
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: potionSeen
+        value: n
+      type: 0
+      sprite: {fileID: 0}
+      text: (It's labeled, "Miss Thang's Sweet Body Potion.")
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: potionSeen
+        value: n
+      type: 0
+      sprite: {fileID: 0}
+      text: (It doesn't look safe to drink...)
+      setValues:
+      - parameter: potionSeen
+        value: y
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: potionSeen
+        value: y
+      - parameter: lotionSeen
+        value: y
+      - parameter: tpSeen
+        value: y
+      - parameter: oilSeen
+        value: y
+      type: 0
+      sprite: {fileID: 0}
+      text: (Think that's just about everything this aisle has to offer.)
+      setValues:
+      - parameter: event2Layer
+        value: 5
+      - parameter: seenEverything
+        value: y
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
 --- !u!61 &391875470
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1483,7 +2290,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &393447725
 GameObject:
@@ -1636,7 +2443,7 @@ MonoBehaviour:
             m_PersistentCalls:
               m_Calls: []
     - conditions:
-      - parameter: canLeave
+      - parameter: seenEverything
         value: n
       type: 0
       sprite: {fileID: -1939337318, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
@@ -1672,7 +2479,7 @@ MonoBehaviour:
             m_PersistentCalls:
               m_Calls: []
     - conditions:
-      - parameter: canLeave
+      - parameter: seenEverything
         value: y
       type: 0
       sprite: {fileID: -1939337318, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
@@ -1797,7 +2604,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &478805615
 GameObject:
@@ -2216,7 +3023,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 794555943}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.69, y: 4.86, z: -10}
+  m_LocalPosition: {x: 10.690001, y: 4.8600006, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2371,15 +3178,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35f969c25eb17f540b7ad09cfaf0a55a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textboxPrefab: {fileID: 0}
+  textboxPrefab: {fileID: 3392875753123741850, guid: a75fba7265650014c8aee6ac619c25e9, type: 3}
   dialogue:
     content:
+    - conditions: []
+      type: 0
+      sprite: {fileID: 0}
+      text: (An arrangement of toilet paper rolls.)
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
     - conditions:
       - parameter: tpSeen
         value: y
       type: 0
       sprite: {fileID: 0}
-      text: (There's nothing else to look at.)
+      text: (There's nothing else to be found here.)
       setValues: []
       onEnd:
         m_PersistentCalls:
@@ -2450,9 +3278,42 @@ MonoBehaviour:
         value: n
       type: 0
       sprite: {fileID: 0}
-      text: (You reset the toilet paper.)
+      text: (You reset the arrangement.)
       setValues:
       - parameter: tpSeen
+        value: y
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: potionSeen
+        value: y
+      - parameter: lotionSeen
+        value: y
+      - parameter: tpSeen
+        value: y
+      - parameter: oilSeen
+        value: y
+      type: 0
+      sprite: {fileID: 0}
+      text: (Think that's just about everything this aisle has to offer.)
+      setValues:
+      - parameter: event2Layer
+        value: 5
+      - parameter: seenEverything
         value: y
       onEnd:
         m_PersistentCalls:
@@ -2519,7 +3380,7 @@ Transform:
   - {fileID: 2066653560}
   - {fileID: 1183677967}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1013928728
 GameObject:
@@ -2642,6 +3503,171 @@ MonoBehaviour:
       - parameter: horseLayer
         value: 0
       type: 0
+      sprite: {fileID: 21300000, guid: 9c4159231a7f2744b8f42d342ad97aa2, type: 3}
+      text: Trrssshhh!
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: horseLayer
+        value: 3
+      type: 0
+      sprite: {fileID: 21300000, guid: 9c4159231a7f2744b8f42d342ad97aa2, type: 3}
+      text: So, I know she said to stay here, but you should probably go after her.
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: horseLayer
+        value: 3
+      type: 0
+      sprite: {fileID: -1341461904, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: Thanks,
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: horseLayer
+        value: 3
+      type: 0
+      sprite: {fileID: 1840998398, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: talking horse?
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: horseLayer
+        value: 3
+      type: 0
+      sprite: {fileID: 21300000, guid: 9c4159231a7f2744b8f42d342ad97aa2, type: 3}
+      text: Of horse.
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: hayGet
+        value: y
+      - parameter: horseLayer
+        value: 2
+      type: 0
+      sprite: {fileID: -1341461904, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: Buddy... you'll never believe what I found.
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: hayGet
+        value: y
+      - parameter: horseLayer
+        value: 2
+      type: 0
+      sprite: {fileID: 21300000, guid: 9c4159231a7f2744b8f42d342ad97aa2, type: 3}
+      text: '*gasp* no way...'
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: horseLayer
+        value: 1
+      type: 0
       sprite: {fileID: -1341461904, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
       text: Hey. I didn't mean to scare you.
       setValues: []
@@ -2663,7 +3689,7 @@ MonoBehaviour:
               m_Calls: []
     - conditions:
       - parameter: horseLayer
-        value: 0
+        value: 1
       type: 0
       sprite: {fileID: 21300000, guid: 9c4159231a7f2744b8f42d342ad97aa2, type: 3}
       text: That's okay I accept your hay as recompense.
@@ -2684,7 +3710,36 @@ MonoBehaviour:
           onEnd:
             m_PersistentCalls:
               m_Calls: []
-    - conditions: []
+    - conditions:
+      - parameter: horseLayer
+        value: 1
+      - parameter: hayGet
+        value: y
+      type: 0
+      sprite: {fileID: 0}
+      text: (The horse snatches the hay out of your hand.)
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: horseLayer
+        value: 1
+      - parameter: hayGet
+        value: n
       type: 0
       sprite: {fileID: -1341461904, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
       text: What hay?
@@ -2705,7 +3760,11 @@ MonoBehaviour:
           onEnd:
             m_PersistentCalls:
               m_Calls: []
-    - conditions: []
+    - conditions:
+      - parameter: horseLayer
+        value: 1
+      - parameter: hayGet
+        value: n
       type: 0
       sprite: {fileID: 21300000, guid: 9c4159231a7f2744b8f42d342ad97aa2, type: 3}
       text: You said "hay." I thought there would be hay.
@@ -2726,11 +3785,17 @@ MonoBehaviour:
           onEnd:
             m_PersistentCalls:
               m_Calls: []
-    - conditions: []
+    - conditions:
+      - parameter: horseLayer
+        value: 1
+      - parameter: hayGet
+        value: n
       type: 0
       sprite: {fileID: -2138747196, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
       text: Sorry, buddy.
-      setValues: []
+      setValues:
+      - parameter: horseLayer
+        value: 2
       onEnd:
         m_PersistentCalls:
           m_Calls: []
@@ -2747,28 +3812,9 @@ MonoBehaviour:
           onEnd:
             m_PersistentCalls:
               m_Calls: []
-    - conditions: []
-      type: 0
-      sprite: {fileID: 21300000, guid: 9c4159231a7f2744b8f42d342ad97aa2, type: 3}
-      text: Trrssshhh!
-      setValues: []
-      onEnd:
-        m_PersistentCalls:
-          m_Calls: []
-      choices:
-        option1:
-          text: 
-          setValues: []
-          onEnd:
-            m_PersistentCalls:
-              m_Calls: []
-        option2:
-          text: 
-          setValues: []
-          onEnd:
-            m_PersistentCalls:
-              m_Calls: []
-    - conditions: []
+    - conditions:
+      - parameter: horseLayer
+        value: 0
       type: 0
       sprite: {fileID: 0}
       text: (The horse nickers.)
@@ -4495,7 +5541,179 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textboxPrefab: {fileID: 3392875753123741850, guid: a75fba7265650014c8aee6ac619c25e9, type: 3}
   dialogue:
-    content: []
+    content:
+    - conditions: []
+      type: 0
+      sprite: {fileID: 0}
+      text: (A murky, oily tincture.)
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: oilSeen
+        value: y
+      type: 0
+      sprite: {fileID: 0}
+      text: (Just another oil. Smells nice, though.)
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: oilSeen
+        value: n
+      type: 0
+      sprite: {fileID: 0}
+      text: (You open it and take a whiff.)
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: oilSeen
+        value: n
+      type: 0
+      sprite: {fileID: 0}
+      text: (It smells like mint, but not quite...)
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 547946463}
+            m_TargetAssemblyTypeName: Cinemachine.CinemachineVirtualCamera, Cinemachine
+            m_MethodName: set_Follow
+            m_Mode: 2
+            m_Arguments:
+              m_ObjectArgument: {fileID: 130537562}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: oilSeen
+        value: n
+      type: 0
+      sprite: {fileID: 1790035049, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: That's eucalyptus, hon.
+      setValues:
+      - parameter: oilSeen
+        value: y
+      onEnd:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 547946463}
+            m_TargetAssemblyTypeName: Cinemachine.CinemachineVirtualCamera, Cinemachine
+            m_MethodName: set_Follow
+            m_Mode: 2
+            m_Arguments:
+              m_ObjectArgument: {fileID: 1193593272}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: potionSeen
+        value: y
+      - parameter: lotionSeen
+        value: y
+      - parameter: tpSeen
+        value: y
+      - parameter: oilSeen
+        value: y
+      type: 0
+      sprite: {fileID: 0}
+      text: (Think that's just about everything this aisle has to offer.)
+      setValues:
+      - parameter: event2Layer
+        value: 5
+      - parameter: seenEverything
+        value: y
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
 --- !u!61 &1800963467
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4587,7 +5805,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1903079160
 GameObject:
@@ -4673,7 +5891,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1903079163
 MonoBehaviour:
@@ -4693,7 +5911,7 @@ MonoBehaviour:
     - conditions: []
       type: 0
       sprite: {fileID: 0}
-      text: (You look try the sample lotion on the stand.)
+      text: (It's a bottle of lotion.)
       setValues: []
       onEnd:
         m_PersistentCalls:
@@ -4711,7 +5929,55 @@ MonoBehaviour:
           onEnd:
             m_PersistentCalls:
               m_Calls: []
-    - conditions: []
+    - conditions:
+      - parameter: lotionSeen
+        value: y
+      type: 0
+      sprite: {fileID: 0}
+      text: (Rather not try it again.)
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: lotionSeen
+        value: n
+      type: 0
+      sprite: {fileID: 0}
+      text: (You try the sample lotion on the stand.)
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: lotionSeen
+        value: n
       type: 0
       sprite: {fileID: 0}
       text: (It smells a little funky.)
@@ -4748,7 +6014,9 @@ MonoBehaviour:
       text: (Think that's just about everything this aisle has to offer.)
       setValues:
       - parameter: event2Layer
-        value: 2
+        value: 5
+      - parameter: seenEverything
+        value: y
       onEnd:
         m_PersistentCalls:
           m_Calls: []
@@ -7831,12 +9099,20 @@ PrefabInstance:
       value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4211788369369512346, guid: 8472b1a44d1945a4f93adbc2c17660b5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 16.744453
+      objectReference: {fileID: 0}
+    - target: {fileID: 4211788369369512346, guid: 8472b1a44d1945a4f93adbc2c17660b5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 18.991682
+      objectReference: {fileID: 0}
+    - target: {fileID: 4211788369369512346, guid: 8472b1a44d1945a4f93adbc2c17660b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.9236
+      value: 10.9091
       objectReference: {fileID: 0}
     - target: {fileID: 4211788369369512346, guid: 8472b1a44d1945a4f93adbc2c17660b5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.2134
+      value: 1.5898
       objectReference: {fileID: 0}
     - target: {fileID: 4211788369369512346, guid: 8472b1a44d1945a4f93adbc2c17660b5, type: 3}
       propertyPath: m_LocalPosition.z

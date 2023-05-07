@@ -4461,6 +4461,10 @@ PrefabInstance:
       propertyPath: UI
       value: 
       objectReference: {fileID: 775774857}
+    - target: {fileID: 2403424121789646319, guid: 023817e4c3d2bbf48874128c9ad05783, type: 3}
+      propertyPath: isUIActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5380725774599249772, guid: 023817e4c3d2bbf48874128c9ad05783, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -8282,9 +8286,7 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: -2138747196, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
       text: (What is this place...?)
-      setValues:
-      - parameter: event1Layer
-        value: 0
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls:
@@ -8743,8 +8745,8 @@ MonoBehaviour:
       sprite: {fileID: 0}
       text: (Will she listen to you?)
       setValues:
-      - parameter: metJo
-        value: 1
+      - parameter: event1Layer
+        value: 0
       onEnd:
         m_PersistentCalls:
           m_Calls:
