@@ -3550,30 +3550,7 @@ MonoBehaviour:
         value: 3
       type: 0
       sprite: {fileID: -1341461904, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
-      text: Thanks,
-      setValues: []
-      onEnd:
-        m_PersistentCalls:
-          m_Calls: []
-      choices:
-        option1:
-          text: 
-          setValues: []
-          onEnd:
-            m_PersistentCalls:
-              m_Calls: []
-        option2:
-          text: 
-          setValues: []
-          onEnd:
-            m_PersistentCalls:
-              m_Calls: []
-    - conditions:
-      - parameter: horseLayer
-        value: 3
-      type: 0
-      sprite: {fileID: 1840998398, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
-      text: talking horse?
+      text: Thanks.
       setValues: []
       onEnd:
         m_PersistentCalls:
