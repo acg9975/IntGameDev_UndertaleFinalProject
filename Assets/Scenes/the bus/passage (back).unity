@@ -302,7 +302,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &327979264
 MonoBehaviour:
@@ -557,63 +557,167 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.46875, y: 0.53125}
   m_EdgeRadius: 0
---- !u!1001 &334134274
+--- !u!1 &330900076
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 330900080}
+  - component: {fileID: 330900079}
+  - component: {fileID: 330900078}
+  - component: {fileID: 330900077}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &330900077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330900076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &330900078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330900076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &330900079
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330900076}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &330900080
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330900076}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!1001 &618003974
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5034883943208341476, guid: 348b85d196bffef46ac47a5d94b1760b, type: 3}
-      propertyPath: m_Name
-      value: Scene Transition
-      objectReference: {fileID: 0}
-    - target: {fileID: 5034883943208341477, guid: 348b85d196bffef46ac47a5d94b1760b, type: 3}
+    - target: {fileID: 2403424121789646319, guid: 023817e4c3d2bbf48874128c9ad05783, type: 3}
+      propertyPath: UI
+      value: 
+      objectReference: {fileID: 330900076}
+    - target: {fileID: 5380725774599249772, guid: 023817e4c3d2bbf48874128c9ad05783, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 5034883943208341477, guid: 348b85d196bffef46ac47a5d94b1760b, type: 3}
+    - target: {fileID: 5380725774599249772, guid: 023817e4c3d2bbf48874128c9ad05783, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.57200766
+      value: 32.75
       objectReference: {fileID: 0}
-    - target: {fileID: 5034883943208341477, guid: 348b85d196bffef46ac47a5d94b1760b, type: 3}
+    - target: {fileID: 5380725774599249772, guid: 023817e4c3d2bbf48874128c9ad05783, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7299998
+      value: 3.13
       objectReference: {fileID: 0}
-    - target: {fileID: 5034883943208341477, guid: 348b85d196bffef46ac47a5d94b1760b, type: 3}
+    - target: {fileID: 5380725774599249772, guid: 023817e4c3d2bbf48874128c9ad05783, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.00872102
       objectReference: {fileID: 0}
-    - target: {fileID: 5034883943208341477, guid: 348b85d196bffef46ac47a5d94b1760b, type: 3}
+    - target: {fileID: 5380725774599249772, guid: 023817e4c3d2bbf48874128c9ad05783, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5034883943208341477, guid: 348b85d196bffef46ac47a5d94b1760b, type: 3}
+    - target: {fileID: 5380725774599249772, guid: 023817e4c3d2bbf48874128c9ad05783, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5034883943208341477, guid: 348b85d196bffef46ac47a5d94b1760b, type: 3}
+    - target: {fileID: 5380725774599249772, guid: 023817e4c3d2bbf48874128c9ad05783, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5034883943208341477, guid: 348b85d196bffef46ac47a5d94b1760b, type: 3}
+    - target: {fileID: 5380725774599249772, guid: 023817e4c3d2bbf48874128c9ad05783, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5034883943208341477, guid: 348b85d196bffef46ac47a5d94b1760b, type: 3}
+    - target: {fileID: 5380725774599249772, guid: 023817e4c3d2bbf48874128c9ad05783, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5034883943208341477, guid: 348b85d196bffef46ac47a5d94b1760b, type: 3}
+    - target: {fileID: 5380725774599249772, guid: 023817e4c3d2bbf48874128c9ad05783, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5034883943208341477, guid: 348b85d196bffef46ac47a5d94b1760b, type: 3}
+    - target: {fileID: 5380725774599249772, guid: 023817e4c3d2bbf48874128c9ad05783, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5380725774599249773, guid: 023817e4c3d2bbf48874128c9ad05783, type: 3}
+      propertyPath: m_Name
+      value: Managers
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 348b85d196bffef46ac47a5d94b1760b, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 023817e4c3d2bbf48874128c9ad05783, type: 3}
 --- !u!4 &658653196 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4164502599485516909, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
@@ -762,7 +866,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 882549849}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.72, y: 9.21, z: -10}
+  m_LocalPosition: {x: 10.15, y: 7.35, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -977,11 +1081,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4164502599485516909, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.72
+      value: 10.15
       objectReference: {fileID: 0}
     - target: {fileID: 4164502599485516909, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.21
+      value: 7.35
       objectReference: {fileID: 0}
     - target: {fileID: 4164502599485516909, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1142,6 +1246,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1297823239
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1297823242}
+  - component: {fileID: 1297823241}
+  - component: {fileID: 1297823240}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1297823240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297823239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &1297823241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297823239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &1297823242
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297823239}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1354093868
 PrefabInstance:
@@ -4402,7 +4574,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1767404345}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.72, y: 9.21, z: -10}
+  m_LocalPosition: {x: 10.15, y: 7.35, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4760,9 +4932,7 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: -1341461904, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
       text: Hi.
-      setValues:
-      - parameter: hallSans
-        value: 0
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls: []
@@ -4779,7 +4949,9 @@ MonoBehaviour:
           onEnd:
             m_PersistentCalls:
               m_Calls: []
-    - conditions: []
+    - conditions:
+      - parameter: backSansLayer
+        value: 1
       type: 0
       sprite: {fileID: -1619752381, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
       text: hey.
@@ -4800,7 +4972,9 @@ MonoBehaviour:
           onEnd:
             m_PersistentCalls:
               m_Calls: []
-    - conditions: []
+    - conditions:
+      - parameter: backSansLayer
+        value: 1
       type: 0
       sprite: {fileID: -1341461904, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
       text: Um, it's a little tough to get by with this big stand in the way.
@@ -4821,7 +4995,9 @@ MonoBehaviour:
           onEnd:
             m_PersistentCalls:
               m_Calls: []
-    - conditions: []
+    - conditions:
+      - parameter: backSansLayer
+        value: 1
       type: 0
       sprite: {fileID: -1571271296, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
       text: yeah, it is.
@@ -4842,7 +5018,9 @@ MonoBehaviour:
           onEnd:
             m_PersistentCalls:
               m_Calls: []
-    - conditions: []
+    - conditions:
+      - parameter: backSansLayer
+        value: 1
       type: 0
       sprite: {fileID: -893850241, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
       text: someone should really do something about that.
@@ -4864,11 +5042,11 @@ MonoBehaviour:
             m_PersistentCalls:
               m_Calls: []
     - conditions:
-      - parameter: hallSansM
-        value: false
+      - parameter: backSansLayer
+        value: 0
       type: 0
       sprite: {fileID: -893850241, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
-      text: what the spruce
+      text: heya. how's trader joe's treatin' ya?
       setValues: []
       onEnd:
         m_PersistentCalls:
@@ -4882,6 +5060,233 @@ MonoBehaviour:
               m_Calls: []
         option2:
           text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: backSansLayer
+        value: 0
+      type: 1
+      sprite: {fileID: -1341461904, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: I don't know!
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: Great
+          setValues:
+          - parameter: titoFeelings
+            value: pos
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: Not sure
+          setValues:
+          - parameter: titoFeelings
+            value: neg
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: backSansLayer
+        value: 0
+      - parameter: titoFeelings
+        value: neg
+      type: 0
+      sprite: {fileID: -1341461904, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: I don't know!
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: Great
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: Not sure
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: backSansLayer
+        value: 0
+      - parameter: titoFeelings
+        value: neg
+      type: 0
+      sprite: {fileID: -1341461904, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: Usually, I like grocery shopping. But it's not the same without my friends...
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: Great
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: Not sure
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: backSansLayer
+        value: 0
+      - parameter: titoFeelings
+        value: pos
+      type: 0
+      sprite: {fileID: -1341461904, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: It's great! But I still have to get home.
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: Great
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: Not sure
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: backSansLayer
+        value: 0
+      type: 0
+      sprite: {fileID: -1619752381, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
+      text: 'eh, don''t worry too much. '
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: Great
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: Not sure
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: backSansLayer
+        value: 0
+      - parameter: titoFeelings
+        value: neg
+      type: 0
+      sprite: {fileID: -1526311129, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
+      text: it's ok to miss people. but getting back to them is a process.
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: Great
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: Not sure
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: backSansLayer
+        value: 0
+      - parameter: titoFeelings
+        value: neg
+      type: 0
+      sprite: {fileID: -1619752381, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
+      text: take your time, ok?
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: Great
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: Not sure
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: backSansLayer
+        value: 0
+      - parameter: titoFeelings
+        value: pos
+      type: 0
+      sprite: {fileID: -1619752381, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
+      text: staying in one place for a bit can be good for you.
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: Great
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: Not sure
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: backSansLayer
+        value: 0
+      - parameter: titoFeelings
+        value: pos
+      type: 0
+      sprite: {fileID: -2138747196, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: I can agree to that...
+      setValues:
+      - parameter: backSansLayer
+        value: 1
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: Great
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: Not sure
           setValues: []
           onEnd:
             m_PersistentCalls:
