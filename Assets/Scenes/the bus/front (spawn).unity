@@ -4612,7 +4612,9 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: -2138747196, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
       text: (What is this place...?)
-      setValues: []
+      setValues:
+      - parameter: event1Layer
+        value: 0
       onEnd:
         m_PersistentCalls:
           m_Calls:
