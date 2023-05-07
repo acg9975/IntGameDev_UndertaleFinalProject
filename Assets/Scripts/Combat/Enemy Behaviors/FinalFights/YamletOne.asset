@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bc6f9462afc347418b98db90dbe5b0e, type: 3}
+  m_Name: YamletOne
+  m_EditorClassIdentifier: 
+  maxHealth: 14
+  health: 14
+  enemySprite: {fileID: -362027459, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+  canBeSpared: 0
+  weakTo: 2
+  weaknessCheck: 1
+  phases:
+  - iterationType: 0
+    attacks:
+    - {fileID: 11400000, guid: 6a6242753cb8e3741bff711404119205, type: 2}
+    descriptions:
+    - 
+    weaknessExploitedPhrase: 
+    weaknessFailPhrase: 
+    healthRange: 0
+    weaknessRange: 0
