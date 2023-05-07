@@ -179,6 +179,8 @@ GameObject:
   m_Component:
   - component: {fileID: 130537562}
   - component: {fileID: 130537561}
+  - component: {fileID: 130537564}
+  - component: {fileID: 130537563}
   m_Layer: 0
   m_Name: Joann
   m_TagString: Untagged
@@ -246,13 +248,377 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 130537560}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.044853, y: 1.03, z: 0}
+  m_LocalPosition: {x: 8.98, y: 3.68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &130537563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130537560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35f969c25eb17f540b7ad09cfaf0a55a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textboxPrefab: {fileID: 3392875753123741850, guid: a75fba7265650014c8aee6ac619c25e9, type: 3}
+  dialogue:
+    content:
+    - conditions: []
+      type: 0
+      sprite: {fileID: -1939337318, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: Hey hon! What did you think of our food?
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions: []
+      type: 1
+      sprite: {fileID: 0}
+      text: Hey hon! What did you think of our food?
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: It was delicious
+          setValues:
+          - parameter: wasItGood
+            value: yes
+          onEnd:
+            m_PersistentCalls:
+              m_Calls:
+              - m_Target: {fileID: 547946463}
+                m_TargetAssemblyTypeName: Cinemachine.CinemachineVirtualCamera, Cinemachine
+                m_MethodName: set_Follow
+                m_Mode: 2
+                m_Arguments:
+                  m_ObjectArgument: {fileID: 130537562}
+                  m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+                  m_IntArgument: 0
+                  m_FloatArgument: 0
+                  m_StringArgument: 
+                  m_BoolArgument: 0
+                m_CallState: 2
+        option2:
+          text: It was disgusting
+          setValues:
+          - parameter: wasItGood
+            value: no
+          onEnd:
+            m_PersistentCalls:
+              m_Calls:
+              - m_Target: {fileID: 547946463}
+                m_TargetAssemblyTypeName: Cinemachine.CinemachineVirtualCamera, Cinemachine
+                m_MethodName: set_Follow
+                m_Mode: 2
+                m_Arguments:
+                  m_ObjectArgument: {fileID: 130537562}
+                  m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+                  m_IntArgument: 0
+                  m_FloatArgument: 0
+                  m_StringArgument: 
+                  m_BoolArgument: 0
+                m_CallState: 2
+    - conditions: []
+      type: 0
+      sprite: {fileID: -1939337318, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: Well, of course it was! That's how you know it's good for you.
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 547946463}
+            m_TargetAssemblyTypeName: Cinemachine.CinemachineVirtualCamera, Cinemachine
+            m_MethodName: set_Follow
+            m_Mode: 2
+            m_Arguments:
+              m_ObjectArgument: {fileID: 1193593272}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      choices:
+        option1:
+          text: It was delicious
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: It was disgusting
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: wasItGood
+        value: no
+      type: 0
+      sprite: {fileID: -2138747196, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: But it was so gross!
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: It was delicious
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: It was disgusting
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: wasItGood
+        value: yes
+      type: 0
+      sprite: {fileID: -2138747196, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: 'It was a fine snack, but... '
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: It was delicious
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: It was disgusting
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions: []
+      type: 0
+      sprite: {fileID: -1341461904, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: Could you please give me some real food? I'm so hungry...
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 547946463}
+            m_TargetAssemblyTypeName: Cinemachine.CinemachineVirtualCamera, Cinemachine
+            m_MethodName: set_Follow
+            m_Mode: 2
+            m_Arguments:
+              m_ObjectArgument: {fileID: 1013928730}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      choices:
+        option1:
+          text: It was delicious
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: It was disgusting
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions: []
+      type: 0
+      sprite: {fileID: 21300000, guid: 9c4159231a7f2744b8f42d342ad97aa2, type: 3}
+      text: how hungry...
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 547946463}
+            m_TargetAssemblyTypeName: Cinemachine.CinemachineVirtualCamera, Cinemachine
+            m_MethodName: set_Follow
+            m_Mode: 2
+            m_Arguments:
+              m_ObjectArgument: {fileID: 1193593272}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      choices:
+        option1:
+          text: It was delicious
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: It was disgusting
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions: []
+      type: 0
+      sprite: {fileID: -1341461904, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: ...
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: It was delicious
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: It was disgusting
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions: []
+      type: 0
+      sprite: {fileID: 1840998398, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: what
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 547946463}
+            m_TargetAssemblyTypeName: Cinemachine.CinemachineVirtualCamera, Cinemachine
+            m_MethodName: set_Follow
+            m_Mode: 2
+            m_Arguments:
+              m_ObjectArgument: {fileID: 130537562}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      choices:
+        option1:
+          text: It was delicious
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: It was disgusting
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions: []
+      type: 0
+      sprite: {fileID: -1939337318, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: This is our cosmetics aisle, hon. You can't eat our essential oils!
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: It was delicious
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: It was disgusting
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions: []
+      type: 0
+      sprite: {fileID: 1790035049, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: Even I know that.
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 547946463}
+            m_TargetAssemblyTypeName: Cinemachine.CinemachineVirtualCamera, Cinemachine
+            m_MethodName: set_Follow
+            m_Mode: 2
+            m_Arguments:
+              m_ObjectArgument: {fileID: 1193593272}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      choices:
+        option1:
+          text: It was delicious
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: It was disgusting
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+--- !u!61 &130537564
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130537560}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.53125, y: 0.75}
+    newSize: {x: 0.53125, y: 0.75}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.53125, y: 0.75}
+  m_EdgeRadius: 0
 --- !u!1001 &191341021
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -907,7 +1273,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1013928728}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.244853, y: -1.3199999, z: 0}
+  m_LocalPosition: {x: 9.15, y: -2.77, z: 0}
   m_LocalScale: {x: 0.2474, y: 0.2474, z: 0.2474}
   m_ConstrainProportionsScale: 0
   m_Children: []
