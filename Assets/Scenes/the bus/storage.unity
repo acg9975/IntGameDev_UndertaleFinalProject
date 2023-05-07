@@ -279,7 +279,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b4ceec1720e81a24e9770dd43b0cb461, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4571,6 +4571,7 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: 0}
       text: I thought I told you to wait for me.
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls: []
@@ -4591,6 +4592,7 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: 0}
       text: That's it!!
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls: []
@@ -4787,6 +4789,7 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: 0}
       text: It's locked. The door shut behind you.
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls: []
