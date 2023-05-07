@@ -40,11 +40,12 @@ public class AttackProjectile : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            CombatManager.instance.causeDamageJuice();
             if (CombatMovement.instance.CanTakeDamage)
             {
                 PlayerData.Health -= damage;
+                CombatManager.instance.causeDamageJuice();
             }
+
             CombatMenuNavigator.instance.UpdateCombatUI();
 
             if (destroyOnPlayer)

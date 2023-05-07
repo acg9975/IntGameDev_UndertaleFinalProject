@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   health: 94
-  enemySprite: {fileID: -265690492, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
   canBeSpared: 0
   weakTo: 0
   weaknessCheck: 3
   phases:
-  - iterationType: 0
+  - sprite: {fileID: 2078953512, guid: b4354a2874452489f91ea503e1233b2a, type: 3}
+    iterationType: 0
     attacks:
     - {fileID: 11400000, guid: 4f85c3f2da167e348b4e573fd760c924, type: 2}
     - {fileID: 11400000, guid: 0cf21005c97750d4ba4818d00cfe0bc1, type: 2}
@@ -30,7 +30,8 @@ MonoBehaviour:
     weaknessFailPhrase: Did you really think that would work
     healthRange: 90
     weaknessRange: 2
-  - iterationType: 1
+  - sprite: {fileID: -728740451, guid: b4354a2874452489f91ea503e1233b2a, type: 3}
+    iterationType: 1
     attacks:
     - {fileID: 11400000, guid: 05f3e95254a38a74588cb0f7cce0e2b3, type: 2}
     - {fileID: 11400000, guid: dea7d2f18135b49498546f3a8594e795, type: 2}
@@ -41,7 +42,8 @@ MonoBehaviour:
     weaknessFailPhrase: Please, your weak actions mean nothing to me
     healthRange: 40
     weaknessRange: 1
-  - iterationType: 0
+  - sprite: {fileID: -547590536, guid: b4354a2874452489f91ea503e1233b2a, type: 3}
+    iterationType: 0
     attacks:
     - {fileID: 11400000, guid: e2cd87a481370ff4cb6421b97668eb87, type: 2}
     - {fileID: 11400000, guid: bd1a61ecc44cbb84b856de67f89d8ac4, type: 2}

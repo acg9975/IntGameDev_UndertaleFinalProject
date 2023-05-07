@@ -167,6 +167,7 @@ public class CombatManager : MonoBehaviour
     {
         //we check if we need to change the phase yet or not
         Enemy.checkChangePhase();
+        EnemySprite = Enemy.EnemySprite;
 
         combatMode = CombatMode.PlayerDefend;
         //Debug.Log("PLAYER DEFEND");

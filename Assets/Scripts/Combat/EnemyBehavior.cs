@@ -7,12 +7,11 @@ public class EnemyBehavior : ScriptableObject
 {
     [SerializeField] [Min(0)] private int maxHealth;
     [SerializeField] [Min(0)] private int health;
-    [SerializeField]private Sprite enemySprite;
     public Sprite EnemySprite
     {
         get
         {
-            return enemySprite;
+            return phases[phaseIndex].sprite;
         }
     }
 
@@ -78,6 +77,8 @@ public class EnemyBehavior : ScriptableObject
     [System.Serializable]
     public class Phase
     {
+        public Sprite sprite;
+
         public enum IterationType { InOrder, Random }
 
         public IterationType iterationType;

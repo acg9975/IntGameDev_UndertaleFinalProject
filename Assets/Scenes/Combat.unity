@@ -3911,7 +3911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a16ca81f283832248825dc6581619af7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 11400000, guid: 1ade67a161dfdd44f810a28903feaedf, type: 2}
+  enemy: {fileID: 11400000, guid: 642d25a8002625844a26437a5a214d18, type: 2}
   playerPrefab: {fileID: 2216183577570962082, guid: 3b697d0d3629fab4b88f71464c66116e, type: 3}
   playerSpawn: {fileID: 2082467482}
   enemySprite: {fileID: 792748950}
