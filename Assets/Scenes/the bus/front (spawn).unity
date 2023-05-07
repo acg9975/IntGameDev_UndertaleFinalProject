@@ -312,6 +312,7 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: -1619752381, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
       text: hey. welcome to trader joe's.
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls: []
@@ -332,6 +333,7 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: 1840998398, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
       text: Huh. Haven't I seen you before?
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls: []
@@ -352,6 +354,7 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: -1619752381, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
       text: i dunno.
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls: []
@@ -372,6 +375,7 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: -893850241, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
       text: have you?
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls: []
@@ -392,6 +396,7 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: -2138747196, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
       text: Hm...
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls: []
@@ -4293,7 +4298,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1262092205}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.51, y: -10.79, z: -10}
+  m_LocalPosition: {x: 18.54, y: -11.87, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4351,11 +4356,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4164502599485516909, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.51
+      value: 18.54
       objectReference: {fileID: 0}
     - target: {fileID: 4164502599485516909, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.79
+      value: -11.87
       objectReference: {fileID: 0}
     - target: {fileID: 4164502599485516909, guid: 90b48c273c5f240e0bf583e5375172e9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4607,9 +4612,22 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: -2138747196, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
       text: (What is this place...?)
+      setValues: []
       onEnd:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 1872661218}
+            m_TargetAssemblyTypeName: Cinemachine.CinemachineVirtualCamera, Cinemachine
+            m_MethodName: set_Follow
+            m_Mode: 2
+            m_Arguments:
+              m_ObjectArgument: {fileID: 1488426949}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       choices:
         option1:
           text: 
@@ -4627,9 +4645,22 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: -1939337318, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
       text: Hey hon! Welcome to Trader Joe's!
+      setValues: []
       onEnd:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 1872661218}
+            m_TargetAssemblyTypeName: Cinemachine.CinemachineVirtualCamera, Cinemachine
+            m_MethodName: set_Follow
+            m_Mode: 2
+            m_Arguments:
+              m_ObjectArgument: {fileID: 734974925}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       choices:
         option1:
           text: 
@@ -4647,6 +4678,40 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: 1840998398, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
       text: Not this again.
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1872661218}
+            m_TargetAssemblyTypeName: Cinemachine.CinemachineVirtualCamera, Cinemachine
+            m_MethodName: set_Follow
+            m_Mode: 2
+            m_Arguments:
+              m_ObjectArgument: {fileID: 1488426949}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions: []
+      type: 0
+      sprite: {fileID: -1939337318, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: They call me Trader Jo, but you can just call me Jo!
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls: []
@@ -4666,8 +4731,8 @@ MonoBehaviour:
     - conditions: []
       type: 0
       sprite: {fileID: -1939337318, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
-      text: I am Trader Jo---yes, THE Trader Jo! And I want to introduce you to our
-        new program!
+      text: Since you're new, I have a special offer for you.
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls: []
@@ -4687,7 +4752,9 @@ MonoBehaviour:
     - conditions: []
       type: 0
       sprite: {fileID: -1939337318, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
-      text: the word vomit. then she runs off screen.
+      text: You see, hon, last year, I was going through a tough time financially
+        when I had to leave the workforce.
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls: []
@@ -4706,11 +4773,321 @@ MonoBehaviour:
               m_Calls: []
     - conditions: []
       type: 0
-      sprite: {fileID: -2138747196, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
-      text: cheese and crackers.
+      sprite: {fileID: 1790035049, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: Of course, I had to take care of my sweet, sweet Caroline. But I got
+        my big break when I met my mentor!
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions: []
+      type: 0
+      sprite: {fileID: -1939337318, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: "It\u2019s called, \u201CDirect Sales,\u201D and you can set your own
+        hours, work from home\u2014it\u2019s basically like owning your own business. "
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions: []
+      type: 0
+      sprite: {fileID: -1939337318, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: And if you join my team, I can teach you how to make six figures a year
+        running your very own business.
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1872661218}
+            m_TargetAssemblyTypeName: Cinemachine.CinemachineVirtualCamera, Cinemachine
+            m_MethodName: set_Follow
+            m_Mode: 2
+            m_Arguments:
+              m_ObjectArgument: {fileID: 734974925}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions: []
+      type: 0
+      sprite: {fileID: -1341461904, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: "But I don\u2019t need a business. I\u2019m already in training."
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1872661218}
+            m_TargetAssemblyTypeName: Cinemachine.CinemachineVirtualCamera, Cinemachine
+            m_MethodName: set_Follow
+            m_Mode: 2
+            m_Arguments:
+              m_ObjectArgument: {fileID: 1488426949}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions: []
+      type: 0
+      sprite: {fileID: -1939337318, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: "If you\u2019re not convinced, try our products at our sample stations!
+        You\u2019ll love them. "
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions: []
+      type: 0
+      sprite: {fileID: -1939337318, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: And if you have any questions about joining our team, please let me know.
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1872661218}
+            m_TargetAssemblyTypeName: Cinemachine.CinemachineVirtualCamera, Cinemachine
+            m_MethodName: set_Follow
+            m_Mode: 2
+            m_Arguments:
+              m_ObjectArgument: {fileID: 734974925}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions: []
+      type: 0
+      sprite: {fileID: -1341461904, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: I have a ques-
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1872661218}
+            m_TargetAssemblyTypeName: Cinemachine.CinemachineVirtualCamera, Cinemachine
+            m_MethodName: set_Follow
+            m_Mode: 2
+            m_Arguments:
+              m_ObjectArgument: {fileID: 1488426949}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions: []
+      type: 0
+      sprite: {fileID: -1939337318, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: Ta-ta!
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1872661218}
+            m_TargetAssemblyTypeName: Cinemachine.CinemachineVirtualCamera, Cinemachine
+            m_MethodName: set_Follow
+            m_Mode: 2
+            m_Arguments:
+              m_ObjectArgument: {fileID: 734974925}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions: []
+      type: 0
+      sprite: {fileID: 1840998398, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: Cheese and crackers...
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions: []
+      type: 0
+      sprite: {fileID: -1341461904, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: I gotta get outta here.
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions: []
+      type: 0
+      sprite: {fileID: 0}
+      text: (But... it looks like you'll have to chase down the store owner.)
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions: []
+      type: 0
+      sprite: {fileID: 0}
+      text: (Will she listen to you?)
+      setValues:
+      - parameter: metJo
+        value: 1
+      onEnd:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1488426947}
+            m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_MethodName: SetActive
+            m_Mode: 6
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       choices:
         option1:
           text: 
@@ -5344,7 +5721,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1872661217}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.069999695, y: -2.7200003, z: -10}
+  m_LocalPosition: {x: 5.960001, y: -3.8000002, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
