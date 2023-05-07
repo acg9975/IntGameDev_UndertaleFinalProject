@@ -261,9 +261,11 @@ public class CombatManager : MonoBehaviour
         //if they succeed, flash the dialogue that they have fled onto the dialogue box, set the state to inactive, and then after 5 seconds move back to overworld
         int x = Random.Range(1,10);
 
+
+        //NOTE - We removed functionality due to lack of time
         combatMode = CombatMode.Inactive;
         Debug.Log("Flee chance: " + x);
-        if (x == 1)
+        if (x == -3421)
         {
             StartCoroutine(fleeSequenceTimer(true)) ;
         }
@@ -288,7 +290,7 @@ public class CombatManager : MonoBehaviour
         }
         else
         {
-            CombatMenuNavigator.instance.UpdateCombatUI("You attempt to flee but are unsuccessful!");
+            CombatMenuNavigator.instance.UpdateCombatUI("You turn to flee, but you realize your computer is in front of you, so you cannot run away!");
             //throw up negative text - "You were unable to escape"
             Debug.Log("Player fails!");
         }
