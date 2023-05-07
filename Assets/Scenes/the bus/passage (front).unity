@@ -1667,6 +1667,7 @@ MonoBehaviour:
       sprite: {fileID: 0}
       text: You find a picture of Jo with a small goat girl. They seem to be laughing
         uncontrollably.
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls: []
@@ -1687,6 +1688,7 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: 0}
       text: The caption says, "Our Caroline."
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls:
@@ -1739,7 +1741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 294a13abc3b2b7245822d3711c011762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: {fileID: 11400000, guid: 7484485428934d24ebaeb41b187c92a5, type: 2}
+  keys: []
 --- !u!1 &295287159
 GameObject:
   m_ObjectHideFlags: 0
@@ -3874,7 +3876,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -13674,6 +13676,7 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: 0}
       text: It's Tito's hat!!!
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls: []
@@ -13694,6 +13697,7 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: 0}
       text: But unfortunately, we never figured out how to let him wear it...
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls: []
@@ -13714,6 +13718,7 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: 0}
       text: So he has to leave it behind.
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls: []
@@ -13734,6 +13739,7 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: 0}
       text: Sorry, Tito.
+      setValues: []
       onEnd:
         m_PersistentCalls:
           m_Calls: []
