@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f2d45994d13a8a41ac3853b8df895ca, type: 3}
+  m_Name: RainAttack
+  m_EditorClassIdentifier: 
+  duration: 10
+  boxPrefab: {fileID: 4188517053946150234, guid: 377bc823554eb2041bee6da4b4f20d3a, type: 3}
+  dropPrefabs:
+  - {fileID: 6787800901682839002, guid: dc403c4ae7dcfec4a80eb5dc8a08e004, type: 3}
+  - {fileID: 6787800901682839002, guid: b9d4b6ccaf1a66e47998fcc3efe61e82, type: 3}
+  - {fileID: 6787800901682839002, guid: 3bc43618f29973040a3691b5d38b34e2, type: 3}
+  dropSpawn: {x: 1, y: 2.5}
+  dropRange: 0.1
+  dropLeftSpeed: 4
+  dropRightSpeed: 3
+  initialDelay: 1.2
+  spawnDelay: 0.1
