@@ -9,15 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 947e5837438d4c74e97d69a39623d2e0, type: 3}
-  m_Name: DriveByTest
+  m_Script: {fileID: 11500000, guid: 89d4b017301ee5747ad6cea335f9b384, type: 3}
+  m_Name: SpearAttack Fast
   m_EditorClassIdentifier: 
   duration: 10
   projectilePrefab: {fileID: 6787800901682839002, guid: 82af262b011745948904054026bd0cbe, type: 3}
-  pos1Spawn: {x: -1, y: -2.8, z: 0}
-  pos2Spawn: {x: 0, y: 2.15, z: 0}
-  pos3Spawn: {x: 1, y: -2.8, z: 0}
-  projSpeed: 5
-  moveDistance: 2
-  waveSpawnDelay: 1.8
-  projDeleteDelay: 1.5
+  projectileSpeed: 8
+  spawnDelay: 0.8
+  spawnRadius: 5

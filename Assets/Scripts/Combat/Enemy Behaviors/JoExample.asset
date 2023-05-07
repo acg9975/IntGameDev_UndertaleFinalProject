@@ -21,8 +21,9 @@ MonoBehaviour:
   phases:
   - iterationType: 0
     attacks:
-    - {fileID: 11400000, guid: 3e948eaab844ca54e84635e05133226e, type: 2}
+    - {fileID: 11400000, guid: 4f85c3f2da167e348b4e573fd760c924, type: 2}
     - {fileID: 11400000, guid: 0cf21005c97750d4ba4818d00cfe0bc1, type: 2}
+    - {fileID: 11400000, guid: 15b4d876900b081428b8e0e6300b0a12, type: 2}
     descriptions:
     - ....
     weaknessExploitedPhrase: What the?
@@ -31,7 +32,7 @@ MonoBehaviour:
     weaknessRange: 2
   - iterationType: 1
     attacks:
-    - {fileID: 11400000, guid: 3e948eaab844ca54e84635e05133226e, type: 2}
+    - {fileID: 11400000, guid: 05f3e95254a38a74588cb0f7cce0e2b3, type: 2}
     - {fileID: 11400000, guid: dea7d2f18135b49498546f3a8594e795, type: 2}
     descriptions:
     - ...............
@@ -42,9 +43,8 @@ MonoBehaviour:
     weaknessRange: 1
   - iterationType: 0
     attacks:
-    - {fileID: 11400000, guid: 3e948eaab844ca54e84635e05133226e, type: 2}
-    - {fileID: 11400000, guid: 0cf21005c97750d4ba4818d00cfe0bc1, type: 2}
-    - {fileID: 11400000, guid: a16761c6949f1434fb9d462eb3eb1504, type: 2}
+    - {fileID: 11400000, guid: e2cd87a481370ff4cb6421b97668eb87, type: 2}
+    - {fileID: 11400000, guid: bd1a61ecc44cbb84b856de67f89d8ac4, type: 2}
     descriptions:
     - ...now die!
     weaknessExploitedPhrase: Good for nothing low life
