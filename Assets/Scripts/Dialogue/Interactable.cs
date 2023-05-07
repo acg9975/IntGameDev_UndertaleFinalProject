@@ -34,18 +34,25 @@ public class Interactable : MonoBehaviour
         dialogue.Reset();
 
         dialogueBox = Instantiate(textboxPrefab, transform.position - Vector3.down * -2.5f, Quaternion.identity).GetComponent<DialogueBox>();
-        dialogueBox.UpdateText(dialogue.Item);
+        dialogueBox.Trigger(dialogue.Item);
     }
 
 
     private void CheckDialogue()
     {
-        dialogue.Trigger();
-
-        if (dialogue.Item == null)
-            EndDialogue();
+        if (dialogueBox.isRevealing)
+        {
+            dialogueBox.Trigger();
+        }
         else
-            dialogueBox.UpdateText(dialogue.Item);
+        {
+            dialogue.Trigger();
+
+            if (dialogue.Item == null)
+                EndDialogue();
+            else
+                dialogueBox.Trigger(dialogue.Item);
+        }
     }
 
     private void EndDialogue()

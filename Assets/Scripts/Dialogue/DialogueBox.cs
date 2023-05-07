@@ -6,6 +6,10 @@ using TMPro;
 
 public class DialogueBox : MonoBehaviour
 {
+    [Header("Text")]
+    [SerializeField] private float textRevealTick = 0.05f;
+    [SerializeField] private string textRevealSound;
+
     [Header("Generic Dialogue")]
     [SerializeField] private GameObject genericGroup;
     [SerializeField] private TextMeshProUGUI genericText;
@@ -24,10 +28,11 @@ public class DialogueBox : MonoBehaviour
 
     public static int selectedIndex = 0;
 
+    private Dialogue.DialogueItem item;
     private string currentText;
-    private char[] separatedText;
 
-    private Sprite currentSprite;
+    private IEnumerator revealRoutine;
+    public bool isRevealing = false;
 
     private void Awake()
     {
@@ -50,7 +55,29 @@ public class DialogueBox : MonoBehaviour
         if (option2Marker != null) option2Marker.SetActive(selectedIndex == 1);
     }
 
-    public void UpdateText(Dialogue.DialogueItem item)
+    public void Trigger(Dialogue.DialogueItem newItem = null)
+    {
+        if (isRevealing)
+        {
+            if (revealRoutine != null)
+                StopCoroutine(revealRoutine);
+
+            isRevealing = false;
+            currentText = item.text;
+
+            UpdateText();
+        }
+        else
+        {
+            item = newItem;
+            SetContent();
+
+            revealRoutine = RevealRoutine();
+            StartCoroutine(revealRoutine);
+        }
+    }
+
+    private void SetContent()
     {
         genericGroup.SetActive(false);
         characterGroup.SetActive(false);
@@ -63,14 +90,11 @@ public class DialogueBox : MonoBehaviour
                 if (item.sprite == null)
                 {
                     genericGroup.SetActive(true);
-
-                    genericText.text = item.text;
                 }
                 else
                 {
                     characterGroup.SetActive(true);
 
-                    characterText.text = item.text;
                     characterImage.sprite = item.sprite;
                 }
 
@@ -86,10 +110,34 @@ public class DialogueBox : MonoBehaviour
         }
     }
 
-    //dialogue has to be created line by line
-    //separate the msg into an array of single character strings and add it into a currentString string to be displayed
-    
+    private void UpdateText()
+    {
+        if (item.type == Dialogue.DialogueItem.DialogueItemType.Standard)
+        {
+            if (item.sprite == null)
+            {
+                genericText.text = currentText;
+            }
+            else
+            {
+                characterText.text = currentText;
+            }
+        }
+    }
 
+    private IEnumerator RevealRoutine()
+    {
+        isRevealing = true;
+        currentText = "";
 
+        for (int i = 0; i < item.text.Length; i++)
+        {
+            currentText += item.text[i];
+            UpdateText();
 
+            yield return new WaitForSeconds(textRevealTick);
+        }
+
+        isRevealing = false;
+    }
 }
