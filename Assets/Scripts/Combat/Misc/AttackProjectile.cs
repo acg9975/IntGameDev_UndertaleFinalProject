@@ -6,6 +6,8 @@ using UnityEngine;
 public class AttackProjectile : MonoBehaviour
 {
     protected Rigidbody2D rb;
+
+    [SerializeField] protected bool destroyOnPlayer = true;
     [SerializeField] protected int damage = 1;
 
     private void Awake()
@@ -29,6 +31,11 @@ public class AttackProjectile : MonoBehaviour
         }
     }
 
+    public void SetVelocity(Vector2 velocity)
+    {
+        rb.velocity = velocity;
+    }
+
     public virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -39,14 +46,17 @@ public class AttackProjectile : MonoBehaviour
                 PlayerData.Health -= damage;
             }
             CombatMenuNavigator.instance.UpdateCombatUI();
-            if (transform.parent != null)
-            {
-                Destroy(transform.parent.gameObject);
-            }
-            else
-            {
-                Destroy(gameObject);
 
+            if (destroyOnPlayer)
+            {
+                if (transform.parent != null)
+                {
+                    Destroy(transform.parent.gameObject);
+                }
+                else
+                {
+                    Destroy(gameObject);
+                }
             }
 
         }
