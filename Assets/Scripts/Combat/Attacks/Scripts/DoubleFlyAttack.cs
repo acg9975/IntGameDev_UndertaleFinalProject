@@ -40,15 +40,20 @@ public class DoubleFlyAttack : Attack
                 //go to wherever heart is currently
                 //projectile.MoveTowards(CombatMovement.PlayerPosition, projectileSpeed);
                 projectile.GetComponent<AttackProjectile>().MoveTowards(CombatMovement.PlayerPosition, projectileSpeed);
+                projectile.transform.up = (Vector3)CombatMovement.PlayerPosition - projectile.transform.position;
                 //after whatever amount of time - change direction to where player is
                 yield return new WaitForSeconds(changeDirTime);
                 //stay in place for 0.25seconds
                 if (projectile != null)
                 {
                     projectile.GetComponent<AttackProjectile>().MoveTowards(projectile.transform.position, 0);
+                    projectile.transform.up = (Vector3)CombatMovement.PlayerPosition - projectile.transform.position;
+
                     yield return new WaitForSeconds(waitTime);
                     Vector3 newTargetPos = CombatMovement.PlayerPosition;
                     projectile.GetComponent<AttackProjectile>().MoveTowards(newTargetPos, projectileSpeed);
+                    projectile.transform.up = (Vector3)CombatMovement.PlayerPosition - projectile.transform.position;
+
                     Debug.Log("Moving towards second goal");
                 }
             }

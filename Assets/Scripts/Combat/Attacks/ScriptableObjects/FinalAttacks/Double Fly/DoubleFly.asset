@@ -9,11 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8d34db8278f1014eae228e5ecc9933d, type: 3}
-  m_Name: SwingAttack Slow 1
+  m_Script: {fileID: 11500000, guid: 668af2211898e84408a0b556ba50327d, type: 3}
+  m_Name: DoubleFly
   m_EditorClassIdentifier: 
   duration: 10
-  projectilePrefab: {fileID: 4784452144219590256, guid: 6a742e9a0cc6d2746ad03f50dedd041b, type: 3}
-  spawnDelay: 2.8
-  destroyTime: 2.5
-  attackSpeed: 0.7
+  projectilePrefab: {fileID: 6787800901682839002, guid: 8e539f79369de174089953970906c06b, type: 3}
+  projectileSpeed: 3
+  spawnDelay: 0.5
+  spawnRadius: 3
+  changeDirTime: 1
+  waitTime: 0.25

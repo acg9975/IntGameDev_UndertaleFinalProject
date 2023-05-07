@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SwingAttack Fast
   m_EditorClassIdentifier: 
   duration: 10
-  projectilePrefab: {fileID: 4784452144219590256, guid: 6a742e9a0cc6d2746ad03f50dedd041b, type: 3}
-  spawnDelay: 1.8
-  destroyTime: 1.5
-  attackSpeed: 1.5
+  projectilePrefab: {fileID: 329027915222647655, guid: 2f381fc83ffd0cb4a944d7ff5168f1b1, type: 3}
+  spawnDelay: 1
+  destroyTime: 1
+  attackSpeed: 1.3

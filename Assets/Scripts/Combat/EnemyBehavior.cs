@@ -125,6 +125,12 @@ public class EnemyBehavior : ScriptableObject
             }
         }
 
+        public void Reset()
+        {
+            attackIndex = -1;
+            descriptionIndex = -1;
+        }
+
         public Attack GetNextAttack()
         {
             if (iterationType == IterationType.InOrder)
@@ -165,6 +171,10 @@ public class EnemyBehavior : ScriptableObject
     public void Init()
     {
         Health = MaxHealth;
+        phaseIndex = 0;
+
+        foreach (Phase phase in phases)
+            phase.Reset();
     }
 
     public float NextWave()

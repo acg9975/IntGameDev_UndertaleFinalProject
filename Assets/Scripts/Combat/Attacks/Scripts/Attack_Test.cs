@@ -33,7 +33,8 @@ public class Attack_Test : Attack
             //projectile.MoveTowards(CombatMovement.PlayerPosition, projectileSpeed);
 
             projectile.GetComponentInChildren<AttackProjectile>().MoveTowards(CombatMovement.PlayerPosition, projectileSpeed, true);
-            //projectile.GetComponentInChildren<Transform>().LookAt(CombatMovement.PlayerPosition, Vector3.back);
+            projectile.transform.up = (Vector3) CombatMovement.PlayerPosition - projectile.transform.position;
+
             Destroy(projectile, 4f);
             yield return new WaitForSeconds(spawnDelay);
         }
