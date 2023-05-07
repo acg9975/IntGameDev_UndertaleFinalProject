@@ -3917,7 +3917,7 @@ MonoBehaviour:
   enemySprite: {fileID: 792748950}
   combatMode: 0
   attackSliderPrefab: {fileID: 7311352869951248375, guid: 290c3cbc2dd4c634696f8261738412d3, type: 3}
-  attackSprite: {fileID: 6792917689251165167, guid: 10b33e44e52457a40bd6dd93fd9e177d, type: 3}
+  attackSprite: {fileID: 6762239409802260408, guid: 610d40c50d7a3054c80d95f75504b0fc, type: 3}
   attackSpriteTransform: {fileID: 1135656411}
   sliderSpawn: {fileID: 726651524}
   exampleItem: {fileID: 11400000, guid: ca9861d3fbdf2354abdde4caf4b2617f, type: 2}
