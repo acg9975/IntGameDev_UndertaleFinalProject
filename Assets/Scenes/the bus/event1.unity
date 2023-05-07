@@ -4269,6 +4269,14 @@ MonoBehaviour:
       setValues:
       - parameter: event2Layer
         value: 0
+      - parameter: tpSeen
+        value: n
+      - parameter: oilSeen
+        value: n
+      - parameter: potionSeen
+        value: n
+      - parameter: lotionSeen
+        value: n
       onEnd:
         m_PersistentCalls:
           m_Calls:

@@ -272,6 +272,384 @@ MonoBehaviour:
     content:
     - conditions:
       - parameter: event2Layer
+        value: 3
+      type: 0
+      sprite: {fileID: -1939337318, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: Hon, you are not very girlboss. I almost want to find a different recruit
+        for my downline.
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: event2Layer
+        value: 2
+      type: 0
+      sprite: {fileID: 1790035049, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: That was rude of you. I work hard at this company, you know?
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: event2Layer
+        value: 2
+      type: 0
+      sprite: {fileID: -1939337318, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: For example, each of our products is all-natural and infused with biological
+        compounds.
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: event2Layer
+        value: 2
+      type: 0
+      sprite: {fileID: -1939337318, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: It's guaranteed to purify, detoxify, and brightify your skin!
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: event2Layer
+        value: 2
+      type: 0
+      sprite: {fileID: 1840998398, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: But I don't want to lighten my skin.
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: event2Layer
+        value: 2
+      type: 0
+      sprite: {fileID: 1790035049, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: I said "brighten," not "lighten." Are you accusing me of something!?
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: event2Layer
+        value: 2
+      type: 1
+      sprite: {fileID: -1939337318, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: 
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: I'm accusing you of imprisonment
+          setValues:
+          - parameter: accusation
+            value: imprisonment
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: I'm accusing you of racism
+          setValues:
+          - parameter: accusation
+            value: racism
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: event2Layer
+        value: 2
+      type: 0
+      sprite: {fileID: -2138747196, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: O-of course not...
+      setValues:
+      - parameter: event2Layer
+        value: 3
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: event2Layer
+        value: 1
+      type: 0
+      sprite: {fileID: -1341461904, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: So, you're Trader Joe?
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: event2Layer
+        value: 1
+      type: 0
+      sprite: {fileID: -1939337318, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: The one and only! That's Jo---no E. It's short for Joann.
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: event2Layer
+        value: 1
+      type: 0
+      sprite: {fileID: -1341461904, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: Oh! Well.
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: event2Layer
+        value: 1
+      type: 0
+      sprite: {fileID: -1341461904, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: Shouldn't it be you running the Joann Fabrics across the street?
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: event2Layer
+        value: 1
+      type: 0
+      sprite: {fileID: -1341461904, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: I mean, if you're here, who's over there?
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: event2Layer
+        value: 1
+      type: 0
+      sprite: {fileID: 446881038, guid: 9a9f48523cbbbbe44843962445e95704, type: 3}
+      text: oh boy.
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: event2Layer
+        value: 1
+      type: 0
+      sprite: {fileID: 21300000, guid: 9c4159231a7f2744b8f42d342ad97aa2, type: 3}
+      text: You're really in it now, brother...
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: event2Layer
+        value: 1
+      type: 0
+      sprite: {fileID: 1790035049, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: ...
+      setValues:
+      - parameter: event2Layer
+        value: 2
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: event2Layer
         value: 0
       type: 0
       sprite: {fileID: -1939337318, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
@@ -613,19 +991,7 @@ MonoBehaviour:
       setValues: []
       onEnd:
         m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 547946463}
-            m_TargetAssemblyTypeName: Cinemachine.CinemachineVirtualCamera, Cinemachine
-            m_MethodName: set_Follow
-            m_Mode: 2
-            m_Arguments:
-              m_ObjectArgument: {fileID: 1193593272}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
+          m_Calls: []
       choices:
         option1:
           text: It was delicious
@@ -643,9 +1009,34 @@ MonoBehaviour:
       - parameter: event2Layer
         value: 0
       type: 0
-      sprite: {fileID: 1790035049, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
-      text: Even I know that.
+      sprite: {fileID: -1939337318, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: Well? Why don't you get acquainted with our cosmetics?
       setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: It was delicious
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: It was disgusting
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: event2Layer
+        value: 0
+      type: 0
+      sprite: {fileID: -1939337318, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: Let me know what you think of them.
+      setValues:
+      - parameter: event2Layer
+        value: 1
       onEnd:
         m_PersistentCalls:
           m_Calls:
@@ -1983,7 +2374,32 @@ MonoBehaviour:
   textboxPrefab: {fileID: 0}
   dialogue:
     content:
-    - conditions: []
+    - conditions:
+      - parameter: tpSeen
+        value: y
+      type: 0
+      sprite: {fileID: 0}
+      text: (There's nothing else to look at.)
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: tpSeen
+        value: n
       type: 0
       sprite: {fileID: 0}
       text: (You fiddle with the toilet paper arrangement.)
@@ -2004,14 +2420,14 @@ MonoBehaviour:
           onEnd:
             m_PersistentCalls:
               m_Calls: []
-    - conditions: []
+    - conditions:
+      - parameter: tpSeen
+        value: n
       type: 0
       sprite: {fileID: 0}
       text: (Inside the pile of rolls, you find a single grain of hay!)
       setValues:
       - parameter: hayGet
-        value: y
-      - parameter: tpSeen
         value: y
       onEnd:
         m_PersistentCalls:
@@ -2029,12 +2445,14 @@ MonoBehaviour:
           onEnd:
             m_PersistentCalls:
               m_Calls: []
-    - conditions: []
+    - conditions:
+      - parameter: tpSeen
+        value: n
       type: 0
       sprite: {fileID: 0}
       text: (You reset the toilet paper.)
       setValues:
-      - parameter: hayGet
+      - parameter: tpSeen
         value: y
       onEnd:
         m_PersistentCalls:
@@ -4323,12 +4741,14 @@ MonoBehaviour:
         value: y
       - parameter: oilSeen
         value: y
+      - parameter: tpSeen
+        value: y
       type: 0
       sprite: {fileID: 0}
       text: (Think that's just about everything this aisle has to offer.)
       setValues:
-      - parameter: lotionSeen
-        value: y
+      - parameter: event2Layer
+        value: 2
       onEnd:
         m_PersistentCalls:
           m_Calls: []
