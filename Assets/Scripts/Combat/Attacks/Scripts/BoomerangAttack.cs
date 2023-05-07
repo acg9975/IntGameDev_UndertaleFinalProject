@@ -11,6 +11,7 @@ public class BoomerangAttack : Attack
 
 
     [SerializeField] protected float spawnDelay = 1.5f;
+    [SerializeField] protected float destroyDelay = 4f;
 
     protected float spawnTimer = 0f;
 
@@ -31,14 +32,14 @@ public class BoomerangAttack : Attack
             Vector2 spawnPos1 = new Vector2(x1, -2.76f);
             GameObject projectile1 = Instantiate(upProjectilePrefab, spawnPos1, Quaternion.identity);
             projectiles.Add(projectile1);
-            Destroy(projectile1, 1.5f);
+            Destroy(projectile1, destroyDelay);
             
             //going down
             float x2 = Random.Range(-1.5f, 1.75f);
             Vector2 spawnPos2 = new Vector2(x2, 2.15f);
             GameObject projectile2 = Instantiate(downProjectilePrefab, spawnPos2, Quaternion.Euler(0, 0, 180));
             projectiles.Add(projectile2);
-            Destroy(projectile2, 1.5f);
+            Destroy(projectile2, destroyDelay);
             yield return new WaitForSeconds(spawnDelay);
         }
     }
