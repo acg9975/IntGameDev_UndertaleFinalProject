@@ -9,6 +9,7 @@ public class DialogueBox : MonoBehaviour
     [Header("Text")]
     [SerializeField] private float textRevealTick = 0.05f;
     [SerializeField] private string textRevealSound;
+    [SerializeField] private float textSoundTick = 0.05f;
 
     [Header("Generic Dialogue")]
     [SerializeField] private GameObject genericGroup;
@@ -130,12 +131,21 @@ public class DialogueBox : MonoBehaviour
         isRevealing = true;
         currentText = "";
 
+        float textSoundTimer = 0f;
+
         for (int i = 0; i < item.text.Length; i++)
         {
             currentText += item.text[i];
             UpdateText();
 
+            if (textSoundTimer >= textSoundTick)
+            {
+                textSoundTimer = 0f;
+                SoundManager.PlayMisc(textRevealSound);
+            }
+
             yield return new WaitForSeconds(textRevealTick);
+            textSoundTimer += textRevealTick;
         }
 
         isRevealing = false;

@@ -721,8 +721,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eead99100d8ca5e48b4d03ed2ef984c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textRevealTick: 0.01
-  textRevealSound: 
+  textRevealTick: 0.02
+  textRevealSound: Text Boop
+  textSoundTick: 0.05
   genericGroup: {fileID: 7897402056228698846}
   genericText: {fileID: 3952794372595403678}
   characterGroup: {fileID: 7509462936497251652}
