@@ -18,7 +18,7 @@ MonoBehaviour:
   weakTo: 1
   weaknessCheck: 11
   phases:
-  - sprite: {fileID: 0}
+  - sprite: {fileID: 707813077, guid: 8f82f11265a1b4533b7e6f6cba8322fd, type: 3}
     iterationType: 0
     attacks:
     - {fileID: 11400000, guid: 0cf21005c97750d4ba4818d00cfe0bc1, type: 2}
@@ -26,33 +26,37 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 15b4d876900b081428b8e0e6300b0a12, type: 2}
     descriptions:
     - 
-    weaknessExploitedPhrase: 
-    weaknessFailPhrase: 
+    weaknessExploitedPhrase: '* You tell Jo her avocadoes are good. She nods in approval.'
+    weaknessFailPhrase: '* You tell Jo her salad mixes are good. She frowns - the
+      store''s been out of salad mix for weeks.'
     healthRange: 80
     weaknessRange: 9
-  - sprite: {fileID: 0}
+  - sprite: {fileID: 828348518, guid: 8f82f11265a1b4533b7e6f6cba8322fd, type: 3}
     iterationType: 0
     attacks:
     - {fileID: 11400000, guid: 05f3e95254a38a74588cb0f7cce0e2b3, type: 2}
     - {fileID: 11400000, guid: dea7d2f18135b49498546f3a8594e795, type: 2}
     descriptions:
     - 
-    weaknessExploitedPhrase: 
-    weaknessFailPhrase: 
+    weaknessExploitedPhrase: '* You tell Jo her nametag looks cool. But of course:
+      it is simple and elegant. '
+    weaknessFailPhrase: '* You wave your hands threateningly. Jo looks at you, confused.
+      Are you trying to wave at her?'
     healthRange: 50
     weaknessRange: 7
-  - sprite: {fileID: 0}
+  - sprite: {fileID: -662525595, guid: 8f82f11265a1b4533b7e6f6cba8322fd, type: 3}
     iterationType: 0
     attacks:
     - {fileID: 11400000, guid: bd1a61ecc44cbb84b856de67f89d8ac4, type: 2}
     - {fileID: 11400000, guid: e2cd87a481370ff4cb6421b97668eb87, type: 2}
     descriptions:
     - 
-    weaknessExploitedPhrase: 
+    weaknessExploitedPhrase: '* You tell Jo her pyramid scheme or whatever is pretty
+      cool. '
     weaknessFailPhrase: 
     healthRange: 20
     weaknessRange: 4
-  - sprite: {fileID: 0}
+  - sprite: {fileID: 707813077, guid: 8f82f11265a1b4533b7e6f6cba8322fd, type: 3}
     iterationType: 1
     attacks:
     - {fileID: 11400000, guid: dea7d2f18135b49498546f3a8594e795, type: 2}

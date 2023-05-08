@@ -18,13 +18,14 @@ MonoBehaviour:
   weakTo: 2
   weaknessCheck: 1
   phases:
-  - sprite: {fileID: 0}
+  - sprite: {fileID: -453440875, guid: cd02c6e1777dd4e6e8c08e0f82a60747, type: 3}
     iterationType: 0
     attacks:
     - {fileID: 11400000, guid: 2dc1dcd383fa24b458530e6e9525e18c, type: 2}
     descriptions:
     - 
-    weaknessExploitedPhrase: 
-    weaknessFailPhrase: 
+    weaknessExploitedPhrase: '* You tell Yamlet the love of his life is in grave
+      danger. '
+    weaknessFailPhrase: '* you were going to say something, but you forgot. '
     healthRange: 0
     weaknessRange: 0
