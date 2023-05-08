@@ -5,14 +5,14 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Enemy Behavior", menuName = "Combat/Enemy Behavior")]
 public class EnemyBehavior : ScriptableObject
 {
+    [SerializeField] private string enemyName;
     [SerializeField] [Min(0)] private int maxHealth;
     [SerializeField] [Min(0)] private int health;
-    [SerializeField] private string name;
     public string Name
     {
         get
         {
-            return name;
+            return enemyName;
         }
     }
     public Sprite EnemySprite

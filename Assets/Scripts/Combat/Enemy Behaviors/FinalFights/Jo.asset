@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bc6f9462afc347418b98db90dbe5b0e, type: 3}
   m_Name: Jo
   m_EditorClassIdentifier: 
+  enemyName: TraderJo
   maxHealth: 100
   health: 100
   canBeSpared: 0

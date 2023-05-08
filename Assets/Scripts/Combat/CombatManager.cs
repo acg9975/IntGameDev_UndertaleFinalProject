@@ -206,15 +206,17 @@ public class CombatManager : MonoBehaviour
         SceneTransition.ChangeScene(SceneTransition.previousScene, pos);
 
         //Check for individual enemy's death and change it in player prefs
-        if (Enemy.name == "Yamlet")
-        {
-            PlayerPrefs.SetString("YamletStatus", "Dead");
-            PlayerPrefs.SetString("SerifStatus", "Moved");
+        //if (Enemy.name == "Yamlet")
+        //{
+        //    PlayerPrefs.SetString("YamletStatus", "Dead");
+        //    PlayerPrefs.SetString("SerifStatus", "Moved");
 
-        }
+        //}
         //SceneTransition.instance.ChangeScene(SceneTransition.previousScene);
         //destroy NPC
 
+        PlayerPrefs.SetString(Enemy.Name + " Status", "Dead");
+        PlayerPrefs.SetString(Enemy.Name + " FightResult", "Kill");
     }
 
     void playerDeath()
@@ -363,10 +365,13 @@ public class CombatManager : MonoBehaviour
 
         Vector3 pos = new Vector3(PlayerPrefs.GetFloat("lastOverworldX"), PlayerPrefs.GetFloat("lastOverworldY"), 0);
         SceneTransition.ChangeScene(SceneTransition.previousScene, pos);
-        if (Enemy.name == "yamlet")
-        {
-            PlayerPrefs.SetString("YamletStatus", "Alive");
-        }
+        //if (Enemy.name == "yamlet")
+        //{
+        //    PlayerPrefs.SetString("YamletStatus", "Alive");
+        //}
+
+        PlayerPrefs.SetString(Enemy.Name + " Status", "Alive");
+        PlayerPrefs.SetString(Enemy.Name + " FightResult", "Mercy");
     }
     public void playerFlee()
     {
