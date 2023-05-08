@@ -3261,7 +3261,7 @@ MonoBehaviour:
     content:
     - conditions: []
       type: 0
-      sprite: {fileID: 0}
+      sprite: {fileID: -1341461904, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
       text: Hello!
       setValues: []
       onEnd:
@@ -3282,7 +3282,7 @@ MonoBehaviour:
               m_Calls: []
     - conditions: []
       type: 0
-      sprite: {fileID: 0}
+      sprite: {fileID: 932394018, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
       text: How goes it, Rosencranberry?
       setValues: []
       onEnd:
@@ -3303,7 +3303,7 @@ MonoBehaviour:
               m_Calls: []
     - conditions: []
       type: 0
-      sprite: {fileID: 0}
+      sprite: {fileID: 1840998398, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
       text: Do I know you...?
       setValues: []
       onEnd:
@@ -3324,7 +3324,7 @@ MonoBehaviour:
               m_Calls: []
     - conditions: []
       type: 0
-      sprite: {fileID: 0}
+      sprite: {fileID: 1426889037, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
       text: Do you know me? Nonsense. You know me very well! Tis I, your old friend.
         Yamlet.
       setValues: []
@@ -3346,7 +3346,7 @@ MonoBehaviour:
               m_Calls: []
     - conditions: []
       type: 0
-      sprite: {fileID: 0}
+      sprite: {fileID: -362027459, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
       text: Dear old tragic Yamlet? Crown Brinjal of Denmark?
       setValues: []
       onEnd:
@@ -3367,7 +3367,7 @@ MonoBehaviour:
               m_Calls: []
     - conditions: []
       type: 0
-      sprite: {fileID: 0}
+      sprite: {fileID: 932394018, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
       text: Brinjal? I'm clearly a yam.
       setValues: []
       onEnd:
@@ -3388,7 +3388,7 @@ MonoBehaviour:
               m_Calls: []
     - conditions: []
       type: 0
-      sprite: {fileID: 0}
+      sprite: {fileID: 1840998398, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
       text: Right.
       setValues: []
       onEnd:
@@ -3409,7 +3409,7 @@ MonoBehaviour:
               m_Calls: []
     - conditions: []
       type: 0
-      sprite: {fileID: 0}
+      sprite: {fileID: -362027459, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
       text: Mark, Rosencranberry. I always preferred you to Guildenstarfruit...
       setValues: []
       onEnd:
@@ -3430,7 +3430,7 @@ MonoBehaviour:
               m_Calls: []
     - conditions: []
       type: 0
-      sprite: {fileID: 0}
+      sprite: {fileID: 932394018, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
       text: So before I sentence thee to your fate at England, how about we spar,
         just once?
       setValues: []
@@ -3452,12 +3452,24 @@ MonoBehaviour:
               m_Calls: []
     - conditions: []
       type: 0
-      sprite: {fileID: 0}
+      sprite: {fileID: 1426889037, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
       text: I am out of practice, and you are too, are you not?
       setValues: []
       onEnd:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 327979264}
+            m_TargetAssemblyTypeName: Interactable, Assembly-CSharp
+            m_MethodName: FightEnemy
+            m_Mode: 2
+            m_Arguments:
+              m_ObjectArgument: {fileID: 11400000, guid: ea82977010b69834cb008abb13682e0d, type: 2}
+              m_ObjectArgumentAssemblyTypeName: EnemyBehavior, Assembly-CSharp
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       choices:
         option1:
           text: 
