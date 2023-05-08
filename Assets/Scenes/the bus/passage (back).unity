@@ -8032,6 +8032,68 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &836164078
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 262719883623511801, guid: 049413dd60cbf8549bf950bdb04132d9, type: 3}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 262719883623511801, guid: 049413dd60cbf8549bf950bdb04132d9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.3096285
+      objectReference: {fileID: 0}
+    - target: {fileID: 262719883623511801, guid: 049413dd60cbf8549bf950bdb04132d9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.835659
+      objectReference: {fileID: 0}
+    - target: {fileID: 262719883623511801, guid: 049413dd60cbf8549bf950bdb04132d9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.09452197
+      objectReference: {fileID: 0}
+    - target: {fileID: 262719883623511801, guid: 049413dd60cbf8549bf950bdb04132d9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 262719883623511801, guid: 049413dd60cbf8549bf950bdb04132d9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 262719883623511801, guid: 049413dd60cbf8549bf950bdb04132d9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 262719883623511801, guid: 049413dd60cbf8549bf950bdb04132d9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 262719883623511801, guid: 049413dd60cbf8549bf950bdb04132d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 262719883623511801, guid: 049413dd60cbf8549bf950bdb04132d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 262719883623511801, guid: 049413dd60cbf8549bf950bdb04132d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7602146946492675886, guid: 049413dd60cbf8549bf950bdb04132d9, type: 3}
+      propertyPath: m_Name
+      value: she's gone...
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 049413dd60cbf8549bf950bdb04132d9, type: 3}
+--- !u!1 &836164079 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7602146946492675886, guid: 049413dd60cbf8549bf950bdb04132d9, type: 3}
+  m_PrefabInstance: {fileID: 836164078}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &836293091
 GameObject:
   m_ObjectHideFlags: 0
@@ -13055,6 +13117,8 @@ GameObject:
   - component: {fileID: 1288491996}
   - component: {fileID: 1288491995}
   - component: {fileID: 1288491994}
+  - component: {fileID: 1288491998}
+  - component: {fileID: 1288491999}
   m_Layer: 0
   m_Name: purple flowers gate
   m_TagString: Untagged
@@ -13169,6 +13233,119 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1288491998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288491993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35f969c25eb17f540b7ad09cfaf0a55a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textboxPrefab: {fileID: 3392875753123741850, guid: a75fba7265650014c8aee6ac619c25e9, type: 3}
+  dialogue:
+    content:
+    - conditions: []
+      type: 0
+      sprite: {fileID: 0}
+      text: (Huh...?)
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: flowerSolved
+        value: n
+      type: 0
+      sprite: {fileID: 0}
+      text: (This flower bed craves... meat!?)
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions:
+      - parameter: flowerSolved
+        value: y
+      type: 0
+      sprite: {fileID: 0}
+      text: (The flower bed accepts your fishcake and moves out of the way.)
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1288491999}
+            m_TargetAssemblyTypeName: InteractableStateController, Assembly-CSharp
+            m_MethodName: UpdateState
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+--- !u!114 &1288491999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288491993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7b614c3150ad69459480820a1f1eaba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultState: {fileID: 1288491993}
+  states:
+  - label: puzzle solved
+    conditions:
+    - parameter: flowerSolved
+      value: y
+    gameObject: {fileID: 836164079}
 --- !u!1 &1297823239
 GameObject:
   m_ObjectHideFlags: 0
