@@ -66,6 +66,13 @@ MonoBehaviour:
     stack: 0
     loop: 1
     source: {fileID: 0}
+  - name: Overworld
+    clip: {fileID: 8300000, guid: a0b8522fdbd4a194fa05246844aba8bb, type: 3}
+    volume: 0.2
+    pitch: 1
+    stack: 0
+    loop: 1
+    source: {fileID: 0}
   sounds:
   - name: UI Move
     clip: {fileID: 8300000, guid: bfc4861ad49484c49b129d014eca2242, type: 3}
@@ -83,7 +90,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Player Damage
     clip: {fileID: 8300000, guid: eafa485fb3684dc48b4a9cc6353bad0d, type: 3}
-    volume: 0.2
+    volume: 0.5
     pitch: 1
     stack: 1
     loop: 0
