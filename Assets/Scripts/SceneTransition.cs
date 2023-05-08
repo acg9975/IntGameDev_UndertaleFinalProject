@@ -79,7 +79,7 @@ public class SceneTransition : MonoBehaviour
     private IEnumerator LoadSceneRoutine(string scene)
     {
         Debug.Log("Changing scene now");
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene(scene);
     }
     private IEnumerator LoadSceneRoutine(string scene, Vector3 position)
@@ -101,7 +101,7 @@ public class SceneTransition : MonoBehaviour
 
     private IEnumerator onDeathRoutine()
     {
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.5f);
         PlayerData.Health = PlayerData.MaxHealth;
         SceneManager.LoadScene("DeathScene");
 
