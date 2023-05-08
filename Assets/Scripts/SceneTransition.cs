@@ -79,7 +79,7 @@ public class SceneTransition : MonoBehaviour
     {
         yield return new WaitForSeconds(1.0f);
         SceneManager.LoadScene(scene);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.05f);
         GameObject fos = Instantiate(FOS, position, Quaternion.identity);
         fos.GetComponent<FadeOutSquare>().StartFadeOut();
         GameObject.Find("Player").GetComponent<Transform>().position = position;
