@@ -18,24 +18,26 @@ MonoBehaviour:
   weakTo: 2
   weaknessCheck: 2
   phases:
-  - sprite: {fileID: 0}
+  - sprite: {fileID: -1374498611, guid: cd02c6e1777dd4e6e8c08e0f82a60747, type: 3}
     iterationType: 0
     attacks:
     - {fileID: 11400000, guid: 9917d19505f93574eb7f28912fda95eb, type: 2}
     descriptions:
     - 
-    weaknessExploitedPhrase: 
-    weaknessFailPhrase: 
+    weaknessExploitedPhrase: '* You tell Yamlet his love is in trouble AGAIN.'
+    weaknessFailPhrase: '* You fumble! Yamlet''s confused, but at least you have
+      the spirit.'
     healthRange: 10
     weaknessRange: 1
-  - sprite: {fileID: 0}
+  - sprite: {fileID: 879431002, guid: cd02c6e1777dd4e6e8c08e0f82a60747, type: 3}
     iterationType: 0
     attacks:
     - {fileID: 11400000, guid: 4f85c3f2da167e348b4e573fd760c924, type: 2}
     - {fileID: 11400000, guid: 0cf21005c97750d4ba4818d00cfe0bc1, type: 2}
     descriptions:
     - 
-    weaknessExploitedPhrase: 
-    weaknessFailPhrase: 
+    weaknessExploitedPhrase: '* You swear that you''re not lying this time. Really.
+      Actually.'
+    weaknessFailPhrase: '* Yamlet takes your action as an aggressive action and frowns.'
     healthRange: 0
     weaknessRange: 0
