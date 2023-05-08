@@ -89,11 +89,12 @@ public class SceneTransition : MonoBehaviour
         //yield return new WaitForSeconds(0.05f);
         //GameObject fos = Instantiate(FOS, position, Quaternion.identity);
         //fos.GetComponent<FadeOutSquare>().StartFadeOut();
-
         fadeAnim.SetTrigger("FadeOut");
+        yield return new WaitForSeconds(0.1f);
         if (GameObject.Find("Player") != null)
         {
             GameObject.Find("Player").GetComponent<Transform>().position = position;
+            OverworldMovement.canMove = true;
         }
         else
         {
@@ -114,10 +115,12 @@ public class SceneTransition : MonoBehaviour
     }
 
 
-    public void onGameEnd()
+    public void onGameEndNoKill()
     {
-        instance.StartCoroutine(LoadSceneRoutine("MainMenu"));
-        Debug.Log("Main Menu Loading");
+        instance.StartCoroutine(LoadSceneRoutine("WinSceneJoAlive"));
     }
-
+    public void onGameEndKill()
+    {
+        instance.StartCoroutine(LoadSceneRoutine("WinSceneJoDead"));
+    }
 }
