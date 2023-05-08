@@ -44,4 +44,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4d3298422d5f714f9ccaf28da0fc002, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  music:
+  - name: Boss Fight
+    clip: {fileID: 8300000, guid: 24c9b7c7cba13414abb8cfbc6632c228, type: 3}
+    volume: 0.2
+    pitch: 1
+    stack: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: General Fight
+    clip: {fileID: 8300000, guid: 0505afff1dbf3dc4ea3ef224308021d3, type: 3}
+    volume: 0.5
+    pitch: 1
+    stack: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: Game Over
+    clip: {fileID: 8300000, guid: 0b84602d540f7f94ca25436fe440f117, type: 3}
+    volume: 0.5
+    pitch: 1
+    stack: 0
+    loop: 1
+    source: {fileID: 0}
+  sounds:
+  - name: UI Move
+    clip: {fileID: 8300000, guid: bfc4861ad49484c49b129d014eca2242, type: 3}
+    volume: 0.2
+    pitch: 1
+    stack: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Player Attack
+    clip: {fileID: 8300000, guid: c0281d9a0ed7e224a81afad5e318940b, type: 3}
+    volume: 0.2
+    pitch: 1
+    stack: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Player Damage
+    clip: {fileID: 8300000, guid: eafa485fb3684dc48b4a9cc6353bad0d, type: 3}
+    volume: 0.2
+    pitch: 1
+    stack: 1
+    loop: 0
+    source: {fileID: 0}
