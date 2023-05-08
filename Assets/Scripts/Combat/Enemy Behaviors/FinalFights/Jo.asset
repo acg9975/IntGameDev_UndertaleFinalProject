@@ -17,7 +17,7 @@ MonoBehaviour:
   health: 100
   canBeSpared: 0
   weakTo: 1
-  weaknessCheck: 7
+  weaknessCheck: 11
   phases:
   - sprite: {fileID: 707813077, guid: 8f82f11265a1b4533b7e6f6cba8322fd, type: 3}
     iterationType: 0
