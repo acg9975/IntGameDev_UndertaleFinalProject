@@ -23,7 +23,7 @@ MonoBehaviour:
     attacks:
     - {fileID: 11400000, guid: 05f3e95254a38a74588cb0f7cce0e2b3, type: 2}
     descriptions:
-    - Stop talking and die
+    - He scowls at you. "So you're approaching me...again?"
     weaknessExploitedPhrase: Stop being weird!?
     weaknessFailPhrase: That wont work on me, nerd
     healthRange: 8

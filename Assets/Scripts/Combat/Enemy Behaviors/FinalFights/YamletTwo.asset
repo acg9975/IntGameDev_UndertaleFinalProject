@@ -23,8 +23,9 @@ MonoBehaviour:
     attacks:
     - {fileID: 11400000, guid: 9917d19505f93574eb7f28912fda95eb, type: 2}
     descriptions:
-    - 
-    weaknessExploitedPhrase: '* You tell Yamlet his love is in trouble AGAIN.'
+    - Yamlet's striking a Jojo pose.
+    weaknessExploitedPhrase: '* You tell Yamlet his love is in trouble AGAIN. "Nonsense!
+      Horatio''s in good health!" He says.'
     weaknessFailPhrase: '* You fumble! Yamlet''s confused, but at least you have
       the spirit.'
     healthRange: 10
@@ -35,9 +36,10 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 4f85c3f2da167e348b4e573fd760c924, type: 2}
     - {fileID: 11400000, guid: 0cf21005c97750d4ba4818d00cfe0bc1, type: 2}
     descriptions:
-    - 
+    - You're tempted to blow the sticky note off of his face.
     weaknessExploitedPhrase: '* You swear that you''re not lying this time. Really.
       Actually.'
-    weaknessFailPhrase: '* Yamlet takes your action as an aggressive action and frowns.'
+    weaknessFailPhrase: '* Yamlet takes your action as an aggressive action and waves
+      his sword angrily.'
     healthRange: 0
     weaknessRange: 0
