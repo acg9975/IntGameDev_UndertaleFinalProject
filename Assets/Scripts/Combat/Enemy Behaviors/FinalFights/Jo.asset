@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Jo
   m_EditorClassIdentifier: 
   maxHealth: 100
-  health: 0
+  health: 100
   canBeSpared: 0
   weakTo: 1
-  weaknessCheck: 11
+  weaknessCheck: 7
   phases:
   - sprite: {fileID: 707813077, guid: 8f82f11265a1b4533b7e6f6cba8322fd, type: 3}
     iterationType: 0
@@ -25,7 +25,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 4f85c3f2da167e348b4e573fd760c924, type: 2}
     - {fileID: 11400000, guid: 15b4d876900b081428b8e0e6300b0a12, type: 2}
     descriptions:
-    - 
+    - Jo considers stopping her enterprise, but then remembers how much money is
+      in her bank account.
     weaknessExploitedPhrase: '* You tell Jo her avocadoes are good. She nods in approval.'
     weaknessFailPhrase: '* You tell Jo her salad mixes are good. She frowns - the
       store''s been out of salad mix for weeks.'
@@ -37,7 +38,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 05f3e95254a38a74588cb0f7cce0e2b3, type: 2}
     - {fileID: 11400000, guid: dea7d2f18135b49498546f3a8594e795, type: 2}
     descriptions:
-    - 
+    - You're tempted to ask her if tofu is superior over fake meat.
     weaknessExploitedPhrase: '* You tell Jo her nametag looks cool. But of course:
       it is simple and elegant. '
     weaknessFailPhrase: '* You wave your hands threateningly. Jo looks at you, confused.
@@ -50,10 +51,11 @@ MonoBehaviour:
     - {fileID: 11400000, guid: bd1a61ecc44cbb84b856de67f89d8ac4, type: 2}
     - {fileID: 11400000, guid: e2cd87a481370ff4cb6421b97668eb87, type: 2}
     descriptions:
-    - 
+    - She's bringing up her list of essential oil scents.
     weaknessExploitedPhrase: '* You tell Jo her pyramid scheme or whatever is pretty
-      cool. '
-    weaknessFailPhrase: 
+      cool. She tears up a bit at the compliment. '
+    weaknessFailPhrase: '* You tell Jo her scheme is cool, but you fumble and the
+      word "scheming" comes out. She looks upset you accused her.'
     healthRange: 20
     weaknessRange: 4
   - sprite: {fileID: 707813077, guid: 8f82f11265a1b4533b7e6f6cba8322fd, type: 3}
@@ -67,8 +69,11 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 15b4d876900b081428b8e0e6300b0a12, type: 2}
     - {fileID: 11400000, guid: e2cd87a481370ff4cb6421b97668eb87, type: 2}
     descriptions:
-    - 
-    weaknessExploitedPhrase: 
-    weaknessFailPhrase: 
+    - 'Jo is mixing her drink. It''s just water. '
+    weaknessExploitedPhrase: '* You tell Jo that it''s impressive she has all these
+      all natural oils. She admits that not all of them are in a moment of weakness.'
+    weaknessFailPhrase: '* You try to drink an essential oil to surprise her. But
+      it''s literally just water. You''ve exposed her bluff, and she''s not happy
+      about it...'
     healthRange: 0
     weaknessRange: 0

@@ -23,11 +23,11 @@ MonoBehaviour:
     attacks:
     - {fileID: 11400000, guid: 15b4d876900b081428b8e0e6300b0a12, type: 2}
     descriptions:
-    - 
+    - A sweet smell fills the air.
     weaknessExploitedPhrase: "* You tell Mr. PB Cup he could trigger someone\u2019s
       allergies. \"One bite couldn't hurt,\" he says. "
-    weaknessFailPhrase: '* You tell PB Cup peanut butter is superior. They already
-      know it is.'
+    weaknessFailPhrase: '* You tell PB Cup peanut butter is superior. He already
+      knows.'
     healthRange: 25
     weaknessRange: 2
   - sprite: {fileID: 1901161118, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
@@ -36,7 +36,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 05f3e95254a38a74588cb0f7cce0e2b3, type: 2}
     - {fileID: 11400000, guid: a16761c6949f1434fb9d462eb3eb1504, type: 2}
     descriptions:
-    - 
+    - Do they ever make almond butter cups...?
     weaknessExploitedPhrase: '* You point out that PB Cup''s looking a little distressed.
       They become even more distressed.'
     weaknessFailPhrase: '* You attempt to say something, but the peanut butter is
