@@ -59,4 +59,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WinSceneJoAlive.unity
     guid: 2d7929f05936561438370f20241acbe9
+  - enabled: 1
+    path: Assets/Scenes/WinSceneJoDead.unity
+    guid: b5d30d1dd9a31d644ab4e7b0ab4b5b3e
   m_configObjects: {}
