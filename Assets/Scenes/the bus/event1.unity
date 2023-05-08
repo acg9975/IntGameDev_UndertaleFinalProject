@@ -689,6 +689,7 @@ GameObject:
   - component: {fileID: 338310507}
   - component: {fileID: 338310510}
   - component: {fileID: 338310509}
+  - component: {fileID: 338310511}
   m_Layer: 0
   m_Name: rice
   m_TagString: Untagged
@@ -827,6 +828,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.52013206, y: 0.4801073}
   m_EdgeRadius: 0
+--- !u!95 &338310511
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338310506}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9af1795f831be9f49a12841087796cc6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &406519114
 GameObject:
   m_ObjectHideFlags: 0
@@ -4275,6 +4296,7 @@ GameObject:
   - component: {fileID: 1275864496}
   - component: {fileID: 1275864499}
   - component: {fileID: 1275864498}
+  - component: {fileID: 1275864500}
   m_Layer: 0
   m_Name: meat cut
   m_TagString: Untagged
@@ -4413,6 +4435,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.53125, y: 0.46875}
   m_EdgeRadius: 0
+--- !u!95 &1275864500
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275864495}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9af1795f831be9f49a12841087796cc6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &1292982373
 GameObject:
   m_ObjectHideFlags: 0
@@ -7315,6 +7357,7 @@ GameObject:
   - component: {fileID: 2091095133}
   - component: {fileID: 2091095136}
   - component: {fileID: 2091095135}
+  - component: {fileID: 2091095137}
   m_Layer: 0
   m_Name: lime
   m_TagString: Untagged
@@ -7453,6 +7496,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.40625, y: 0.3125}
   m_EdgeRadius: 0
+--- !u!95 &2091095137
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091095132}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9af1795f831be9f49a12841087796cc6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &2097935920
 GameObject:
   m_ObjectHideFlags: 0
