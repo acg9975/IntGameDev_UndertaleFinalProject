@@ -1259,7 +1259,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 576409751}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.25, y: -6.2667, z: -10}
+  m_LocalPosition: {x: 18.249996, y: -6.2667, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6550,33 +6550,11 @@ MonoBehaviour:
       sprite: {fileID: -1757652543, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
       text: Here.
       setValues:
-      - parameter: event2Layer
-        value: 0
-      - parameter: horseLayer
-        value: 0
-      - parameter: tpSeen
-        value: n
-      - parameter: oilSeen
-        value: n
-      - parameter: potionSeen
-        value: n
-      - parameter: lotionSeen
-        value: n
+      - parameter: flowerSolved
+        value: y
       onEnd:
         m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 1875044405}
-            m_TargetAssemblyTypeName: GiveItem, Assembly-CSharp
-            m_MethodName: giveKey
-            m_Mode: 1
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
+          m_Calls: []
       choices:
         option1:
           text: 
