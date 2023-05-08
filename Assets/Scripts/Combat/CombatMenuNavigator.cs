@@ -211,6 +211,16 @@ public class CombatMenuNavigator : MonoBehaviour
                 selected++;
                 SoundManager.PlayMisc("UI Move");
             }
+            else if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                selected += (selected < 2) ? 2 : -2;
+                SoundManager.PlayMisc("UI Move");
+            }
+            else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                selected += (selected < 2) ? 2 : -2;
+                SoundManager.PlayMisc("UI Move");
+            }
 
             // if its the menu - have one option selected, out of an array of the buttons available
             if (selected > actButtons.Length - 1)
