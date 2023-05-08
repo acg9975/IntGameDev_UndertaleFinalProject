@@ -12665,7 +12665,7 @@ MonoBehaviour:
     - conditions: []
       type: 0
       sprite: {fileID: 0}
-      text: It's Tito's hat!!!
+      text: My hat!!
       setValues: []
       onEnd:
         m_PersistentCalls:
@@ -12686,7 +12686,8 @@ MonoBehaviour:
     - conditions: []
       type: 0
       sprite: {fileID: 0}
-      text: But unfortunately, we never figured out how to let him wear it...
+      text: (Unfortunately, the hat has been bolted down to the floor, and cannot
+        be worn.)
       setValues: []
       onEnd:
         m_PersistentCalls:
@@ -12707,7 +12708,7 @@ MonoBehaviour:
     - conditions: []
       type: 0
       sprite: {fileID: 0}
-      text: So he has to leave it behind.
+      text: 
       setValues: []
       onEnd:
         m_PersistentCalls:
@@ -12728,7 +12729,7 @@ MonoBehaviour:
     - conditions: []
       type: 0
       sprite: {fileID: 0}
-      text: Sorry, Tito.
+      text: 
       setValues: []
       onEnd:
         m_PersistentCalls:
