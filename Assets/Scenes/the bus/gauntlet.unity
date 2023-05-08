@@ -1992,7 +1992,105 @@ MonoBehaviour:
     - conditions: []
       type: 0
       sprite: {fileID: -1341461904, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
-      text: '* You''re so startled that you clip into the combat screen!'
+      text: '* You look up, expecting a prank speaker or something.
+
+'
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions: []
+      type: 0
+      sprite: {fileID: -2138747196, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: '* You look down.'
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 812707062}
+            m_TargetAssemblyTypeName: Interactable, Assembly-CSharp
+            m_MethodName: FightEnemy
+            m_Mode: 2
+            m_Arguments:
+              m_ObjectArgument: {fileID: 11400000, guid: 489304a9ee93eb547ab5b0b84adf9bd7, type: 2}
+              m_ObjectArgumentAssemblyTypeName: EnemyBehavior, Assembly-CSharp
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions: []
+      type: 0
+      sprite: {fileID: 1840998398, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: Are...peanut butter cups supposed to have a face?
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions: []
+      type: 0
+      sprite: {fileID: 1721979057, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: YUP!
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+    - conditions: []
+      type: 0
+      sprite: {fileID: -1341461904, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: '* You...really want to eat...no, you can''t. That''s like, murder.'
       setValues: []
       onEnd:
         m_PersistentCalls:
