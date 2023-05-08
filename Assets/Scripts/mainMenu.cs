@@ -10,7 +10,7 @@ public class mainMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && SceneManager.GetActiveScene().name == "MainMenu")
         {
-            SceneManager.LoadScene("SampleScene 1");
+            SceneManager.LoadScene("front (spawn)");
             //Change to whatever the first level is in the modern version
         }
         else if (Input.GetKeyDown(KeyCode.Space) && SceneManager.GetActiveScene().name == "DeathScene") 
