@@ -23,6 +23,10 @@ public class SoundManager : MonoBehaviour
 
     public static SoundManager instance;
 
+    [SerializeField] private Sound[] music;
+
+    private Sound currentMusic;
+
     [SerializeField] private Sound[] sounds;
 
     private void Awake()
@@ -37,6 +41,9 @@ public class SoundManager : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
 
+        foreach (Sound sound in music)
+            SetupSound(sound);
+
         foreach (Sound sound in sounds)
             SetupSound(sound);
     }
@@ -44,10 +51,38 @@ public class SoundManager : MonoBehaviour
     private void SetupSound(Sound sound)
     {
         sound.source = gameObject.AddComponent<AudioSource>();
+        sound.source.playOnAwake = false;
         sound.source.clip = sound.clip;
         sound.source.volume = sound.volume;
         sound.source.pitch = sound.pitch;
         sound.source.loop = sound.loop;
+    }
+
+    public static void PlayMusic(string name)
+    {
+        if (instance.currentMusic != null)
+        {
+            if (instance.currentMusic.name == name)
+                return;
+
+            StopAllMusic();
+        }
+
+        foreach (Sound m in instance.music)
+        {
+            if (m.name == name)
+            {
+                instance.currentMusic = m;
+                m.source.Play();
+                return;
+            }
+        }
+    }
+
+    public static void StopAllMusic()
+    {
+        foreach (Sound m in instance.music)
+            m.source.Stop();
     }
 
     public static void PlayMisc(string name)

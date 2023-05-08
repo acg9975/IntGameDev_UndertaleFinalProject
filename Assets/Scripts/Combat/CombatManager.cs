@@ -145,6 +145,9 @@ public class CombatManager : MonoBehaviour
             //spawn in attack sprite on enemy sprite
             //currently this is a particle system so we just find and activate it
             GameObject AS = Instantiate(attackSprite, attackSpriteTransform.position, Quaternion.identity);
+
+            SoundManager.PlayMisc("Player Attack");
+
             Destroy(AS, 0.7f);
         }
 
