@@ -53,4 +53,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/the bus/storage.unity
     guid: bd9de4641b8f40046a63b19a2bdfd941
+  - enabled: 1
+    path: Assets/Scenes/DeathScene.unity
+    guid: 6c1af80a788494049be346d00cba24b8
   m_configObjects: {}
