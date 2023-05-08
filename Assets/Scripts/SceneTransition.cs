@@ -91,8 +91,14 @@ public class SceneTransition : MonoBehaviour
         //fos.GetComponent<FadeOutSquare>().StartFadeOut();
 
         fadeAnim.SetTrigger("FadeOut");
-
-        GameObject.Find("Player").GetComponent<Transform>().position = position;
+        if (GameObject.Find("Player") != null)
+        {
+            GameObject.Find("Player").GetComponent<Transform>().position = position;
+        }
+        else
+        {
+            Debug.Log("ERROR : PLAYER NOT FOUND ");
+        }
     }
     public void onDeath()
     {
