@@ -101,6 +101,8 @@ public class SceneTransition : MonoBehaviour
 
     private IEnumerator onDeathRoutine()
     {
+        SoundManager.PlayMusic("Game Over");
+
         yield return new WaitForSeconds(0.5f);
         PlayerData.Health = PlayerData.MaxHealth;
         SceneManager.LoadScene("DeathScene");

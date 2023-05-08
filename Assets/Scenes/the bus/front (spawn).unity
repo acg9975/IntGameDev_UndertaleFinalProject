@@ -7808,7 +7808,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1262092205}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.44999, y: -13.19075, z: -10}
+  m_LocalPosition: {x: 18.449999, y: -13.19075, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8675,7 +8675,7 @@ MonoBehaviour:
       type: 0
       sprite: {fileID: -1939337318, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
       text: "It\u2019s called, \u201CDirect Sales,\u201D and you can set your own
-        hours, work from home\u2014it\u2019s basically like owning your own business. "
+        hours, work from home\u2014"
       setValues: []
       onEnd:
         m_PersistentCalls:

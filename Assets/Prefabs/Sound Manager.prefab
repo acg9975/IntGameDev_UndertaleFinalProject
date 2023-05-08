@@ -89,9 +89,9 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Text Boop
-    clip: {fileID: 8300000, guid: 40829133ddaa7af4c83cec96e5eb5b50, type: 3}
+    clip: {fileID: 8300000, guid: c285f79179cae6c4a9ff1ad9b2b783d0, type: 3}
     volume: 0.3
-    pitch: 0.9
+    pitch: 1
     stack: 1
     loop: 0
     source: {fileID: 0}
