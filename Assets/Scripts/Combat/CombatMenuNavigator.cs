@@ -69,10 +69,12 @@ public class CombatMenuNavigator : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 selected--;
+                SoundManager.PlayMisc("UI Move");
             }
             else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
             {
                 selected++;
+                SoundManager.PlayMisc("UI Move");
             }
 
             // if its the menu - have one option selected, out of an array of the buttons available
@@ -99,6 +101,8 @@ public class CombatMenuNavigator : MonoBehaviour
             //handle pressing spacebar to select option - use the button gameobject's name to find whats necessary - possibly use enum?
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                SoundManager.PlayMisc("UI Move");
+
                 //Debug.Log(combatButtons[selected].name);
                 switch (combatButtons[selected].name)
                 {
@@ -132,10 +136,12 @@ public class CombatMenuNavigator : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
             {
                 selected--;
+                SoundManager.PlayMisc("UI Move");
             }
             else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
             {
                 selected++;
+                SoundManager.PlayMisc("UI Move");
             }
 
             // if its the menu - have one option selected, out of an array of the buttons available
@@ -161,6 +167,8 @@ public class CombatMenuNavigator : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Space) && canPressbutton)
             {
+                SoundManager.PlayMisc("UI Move");
+
                 switch (mercyButtons[selected].name)
                 {
                     
@@ -196,10 +204,12 @@ public class CombatMenuNavigator : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 selected--;
+                SoundManager.PlayMisc("UI Move");
             }
             else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
             {
                 selected++;
+                SoundManager.PlayMisc("UI Move");
             }
 
             // if its the menu - have one option selected, out of an array of the buttons available
@@ -225,6 +235,8 @@ public class CombatMenuNavigator : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Space) && canPressbutton)
             {
+                SoundManager.PlayMisc("UI Move");
+
                 switch (actButtons[selected].name)
                 {
                     case "Check":

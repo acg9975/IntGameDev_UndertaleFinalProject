@@ -77,6 +77,8 @@ public class CombatMovement : MonoBehaviour
     }
     private IEnumerator damageJuiceRoutine(SpriteRenderer sr)
     {
+        SoundManager.PlayMisc("Player Damage");
+
         float timetoStopFlashing = Time.time + 2f;
         sr.sprite = damagedSprite;
         canTakeDamage = false;
