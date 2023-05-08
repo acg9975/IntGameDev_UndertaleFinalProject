@@ -577,6 +577,7 @@ GameObject:
   - component: {fileID: 273498838}
   - component: {fileID: 273498840}
   - component: {fileID: 273498839}
+  - component: {fileID: 273498841}
   m_Layer: 0
   m_Name: Products_Assets 1_4 (3)
   m_TagString: Untagged
@@ -677,6 +678,55 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &273498841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273498837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35f969c25eb17f540b7ad09cfaf0a55a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textboxPrefab: {fileID: 3392875753123741850, guid: a75fba7265650014c8aee6ac619c25e9, type: 3}
+  dialogue:
+    content:
+    - conditions: []
+      type: 0
+      sprite: {fileID: 0}
+      text: You reach for a pineapple but realize is actually a ball painted yellow
+        with leaves stuck on the top.
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 273498841}
+            m_TargetAssemblyTypeName: 
+            m_MethodName: 
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
 --- !u!1 &338310506
 GameObject:
   m_ObjectHideFlags: 0
@@ -1259,7 +1309,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 576409751}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.249996, y: -6.2667, z: -10}
+  m_LocalPosition: {x: 18.250002, y: -8.08, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
