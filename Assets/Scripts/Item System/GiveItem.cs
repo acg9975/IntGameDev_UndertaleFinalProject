@@ -18,6 +18,7 @@ public class GiveItem : MonoBehaviour
 
     public void increaseMaxHealth()
     {
+        PlayerData.MaxHealth = 20;
         PlayerData.Health = 20;//max health and current health is now set to 20 after calling this
         Debug.Log("Setting max health to 20");
     }
