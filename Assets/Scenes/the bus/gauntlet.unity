@@ -285,6 +285,7 @@ GameObject:
   - component: {fileID: 253625819}
   - component: {fileID: 253625820}
   - component: {fileID: 253625821}
+  - component: {fileID: 253625822}
   m_Layer: 0
   m_Name: Products_Assets 1_3 (1)
   m_TagString: Untagged
@@ -385,6 +386,42 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0625, y: 1.03125}
   m_EdgeRadius: 0
+--- !u!114 &253625822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253625818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35f969c25eb17f540b7ad09cfaf0a55a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textboxPrefab: {fileID: 3392875753123741850, guid: a75fba7265650014c8aee6ac619c25e9, type: 3}
+  dialogue:
+    content:
+    - conditions: []
+      type: 0
+      sprite: {fileID: 0}
+      text: 'Be ready for the battles ahead child. '
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
 --- !u!1001 &260894217
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1814,6 +1851,7 @@ GameObject:
   - component: {fileID: 725776819}
   - component: {fileID: 725776820}
   - component: {fileID: 725776821}
+  - component: {fileID: 725776822}
   m_Layer: 0
   m_Name: Products_Assets 1_5
   m_TagString: Untagged
@@ -1914,6 +1952,42 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.03125, y: 0.9375}
   m_EdgeRadius: 0
+--- !u!114 &725776822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725776818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35f969c25eb17f540b7ad09cfaf0a55a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textboxPrefab: {fileID: 3392875753123741850, guid: a75fba7265650014c8aee6ac619c25e9, type: 3}
+  dialogue:
+    content:
+    - conditions: []
+      type: 0
+      sprite: {fileID: 0}
+      text: 'You''re almost done child, you can do it! '
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
 --- !u!1 &812707059
 GameObject:
   m_ObjectHideFlags: 0
@@ -3840,6 +3914,7 @@ GameObject:
   - component: {fileID: 1483893308}
   - component: {fileID: 1483893309}
   - component: {fileID: 1483893310}
+  - component: {fileID: 1483893311}
   m_Layer: 0
   m_Name: Products_Assets 1_4 (1)
   m_TagString: Untagged
@@ -3940,6 +4015,42 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.15625, y: 0.96875}
   m_EdgeRadius: 0
+--- !u!114 &1483893311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483893307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35f969c25eb17f540b7ad09cfaf0a55a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textboxPrefab: {fileID: 0}
+  dialogue:
+    content:
+    - conditions: []
+      type: 0
+      sprite: {fileID: 0}
+      text: 'Keep going '
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
 --- !u!1 &1568658107
 GameObject:
   m_ObjectHideFlags: 0
