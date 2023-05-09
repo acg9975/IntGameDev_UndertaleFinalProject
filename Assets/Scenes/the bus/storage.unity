@@ -2872,6 +2872,7 @@ GameObject:
   - component: {fileID: 495998830}
   - component: {fileID: 495998829}
   - component: {fileID: 495998831}
+  - component: {fileID: 495998832}
   m_Layer: 0
   m_Name: Backworld_Assets_1 (21)
   m_TagString: Untagged
@@ -2972,6 +2973,42 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 12.321607, y: 0.96875}
   m_EdgeRadius: 0
+--- !u!114 &495998832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495998828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35f969c25eb17f540b7ad09cfaf0a55a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textboxPrefab: {fileID: 3392875753123741850, guid: a75fba7265650014c8aee6ac619c25e9, type: 3}
+  dialogue:
+    content:
+    - conditions: []
+      type: 0
+      sprite: {fileID: 1840998398, guid: 890b3ccd04fe146079e0788f407e059b, type: 3}
+      text: 'This boxes are so big, looks like they could stuff a body in there...weird. '
+      setValues: []
+      onEnd:
+        m_PersistentCalls:
+          m_Calls: []
+      choices:
+        option1:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
+        option2:
+          text: 
+          setValues: []
+          onEnd:
+            m_PersistentCalls:
+              m_Calls: []
 --- !u!1 &515483794
 GameObject:
   m_ObjectHideFlags: 0
