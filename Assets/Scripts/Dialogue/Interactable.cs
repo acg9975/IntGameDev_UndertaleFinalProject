@@ -74,6 +74,6 @@ public class Interactable : MonoBehaviour
         PlayerPrefs.SetString("lastScene", SceneManager.GetActiveScene().name);
         PlayerPrefs.SetFloat("lastOverworldX", playerPos.x);
         PlayerPrefs.SetFloat("lastOverworldY", playerPos.y);
-        Debug.Log("x " + playerPos.x + " y " + playerPos.y);
+        Debug.Log("x " + playerPos.x + " y " + playerPos.y + " in " + PlayerPrefs.GetString("lastScene"));
     }
 }

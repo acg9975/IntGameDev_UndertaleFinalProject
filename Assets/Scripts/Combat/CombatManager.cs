@@ -14,6 +14,18 @@ public class CombatManager : MonoBehaviour
 
     [SerializeField] private Transform playerSpawn;
     [SerializeField] private SpriteRenderer enemySprite;
+    private bool playerDeathCalled;
+    public bool PlayerDeathCalled
+    {
+        get
+        {
+            return playerDeathCalled;
+        }
+        set
+        {
+            playerDeathCalled = value;
+        }
+    }
     public Sprite EnemySprite
     {
         get
@@ -79,9 +91,10 @@ public class CombatManager : MonoBehaviour
             inventoryUIManager.instance.updateText();
         }
 
-        if (!PlayerData.IsAlive)
+        if (!PlayerData.IsAlive && !playerDeathCalled)
         {
             playerDeath();
+            playerDeathCalled = true;
         }
     }
     
@@ -223,9 +236,6 @@ public class CombatManager : MonoBehaviour
     {
         //goto main menu
         SceneTransition.instance.onDeath();
-
-        //SceneTransition.ChangeScene("MainMenu");
-        //PlayerData.Health = PlayerData.MaxHealth;
     }
 
     void spawnSlider()

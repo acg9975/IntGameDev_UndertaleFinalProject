@@ -17,9 +17,11 @@ public class mainMenu : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Space) && SceneManager.GetActiveScene().name == "DeathScene") 
         {
             //load the last scene the player was at
-            PlayerPrefs.DeleteAll();
+            //PlayerPrefs.DeleteAll();
+
             Vector3 pos = new Vector3(PlayerPrefs.GetFloat("lastOverworldX"), PlayerPrefs.GetFloat("lastOverworldY"), 0);
             SceneTransition.ChangeScene(PlayerPrefs.GetString("lastScene"), pos);
+            CombatManager.instance.PlayerDeathCalled = false;
         }
     }
 }

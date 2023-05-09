@@ -104,6 +104,7 @@ public class SceneTransition : MonoBehaviour
     public void onDeath()
     {
         StartCoroutine(onDeathRoutine());
+        Debug.Log("On death routine called");
     }
 
     private IEnumerator onDeathRoutine()
